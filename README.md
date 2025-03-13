@@ -11,10 +11,10 @@
   </thead>
   <tbody>
     <tr>
-      <td align="center"><a href="(깃허브 링크)">
+      <td align="center"><a href="https://github.com/pch2001">
         <img src="(깃허브 이미지 링크)" width="100px;" alt=""/><br/><sub>박창후</sub></a><br/>
       <td>콘텐츠IT전공</td>
-      <td>(학번)</td>
+      <td>20205177</td>
     </tr>
     <tr>
       <td align="center"><a href="(깃허브 링크)">
