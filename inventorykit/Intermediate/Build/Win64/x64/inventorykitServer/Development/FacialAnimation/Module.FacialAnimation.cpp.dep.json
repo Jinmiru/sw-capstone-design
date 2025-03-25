@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\facialanimation\\module.facialanimation.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\facialanimation\\definitions.facialanimation.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\facialanimation\\uht\\audiocurvesourcecomponent.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\editor\\facialanimation\\source\\facialanimation\\public\\audiocurvesourcecomponent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\components\\audiocomponent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\audio\\soundparametercontrollerinterface.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\soundparametercontrollerinterface.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioextensions\\public\\iaudioparametertransmitter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerquantizedcommands.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixer\\public\\quartz\\audiomixerclock.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixer\\public\\quartz\\quartzmetronome.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\sound\\quartzsubscription.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\sound\\quartzsubscriptiontoken.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\containers\\consumeallmpmcqueue.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\audiocomponent.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\animation\\curvesourceinterface.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\curvesourceinterface.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\facialanimation\\uht\\audiocurvesourcecomponent.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\facialanimation\\uht\\facialanimation.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\editor\\facialanimation\\source\\facialanimation\\private\\audiocurvesourcecomponent.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\editor\\facialanimation\\source\\facialanimation\\private\\facialanimationmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\editor\\facialanimation\\source\\facialanimation\\private\\facialanimationmodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

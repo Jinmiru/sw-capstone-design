@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\packethandler\\module.packethandler.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\packethandler\\definitions.packethandler.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\packethandler\\uht\\packethandler.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\private\\handlercomponentfactory.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\classes\\handlercomponentfactory.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\packethandler\\uht\\handlercomponentfactory.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\packethandler\\uht\\handlercomponentfactory.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\private\\packethandler.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\public\\packethandler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\ipaddress.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\sockettypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packetview.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\sockets\\socketerrors.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packettraits.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\misc\\packetaudit.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\public\\encryptioncomponent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\consolemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\misc\\ddosdetection.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\reliabilityhandlercomponent\\public\\reliabilityhandlercomponent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\classes\\packethandlerprofileconfig.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\packethandler\\uht\\packethandlerprofileconfig.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\socketsubsystem.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\addressinfotypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\private\\packethandlerprofileconfig.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\packethandler\\uht\\packethandlerprofileconfig.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

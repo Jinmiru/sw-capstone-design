@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\eyetracker\\module.eyetracker.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\eyetracker\\definitions.eyetracker.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\eyetracker\\uht\\eyetracker.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\private\\eyetrackerfunctionlibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\public\\eyetrackerfunctionlibrary.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\public\\eyetrackertypes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\eyetracker\\uht\\eyetrackertypes.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\public\\ieyetracker.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\eyetracker\\uht\\eyetrackerfunctionlibrary.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\eyetracker\\uht\\eyetrackerfunctionlibrary.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\private\\eyetrackermodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\public\\ieyetrackermodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\eyetracker\\private\\eyetrackertypes.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\eyetracker\\uht\\eyetrackertypes.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

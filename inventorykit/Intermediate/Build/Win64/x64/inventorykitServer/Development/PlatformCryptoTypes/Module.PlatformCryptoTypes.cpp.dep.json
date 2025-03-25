@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\platformcryptotypes\\module.platformcryptotypes.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\platformcryptotypes\\definitions.platformcryptotypes.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\platformcrypto\\source\\platformcryptotypes\\private\\platformcryptotypes.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\platformcrypto\\source\\platformcryptotypes\\public\\platformcryptotypes.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

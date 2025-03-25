@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\appleimageutils\\module.appleimageutils.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\appleimageutils\\definitions.appleimageutils.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\appleimageutils\\uht\\appleimageutils.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\appleimageutils\\uht\\appleimageutilstypes.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\appleimageutils\\source\\appleimageutils\\public\\appleimageutilstypes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\appleimageutils\\uht\\appleimageutilstypes.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\appleimageutils\\source\\appleimageutils\\private\\appleimageutilsblueprintproxy.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\appleimageutils\\source\\appleimageutils\\public\\appleimageutilsblueprintproxy.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\appleimageutils\\uht\\appleimageutilsblueprintproxy.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\appleimageutils\\source\\appleimageutils\\public\\iappleimageutilsplugin.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\appleimageutils\\source\\appleimageutils\\public\\appleimageutilsavailability.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\appleimageutils\\uht\\appleimageutilsblueprintproxy.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\appleimageutils\\source\\appleimageutils\\private\\appleimageutilsplugin.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

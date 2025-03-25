@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\automationutils\\module.automationutils.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\automationutils\\definitions.automationutils.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\automationutils\\uht\\automationutils.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\automationutils\\source\\automationutils\\private\\automationutils.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\automationutils\\source\\automationutils\\private\\automationutilsblueprintlibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\automationutils\\source\\automationutils\\public\\automationutilsblueprintlibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\automationutils\\uht\\automationutilsblueprintlibrary.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\assetcompilingmanager.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\assetcompilingmanager.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\sceneviewextension.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\sceneviewextensioncontext.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\sceneviewextensioncontext.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\scenetexturesconfig.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\rendercore\\public\\gbufferinfo.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\imageutils.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\hardwareinfo.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\gameengine.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\sviewport.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\moviescenecapture\\public\\moviescenecapturehandle.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\gameengine.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\automationutils\\uht\\automationutilsblueprintlibrary.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

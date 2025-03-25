@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Advertising.cpp.obj": [
+			"Advertising.cpp.obj"
+		]
+	}
+}

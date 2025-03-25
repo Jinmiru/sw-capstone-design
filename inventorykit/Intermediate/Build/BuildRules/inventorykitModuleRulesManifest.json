@@ -1,0 +1,9 @@
+{
+	"SourceFiles": [
+		"C:\\UEProject\\inventorykit\\Source\\inventorykit\\inventorykit.Build.cs",
+		"C:\\UEProject\\inventorykit\\Source\\inventorykit.Target.cs",
+		"C:\\UEProject\\inventorykit\\Source\\inventorykitEditor.Target.cs",
+		"C:\\UEProject\\inventorykit\\Source\\inventorykitServer.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}

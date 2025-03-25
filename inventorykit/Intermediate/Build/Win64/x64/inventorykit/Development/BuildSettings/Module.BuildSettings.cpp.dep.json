@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\buildsettings\\module.buildsettings.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\buildsettings\\definitions.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\buildsettings\\private\\buildsettings.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\buildsettings\\public\\buildsettings.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\coretypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\build.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\largeworldcoordinates.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\preprocessorhelpers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\windows\\windowsplatformcompilerpresetup.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\msvc\\msvcplatformcompilerpresetup.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\genericplatform\\genericplatformcompilerpresetup.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\genericplatform\\genericplatform.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\windows\\windowsplatformcodeanalysis.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\windows\\windowsplatform.h",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\sal.h",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\concurrencysal.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\msvc\\msvcplatform.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\windows\\windowsplatformcompilersetup.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\umemorydefines.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\coremiscdefines.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\coredefines.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

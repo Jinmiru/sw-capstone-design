@@ -1,0 +1,37 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\navmesh\\module.navmesh.2.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\navmesh\\definitions.navmesh.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\detour\\detournavmesh.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detournavmesh.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detouralloc.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detourassert.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detourstatus.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detourlargeworldcoordinates.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detourcommon.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\detour\\detournavmeshbuilder.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detournavmeshbuilder.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\detour\\detournavmeshquery.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detournavmeshquery.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\detour\\detournode.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\detour\\detournode.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\navmeshmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recast.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recast.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recastlargeworldcoordinates.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recastalloc.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recastassert.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastalloc.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastarea.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastcontour.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastfilter.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastlayers.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

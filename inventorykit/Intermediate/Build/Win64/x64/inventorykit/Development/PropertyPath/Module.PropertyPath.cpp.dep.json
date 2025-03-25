@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\propertypath\\module.propertypath.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\propertypath\\definitions.propertypath.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\propertypath\\uht\\propertypath.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\propertypath\\private\\propertypathhelpers.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\propertypath\\public\\propertypathhelpers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\propertypath\\public\\propertytypecompatibility.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\propertypath\\uht\\propertypathhelpers.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\propertypath\\uht\\propertypathhelpers.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\propertypath\\private\\propertypathmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\propertypath\\private\\tests\\propertypathhelperstest.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\propertypath\\private\\tests\\propertypathhelperstest.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\propertypath\\uht\\propertypathhelperstest.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\propertypath\\uht\\propertypathhelperstest.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

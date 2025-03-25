@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\locationservicesbplibrary\\module.locationservicesbplibrary.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\locationservicesbplibrary\\definitions.locationservicesbplibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\locationservicesbplibrary\\uht\\locationservicesbplibrary.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\locationservicesbplibrary\\source\\locationservicesbplibrary\\classes\\locationservicesbplibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\locationservicesbplibrary\\uht\\locationservicesbplibrary.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\locationservicesbplibrary\\uht\\locationservicesbplibrary.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\locationservicesbplibrary\\uht\\locationservicesimpl.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\locationservicesbplibrary\\source\\locationservicesbplibrary\\classes\\locationservicesimpl.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\locationservicesbplibrary\\uht\\locationservicesimpl.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\locationservicesbplibrary\\source\\locationservicesbplibrary\\private\\locationservicesbplibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\locationservicesbplibrary\\source\\locationservicesbplibrary\\private\\locationservicesbplibrarymodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\locationservicesbplibrary\\source\\locationservicesbplibrary\\public\\locationservicesbplibrarymodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

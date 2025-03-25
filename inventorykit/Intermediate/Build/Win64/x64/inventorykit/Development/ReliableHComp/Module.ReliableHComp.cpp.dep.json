@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\reliablehcomp\\module.reliablehcomp.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\reliablehcomp\\definitions.reliablehcomp.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\reliabilityhandlercomponent\\private\\reliabilityhandlercomponent.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\reliabilityhandlercomponent\\public\\reliabilityhandlercomponent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packettraits.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\packethandlers\\packethandler\\public\\packethandler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\ipaddress.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\sockettypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packetview.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\sockets\\socketerrors.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\misc\\packetaudit.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

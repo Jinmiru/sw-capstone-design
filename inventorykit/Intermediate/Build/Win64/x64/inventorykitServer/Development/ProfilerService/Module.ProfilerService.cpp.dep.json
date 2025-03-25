@@ -1,0 +1,35 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\profilerservice\\module.profilerservice.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\profilerservice\\definitions.profilerservice.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilerservice\\private\\profilerservicefiletransfer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagecontext.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilermessages\\public\\profilerservicemessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\profilermessages\\uht\\profilerservicemessages.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilerservice\\public\\iprofilerservicemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilerservice\\private\\profilerservicemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messagingcommon\\public\\messageendpoint.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\containers\\arraybuilder.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessageattachment.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagebus.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagehandler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagereceiver.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagesender.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagebuslistener.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilerservice\\private\\profilerservicemanager.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messagingcommon\\public\\messageendpointbuilder.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messaging\\public\\imessagingmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\messagingcommon\\public\\messagehandlers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\stats\\statsdata.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\stats\\statsfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilerservice\\private\\profilerservicemodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilerservice\\public\\iprofilerservicemodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

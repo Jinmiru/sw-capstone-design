@@ -1,0 +1,37 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\perfcounters\\module.perfcounters.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\perfcounters\\definitions.perfcounters.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\perfcounters\\private\\perfcounters.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\perfcounters\\private\\perfcounters.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\perfcounters\\public\\perfcountersmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httpresultcallback.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httpserverresponse.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httpserverconstants.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httpserverhttpversion.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httppath.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httprequesthandler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httproutehandle.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httpserverrequest.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\platformoutputdevices.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\windows\\windowsplatformoutputdevices.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\genericplatform\\genericplatformoutputdevices.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\platformmemoryhelpers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonwriter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsontypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\policies\\prettyjsonprintpolicy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\policies\\jsonprintpolicy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\perfcounters\\private\\zeroload.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\httpservermodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\httpserver\\public\\ihttprouter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\perfcounters\\private\\perfcountersmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\perfcounters\\private\\zeroload.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

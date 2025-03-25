@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LocalizableMessageBlueprint.cpp.obj": [
+			"LocalizableMessageBlueprint.init.gen.cpp.obj",
+			"LocalizableMessageLibrary.gen.cpp.obj",
+			"LocalizableMessageBlueprintModule.cpp.obj",
+			"LocalizableMessageLibrary.cpp.obj"
+		]
+	}
+}

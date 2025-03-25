@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.StreamingFile.cpp.obj": [
+			"StreamingNetworkPlatformFile.cpp.obj"
+		]
+	}
+}

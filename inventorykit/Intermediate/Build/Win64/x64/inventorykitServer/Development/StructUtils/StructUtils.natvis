@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+  <!--
+  *
+  * StructUtils Visualizers
+  *
+  -->
+  
+  <Type Name="FInstancedStructContainer">
+    <DisplayString Condition="NumItems == 0">Empty</DisplayString>
+    <DisplayString Condition="NumItems &gt; 0">{{ NumItems={NumItems} }} </DisplayString>
+    <Expand>
+      <IndexListItems Condition="NumItems != 0">
+        <Size>NumItems</Size>
+        <ValueNode>(FInstancedStructContainer::FItem*)(Memory + AllocatedSize - ($i + 1) * ItemStride)</ValueNode>
+      </IndexListItems>
+    </Expand>
+  </Type>
+  
+  <Type Name="TInstancedStruct&lt;*&gt;">
+    <DisplayString Condition="InstancedStruct.ScriptStruct == nullptr">Empty</DisplayString>
+    <DisplayString Condition="InstancedStruct.ScriptStruct != nullptr">{InstancedStruct.ScriptStruct->NamePrivate}</DisplayString>
+    <Expand>
+      <Item Name="[Type]">InstancedStruct.ScriptStruct</Item>
+      <Item Name="[Value]">($T1*)InstancedStruct.StructMemory</Item>
+    </Expand>
+  </Type>
+
+</AutoVisualizer>

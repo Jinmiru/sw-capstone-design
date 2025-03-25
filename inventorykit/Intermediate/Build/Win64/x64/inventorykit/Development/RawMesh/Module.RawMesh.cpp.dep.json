@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\rawmesh\\module.rawmesh.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\rawmesh\\definitions.rawmesh.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\rawmesh\\private\\rawmesh.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\rawmesh\\public\\rawmesh.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\templates\\dontcopy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\bufferwriter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\serialization\\bulkdatareader.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

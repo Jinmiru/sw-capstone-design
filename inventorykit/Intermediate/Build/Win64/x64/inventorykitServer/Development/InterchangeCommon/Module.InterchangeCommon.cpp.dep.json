@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\interchangecommon\\module.interchangecommon.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\interchangecommon\\definitions.interchangecommon.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangecommon\\uht\\interchangecommon.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangecommon\\uht\\interchangematerialxdefinitions.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\common\\public\\materialx\\interchangematerialxdefinitions.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangecommon\\uht\\interchangematerialxdefinitions.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\common\\private\\interchangecommonmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

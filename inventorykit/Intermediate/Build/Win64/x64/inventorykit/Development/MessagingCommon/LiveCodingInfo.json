@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MessagingCommon.cpp.obj": [
+			"MessagingCommonModule.cpp.obj"
+		]
+	}
+}

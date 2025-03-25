@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CsvMetrics.cpp.obj": [
+			"CsvMetrics.init.gen.cpp.obj",
+			"CsvActorCountMetric.cpp.obj",
+			"CsvMetricsModule.cpp.obj",
+			"CsvMetricsSubsystem.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LauncherChunkInstaller.cpp.obj": [
+			"LauncherChunkInstaller.cpp.obj"
+		]
+	}
+}

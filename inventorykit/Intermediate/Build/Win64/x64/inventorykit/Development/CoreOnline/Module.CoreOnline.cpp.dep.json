@@ -1,0 +1,26 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreonline\\module.coreonline.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreonline\\definitions.coreonline.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\coreonline\\uht\\coreonline.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\public\\online\\coreonline.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\public\\online\\coreonlinefwd.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\public\\online\\coreonlinepackage.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\coreonline\\uht\\coreonline.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\coreonline\\uht\\coreonline.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\coreonline\\uht\\coreonlineprivate.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\private\\online\\coreonlineprivate.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\coreonline\\uht\\coreonlineprivate.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\private\\online\\coreonline.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\lazysingleton.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\private\\online\\coreonlineprivate.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreonline\\private\\tests\\coreonlinetests.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

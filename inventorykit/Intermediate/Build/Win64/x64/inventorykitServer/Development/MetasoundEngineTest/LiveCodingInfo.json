@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MetasoundEngineTest.cpp.obj": [
+			"CompressorNodeTests.cpp.obj",
+			"EngineTestMetaSoundAutomatedNodeTest.cpp.obj",
+			"EngineTestMetaSoundAutomatedNodeTest_Bind.cpp.obj",
+			"EngineTestMetaSoundAutomatedNodeTest_Reset.cpp.obj",
+			"EngineTestMetaSoundAutomatedNodeTest_ValidOutputs.cpp.obj",
+			"EngineTestMetasoundSource.cpp.obj",
+			"EngineTestMetasoundWavePlayer.cpp.obj",
+			"EnvelopeFollowerNodeTests.cpp.obj",
+			"MetasoundDynamicGeneratorTests.cpp.obj",
+			"MetasoundEngineTestModule.cpp.obj",
+			"MetasoundGeneratorTests.cpp.obj",
+			"MetasoundOutputTests.cpp.obj",
+			"NodeTestGraphBuilder.cpp.obj"
+		]
+	}
+}

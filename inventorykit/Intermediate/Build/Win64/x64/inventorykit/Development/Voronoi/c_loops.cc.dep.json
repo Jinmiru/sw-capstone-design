@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\c_loops.cc",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\voronoi\\definitions.voronoi.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\c_loops.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\config.hh"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\interchangenodes\\module.interchangenodes.1.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\interchangenodes\\definitions.interchangenodes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangeanimationtracksetnode.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\nodes\\public\\interchangeanimationtracksetnode.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\interchange\\core\\public\\nodes\\interchangebasenode.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\interchange\\core\\public\\nodes\\interchangebasenodeutilities.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\interchange\\core\\public\\types\\attributestorage.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\assetregistrytagscontext.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\cookenums.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangecore\\uht\\interchangebasenode.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangeanimationtracksetnode.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangecameranode.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\nodes\\public\\interchangecameranode.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangecameranode.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangedecalmaterialnode.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\nodes\\public\\interchangedecalmaterialnode.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\nodes\\public\\interchangeshadergraphnode.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangeshadergraphnode.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\interchangenodes\\uht\\interchangedecalmaterialnode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

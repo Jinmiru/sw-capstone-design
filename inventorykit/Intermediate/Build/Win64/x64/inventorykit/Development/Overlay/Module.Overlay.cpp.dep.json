@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\overlay\\module.overlay.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\overlay\\definitions.overlay.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\overlay.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\overlays.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\public\\overlays.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\overlays.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\private\\assets\\basicoverlays.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\public\\basicoverlays.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\basicoverlays.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\basicoverlays.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\assetregistrytagscontext.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\cookenums.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\private\\assets\\localizedoverlays.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\public\\localizedoverlays.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\localizedoverlays.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\internationalization\\culture.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\overlay\\uht\\localizedoverlays.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\private\\factories\\overlaysimporter.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\public\\overlaysimporter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\private\\overlaymodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\private\\overlayprivate.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\overlay\\public\\ioverlaymodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

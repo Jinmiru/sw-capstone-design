@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\realtimeprofiler\\module.realtimeprofiler.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\slate\\sharedpch.slate.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\realtimeprofiler\\definitions.realtimeprofiler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\realtimeprofiler.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\realtimeprofiler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\visualizerevents.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilerframe.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilerframe.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilerlinegraph.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilerlinegraph.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilervisualizer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilertimeline.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilertimeline.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\input\\sslider.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\stimeline.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\realtimeprofiler\\private\\srealtimeprofilervisualizer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\sbarvisualizer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\seventstree.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

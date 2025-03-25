@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\audioplatformconfiguration\\module.audioplatformconfiguration.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\audioplatformconfiguration\\definitions.audioplatformconfiguration.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\audioplatformconfiguration\\uht\\audioplatformconfiguration.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioplatformconfiguration\\private\\audiocompressionsettings.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioplatformconfiguration\\public\\audiocompressionsettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\audioplatformconfiguration\\uht\\audiocompressionsettings.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\audiocompressionsettingsutils.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\audioplatformconfiguration\\uht\\audiocompressionsettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioplatformconfiguration\\private\\audioplatformconfigurationmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioplatformconfiguration\\public\\audioplatformconfigurationmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioplatformconfiguration\\private\\audioresampler.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audioplatformconfiguration\\public\\audioresampler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\thirdparty\\libsamplerate\\public\\samplerate.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

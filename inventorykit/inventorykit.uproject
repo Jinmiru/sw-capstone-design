@@ -1,0 +1,20 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{303EDF5F-49ED-A4EA-FF44-349D5AA58487}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "inventorykit",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "CleanProject",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/13d45e838b954d67b9d5d01fa82635d9"
+		}
+	]
+}

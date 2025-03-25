@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\xmlparser\\module.xmlparser.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\xmlparser\\definitions.xmlparser.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\private\\fastxml.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\public\\fastxml.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\platformfilemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\private\\xmlfile.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\public\\xmlfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\public\\xmlnode.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\private\\xmlfile.spec.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\private\\xmlnode.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\private\\xmlparser.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\xmlparser\\public\\xmlparser.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,45 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MetasoundEngine.cpp.obj": [
+			"MetasoundEngine.init.gen.cpp.obj",
+			"MetasoundFrontendLiteralBlueprintAccess.gen.cpp.obj",
+			"MetasoundGeneratorHandle.gen.cpp.obj",
+			"MetasoundOperatorCacheSubsystem.gen.cpp.obj",
+			"MetasoundOutput.gen.cpp.obj",
+			"MetasoundOutputSubsystem.gen.cpp.obj",
+			"MetasoundSettings.gen.cpp.obj",
+			"MetasoundDeprecatedInterfaces.cpp.obj",
+			"MetasoundInputFormatInterfaces.cpp.obj",
+			"MetasoundInterface.cpp.obj",
+			"MetasoundInterfaceBindings.cpp.obj",
+			"MetasoundOutputFormatInterfaces.cpp.obj",
+			"Metasound.cpp.obj",
+			"MetasoundAssetSubsystem.cpp.obj",
+			"MetasoundAudioBus.cpp.obj",
+			"MetasoundAudioBusReaderNode.cpp.obj",
+			"MetasoundAudioBusWriterNode.cpp.obj",
+			"MetasoundBuilderSubsystem.cpp.obj",
+			"MetasoundEngineEnvironment.cpp.obj",
+			"MetasoundEngineModule.cpp.obj",
+			"MetasoundEngineNodesNames.cpp.obj",
+			"MetasoundFrontendLiteralBlueprintAccess.cpp.obj",
+			"MetasoundGeneratorHandle.cpp.obj",
+			"MetasoundOperatorCacheSubsystem.cpp.obj",
+			"MetasoundOutput.cpp.obj",
+			"MetasoundOutputSubsystem.cpp.obj",
+			"MetasoundSettings.cpp.obj",
+			"MetasoundSource.cpp.obj",
+			"MetasoundUObjectRegistry.cpp.obj",
+			"MetasoundWave.cpp.obj",
+			"MetasoundWaveInfoNode.cpp.obj",
+			"MetasoundWavePlayerNode.cpp.obj",
+			"MetasoundWaveTableBankEvaluateNode.cpp.obj",
+			"MetasoundWaveTableEnvelopeNode.cpp.obj",
+			"MetasoundWaveTableEvaluateNode.cpp.obj",
+			"MetasoundWaveTableGetNode.cpp.obj",
+			"MetasoundWaveTableOscillatorNode.cpp.obj",
+			"MetasoundWaveTablePlayerNode.cpp.obj"
+		]
+	}
+}

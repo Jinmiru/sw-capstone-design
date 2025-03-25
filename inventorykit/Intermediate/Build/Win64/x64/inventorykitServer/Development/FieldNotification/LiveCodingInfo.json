@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FieldNotification.cpp.obj": [
+			"FieldNotification.init.gen.cpp.obj",
+			"FieldNotificationId.gen.cpp.obj",
+			"INotifyFieldValueChanged.gen.cpp.obj",
+			"FieldNotificationDelegate.cpp.obj",
+			"FieldNotificationModule.cpp.obj",
+			"FieldNotificationMulticastDelegateTest.cpp.obj"
+		]
+	}
+}

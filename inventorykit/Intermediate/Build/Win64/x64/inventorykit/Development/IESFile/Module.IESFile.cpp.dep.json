@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\iesfile\\module.iesfile.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\iesfile\\definitions.iesfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\iesfile\\private\\iesloader.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\iesfile\\private\\iesloader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\iesfile\\public\\iesconverter.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

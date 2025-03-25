@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\settings\\module.settings.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\settings\\definitions.settings.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingscategory.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingscategory.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\public\\isettingscategory.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\public\\isettingssection.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\namepermissionlist.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingssection.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingscontainer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingscontainer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\public\\isettingscontainer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingsmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\public\\isettingsviewer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\public\\isettingsmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\reload.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\settings\\private\\settingssection.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\configcontext.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

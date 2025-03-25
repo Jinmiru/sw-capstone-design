@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\unrealedmessages\\module.unrealedmessages.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\unrealedmessages\\definitions.unrealedmessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\unrealedmessages\\uht\\asseteditormessages.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\editor\\unrealedmessages\\classes\\asseteditormessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\unrealedmessages\\uht\\asseteditormessages.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\unrealedmessages\\uht\\fileservermessages.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\editor\\unrealedmessages\\classes\\fileservermessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\unrealedmessages\\uht\\fileservermessages.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\unrealedmessages\\uht\\unrealedmessages.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\editor\\unrealedmessages\\private\\unrealedmessagesmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

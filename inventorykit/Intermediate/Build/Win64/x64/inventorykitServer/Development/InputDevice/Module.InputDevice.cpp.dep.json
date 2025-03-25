@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\inputdevice\\module.inputdevice.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\inputdevice\\definitions.inputdevice.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\inputdevice\\private\\inputdevicemodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\inputdevice\\public\\iinputdevice.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\inputdevice\\public\\iinputdevicemodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

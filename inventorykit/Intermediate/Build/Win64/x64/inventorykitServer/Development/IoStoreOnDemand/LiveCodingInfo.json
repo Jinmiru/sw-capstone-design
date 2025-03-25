@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.IoStoreOnDemand.cpp.obj": [
+			"Http.cpp.obj",
+			"LatencyTesting.cpp.obj",
+			"DistributionEndpoints.cpp.obj",
+			"IoStoreOnDemand.cpp.obj",
+			"JournaledCache.cpp.obj",
+			"LatencyInjector.cpp.obj",
+			"OnDemandHttpClient.cpp.obj",
+			"OnDemandIoDispatcherBackend.cpp.obj",
+			"Statistics.cpp.obj"
+		]
+	}
+}

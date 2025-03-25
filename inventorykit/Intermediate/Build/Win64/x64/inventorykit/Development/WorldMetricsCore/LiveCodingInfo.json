@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.WorldMetricsCore.cpp.obj": [
+			"WorldMetricInterface.gen.cpp.obj",
+			"WorldMetricsActorTrackerSubscriber.gen.cpp.obj",
+			"WorldMetricsCore.init.gen.cpp.obj",
+			"WorldMetricsExtension.gen.cpp.obj",
+			"WorldMetricsActorTracker.cpp.obj",
+			"WorldMetricsCoreModule.cpp.obj",
+			"WorldMetricsLog.cpp.obj",
+			"WorldMetricsSubsystem.cpp.obj"
+		]
+	}
+}

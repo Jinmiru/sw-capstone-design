@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\vectorvm\\module.vectorvm.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\vectorvm\\definitions.vectorvm.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\vectorvm\\uht\\vectorvm.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\vectorvm\\uht\\vectorvmcommon.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\public\\vectorvmcommon.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\vectorvm\\uht\\vectorvmcommon.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\private\\tests\\vectorvmtests.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\public\\vectorvm.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\public\\vectorvmexperimental.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\public\\vectorvmserialization.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\public\\vectorvmlegacy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\private\\vectorvmprivate.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\private\\vectorvm.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\consolemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\platformfilemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\private\\vectorvmexperimental.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\private\\vectorvmexperimentaloptimizer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\vectorvm\\private\\vectorvmexperimentalserialization.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

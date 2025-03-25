@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AISupportModule.cpp.obj": [
+			"AISupportModule.cpp.obj"
+		]
+	}
+}

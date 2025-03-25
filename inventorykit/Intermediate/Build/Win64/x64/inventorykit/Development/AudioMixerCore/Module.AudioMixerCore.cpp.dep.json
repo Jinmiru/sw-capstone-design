@@ -1,0 +1,34 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\audiomixercore\\module.audiomixercore.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\audiomixercore\\definitions.audiomixercore.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\private\\audiomixer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiomixer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiomixerlog.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiomixernulldevice.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiomixertypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\buffervectoroperations.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\alignedbuffer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\dsp.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\signalprocessing\\public\\signalprocessingmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\paraminterpolator.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiodefines.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiomixertrace.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\signalprocessing\\public\\dsp\\floatarraymath.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\scopetrylock.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\csvprofiler.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\csvprofilerconfig.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\csvprofilertrace.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\scopedtimers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\private\\audiomixercoremodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\public\\audiomixercoremodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\audiomixercore\\private\\audiomixernulldevice.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

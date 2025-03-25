@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InterchangeCommon.cpp.obj": [
+			"InterchangeCommon.init.gen.cpp.obj",
+			"InterchangeMaterialXDefinitions.gen.cpp.obj",
+			"InterchangeCommonModule.cpp.obj"
+		]
+	}
+}

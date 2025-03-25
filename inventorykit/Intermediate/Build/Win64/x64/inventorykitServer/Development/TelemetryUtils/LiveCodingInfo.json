@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TelemetryUtils.cpp.obj": [
+			"TelemetryRouter.cpp.obj",
+			"TelemetryUtils.cpp.obj",
+			"TelemetryRouterTests.cpp.obj"
+		]
+	}
+}

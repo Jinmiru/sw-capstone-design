@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\googlepad\\module.googlepad.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\googlepad\\definitions.googlepad.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\googlepad\\uht\\googlepad.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\googlepad\\uht\\googlepadfunctionlibrary.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\googlepad\\source\\googlepad\\classes\\googlepadfunctionlibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\googlepad\\uht\\googlepadfunctionlibrary.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\googlepad\\source\\googlepad\\private\\googlepad.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\googlepad\\source\\googlepad\\public\\googlepad.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\googlepad\\source\\googlepad\\private\\googlepadfunctionlibrary.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

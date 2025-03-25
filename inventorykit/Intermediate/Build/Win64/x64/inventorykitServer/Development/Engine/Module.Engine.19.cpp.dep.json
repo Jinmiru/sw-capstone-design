@@ -1,0 +1,37 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\module.engine.19.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\pch.engine.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skeletalmeshsocket.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\skeletalmeshsocket.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skeletalmeshsocket.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\serialization\\archiveuobjectfromstructuredarchive.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skeletalmeshsourcemodel.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skinnedlevelsetelem.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skinnedmeshcomponent.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skylight.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\skylight.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skylight.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skylightcomponent.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\components\\skylightcomponent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\components\\lightcomponentbase.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\lightcomponentbase.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\skylightcomponent.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\sminstancemanager.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\elements\\sminstance\\sminstancemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\elements\\sminstance\\sminstanceelementid.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\instancedstaticmeshdelegates.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\sminstanceelementid.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\sminstancemanager.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\softworldreference.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\softworldreference.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\softworldreference.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\soundattenuation.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

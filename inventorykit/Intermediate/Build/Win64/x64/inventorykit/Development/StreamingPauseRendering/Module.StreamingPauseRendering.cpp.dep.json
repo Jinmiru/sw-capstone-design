@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\streamingpauserendering\\module.streamingpauserendering.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\streamingpauserendering\\definitions.streamingpauserendering.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\streamingpauserendering\\private\\streamingpauserendering.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\streamingpauserendering\\public\\streamingpauserendering.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\canvastypes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\canvastypes.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\sviewport.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\slate\\sceneviewport.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\slate\\slatetextures.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\textures\\slateupdatabletexture.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\movieplayer\\public\\movieplayer.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\movieplayer\\uht\\movieplayer.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\images\\sthrobber.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

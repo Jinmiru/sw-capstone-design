@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\telemetryutils\\module.telemetryutils.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\telemetryutils\\definitions.telemetryutils.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\telemetryutils\\private\\telemetryrouter.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\telemetryutils\\public\\telemetryrouter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\telemetryutils\\public\\telemetryutils.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\scoperwlock.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\telemetryutils\\private\\telemetryutils.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\telemetryutils\\tests\\telemetryroutertests.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

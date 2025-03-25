@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\localizablemessageblueprint\\module.localizablemessageblueprint.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\localizablemessageblueprint\\definitions.localizablemessageblueprint.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\localizablemessageblueprint\\uht\\localizablemessageblueprint.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\localizablemessageblueprint\\uht\\localizablemessagelibrary.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessageblueprint\\public\\localizablemessagelibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\localizablemessageblueprint\\uht\\localizablemessagelibrary.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessage\\public\\localizablemessage.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutils\\public\\instancedstruct.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutils\\public\\structutils.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\structutils\\uht\\instancedstruct.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\localizablemessage\\uht\\localizablemessage.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessageblueprint\\private\\localizablemessageblueprintmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessageblueprint\\private\\localizablemessagelibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessage\\public\\ilocalizablemessagemodule.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessage\\public\\localizablemessageprocessor.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\localizablemessage\\source\\localizablemessage\\public\\localizationcontext.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

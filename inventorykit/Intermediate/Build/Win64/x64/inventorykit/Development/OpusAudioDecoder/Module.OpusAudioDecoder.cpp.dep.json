@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\opusaudiodecoder\\module.opusaudiodecoder.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\opusaudiodecoder\\definitions.opusaudiodecoder.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\opusaudiodecoder\\module\\private\\opusaudioinfo.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\opusaudiodecoder\\module\\public\\decoders\\opusaudioinfo.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\audiodecompress.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\targetplatform\\public\\interfaces\\iaudioformat.h",
+            "c:\\github\\unrealengine5\\engine\\source\\thirdparty\\libopus\\opus-1.3.1-12\\include\\opus_defines.h",
+            "c:\\github\\unrealengine5\\engine\\source\\thirdparty\\libopus\\opus-1.3.1-12\\include\\opus_types.h",
+            "c:\\github\\unrealengine5\\engine\\source\\thirdparty\\libopus\\opus-1.3.1-12\\include\\opus_multistream.h",
+            "c:\\github\\unrealengine5\\engine\\source\\thirdparty\\libopus\\opus-1.3.1-12\\include\\opus.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

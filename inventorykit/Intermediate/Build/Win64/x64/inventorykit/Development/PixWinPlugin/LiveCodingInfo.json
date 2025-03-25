@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PixWinPlugin.cpp.obj": [
+			"PixWinPluginModule.cpp.obj"
+		]
+	}
+}

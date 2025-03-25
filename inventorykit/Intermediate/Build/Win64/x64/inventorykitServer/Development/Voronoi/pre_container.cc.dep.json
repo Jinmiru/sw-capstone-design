@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\pre_container.cc",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\voronoi\\definitions.voronoi.h",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\cmath",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\config.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\pre_container.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\c_loops.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\container.hh",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\vector",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\__msvc_bit_utils.hpp",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\__msvc_sanitizer_annotate_container.hpp",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\xmemory",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\xpolymorphic_allocator.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\common.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\v_base.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\worklist.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\cell.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\v_compute.hh",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\voronoi\\private\\voro++\\src\\rad_option.hh"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

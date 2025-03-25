@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\nullreplaystreaming\\module.nullreplaystreaming.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\nullreplaystreaming\\definitions.nullreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\nullnetworkreplaystreaming\\private\\nullnetworkreplaystreaming.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\nullnetworkreplaystreaming\\public\\nullnetworkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\networkreplaystreaming\\public\\networkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticseventattribute.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticsconversion.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\connection\\netresultmanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\nullnetworkreplaystreaming\\private\\nullnetworkreplaystreamingmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

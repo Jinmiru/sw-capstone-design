@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\uobjectplugin\\module.uobjectplugin.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\uobjectplugin\\definitions.uobjectplugin.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\uobjectplugin\\uht\\mypluginobject.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\uobjectplugin\\source\\uobjectplugin\\classes\\mypluginobject.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\uobjectplugin\\uht\\mypluginobject.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\uobjectplugin\\uht\\uobjectplugin.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\uobjectplugin\\source\\uobjectplugin\\private\\mypluginobject.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\uobjectplugin\\source\\uobjectplugin\\private\\uobjectplugin.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\uobjectplugin\\source\\uobjectplugin\\public\\iuobjectplugin.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

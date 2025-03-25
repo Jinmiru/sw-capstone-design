@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoviePlayerProxy.cpp.obj": [
+			"MoviePlayerProxy.cpp.obj"
+		]
+	}
+}

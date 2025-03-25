@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SkeletalMeshDescription.cpp.obj": [
+			"SkeletalMeshDescription.init.gen.cpp.obj",
+			"SkeletalMeshElementTypes.gen.cpp.obj",
+			"SkeletalMeshAttributes.cpp.obj",
+			"SkeletalMeshDescription.cpp.obj",
+			"SkeletalMeshDescriptionModule.cpp.obj",
+			"SkeletalMeshOperations.cpp.obj"
+		]
+	}
+}

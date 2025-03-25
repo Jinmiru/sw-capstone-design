@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\streamingfile\\module.streamingfile.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\streamingfile\\definitions.streamingfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\streamingfile\\private\\streamingnetworkplatformfile.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\streamingfile\\public\\streamingnetworkplatformfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\networkmessage.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\arrayreader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\bufferarchive.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkfile\\public\\networkplatformfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\containers\\spscqueue.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\servertoc.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\iplatformfilemodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\imagewritequeue\\module.imagewritequeue.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\imagewritequeue\\definitions.imagewritequeue.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\imagewritequeue\\uht\\imagewritequeue.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\imagewritequeue\\uht\\imagewritetypes.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\public\\imagewritetypes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\imagewritequeue\\uht\\imagewritetypes.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\private\\imagewriteblueprintlibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\public\\imagewriteblueprintlibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\imagewritequeue\\uht\\imagewriteblueprintlibrary.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\public\\imagewritequeue.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\public\\imagewritetask.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewrapper\\public\\iimagewrapper.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\public\\imagepixeldata.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\texturerendertarget2d.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\texturerendertarget.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\texturerendertarget.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\texturerendertarget2d.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\imagewritequeue\\uht\\imagewriteblueprintlibrary.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\private\\imagewritequeue.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewrapper\\public\\iimagewrappermodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\queuedthreadpoolwrapper.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\experimental\\misc\\executionresource.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\private\\imagewritestream.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\public\\imagewritestream.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagewritequeue\\private\\imagewritetask.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BinkAudioDecoder.cpp.obj": [
+			"BinkAudioInfo.cpp.obj"
+		]
+	}
+}

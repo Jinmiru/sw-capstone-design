@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PlatformCrypto.cpp.obj": [
+			"PlatformCrypto.cpp.obj"
+		]
+	}
+}

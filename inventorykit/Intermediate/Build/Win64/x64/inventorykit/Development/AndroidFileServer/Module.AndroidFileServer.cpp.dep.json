@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\androidfileserver\\module.androidfileserver.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\androidfileserver\\definitions.androidfileserver.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\androidfileserver\\uht\\androidfileserver.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\androidfileserver\\source\\androidfileserver\\private\\androidfileserver.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\androidfileserver\\source\\androidfileserver\\public\\androidfileserver.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\androidfileserver\\source\\androidfileserver\\private\\androidfileserverbplibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\androidfileserver\\source\\androidfileserver\\classes\\androidfileserverbplibrary.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\androidfileserver\\uht\\androidfileserverbplibrary.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\androidfileserver\\uht\\androidfileserverbplibrary.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MsQuicRuntime.cpp.obj": [
+			"MsQuicRuntimeModule.cpp.obj"
+		]
+	}
+}

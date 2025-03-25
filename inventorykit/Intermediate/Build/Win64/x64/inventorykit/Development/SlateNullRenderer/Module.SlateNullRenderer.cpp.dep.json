@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\slatenullrenderer\\module.slatenullrenderer.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\slatenullrenderer\\definitions.slatenullrenderer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatenullrenderer\\private\\slatenullrenderer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatenullrenderer\\private\\slatenullrenderer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\rendering\\slatedrawbuffer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatenullrenderer\\private\\slatenullrenderermodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatenullrenderer\\public\\interfaces\\islatenullrenderermodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

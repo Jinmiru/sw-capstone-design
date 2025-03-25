@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\drawprimitivedebugger\\module.drawprimitivedebugger.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\drawprimitivedebugger\\definitions.drawprimitivedebugger.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\drawprimitivedebugger\\uht\\drawprimitivedebugger.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\drawprimitivedebugger\\private\\drawprimitivedebuggerconfig.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\drawprimitivedebugger\\public\\drawprimitivedebuggerconfig.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\drawprimitivedebugger\\uht\\drawprimitivedebuggerconfig.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\drawprimitivedebugger\\uht\\drawprimitivedebuggerconfig.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\drawprimitivedebugger\\private\\drawprimitivedebuggermodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\drawprimitivedebugger\\public\\drawprimitivedebugger.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\drawprimitivedebugger\\private\\sdrawprimitivedebugger.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\input\\ssearchbox.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\renderer\\public\\viewdebug.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\renderer\\public\\primitivesceneinfo.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\renderer\\public\\meshpassprocessor.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\renderer\\public\\meshdrawshaderbindings.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\renderer\\public\\meshmaterialshader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\renderer\\public\\materialshader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\psoprecachematerial.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\experimental\\containers\\robinhoodhashtable.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\drawprimitivedebugger\\private\\sdrawprimitivedebugger.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\fonts\\fontmeasure.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

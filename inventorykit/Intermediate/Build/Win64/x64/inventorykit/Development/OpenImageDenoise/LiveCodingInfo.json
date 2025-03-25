@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.OpenImageDenoise.cpp.obj": [
+			"Plugin.cpp.obj"
+		]
+	}
+}

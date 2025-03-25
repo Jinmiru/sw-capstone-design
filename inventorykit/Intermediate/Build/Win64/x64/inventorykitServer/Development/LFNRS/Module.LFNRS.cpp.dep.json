@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\lfnrs\\module.lfnrs.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\lfnrs\\definitions.lfnrs.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\lfnrs\\uht\\localfilenetworkreplaystreaming.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\localfilenetworkreplaystreaming\\private\\localfilenetworkreplaystreaming.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\localfilenetworkreplaystreaming\\public\\localfilenetworkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\networkreplaystreaming\\public\\networkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticseventattribute.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticsconversion.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\connection\\netresultmanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\arrayreader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\arraywriter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\bufferarchive.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\lfnrs\\uht\\localfilenetworkreplaystreaming.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\scopedtimers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\serialization\\archivecountmem.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\largememoryreader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\iplatformfilemanagedstoragewrapper.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\algo\\indexof.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\lfnrs\\uht\\localfilenetworkreplaystreaming.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

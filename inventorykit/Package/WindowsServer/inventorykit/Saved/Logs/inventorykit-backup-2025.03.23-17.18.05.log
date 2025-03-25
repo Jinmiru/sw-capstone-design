@@ -1,0 +1,664 @@
+﻿Log file open, 03/24/25 02:16:53
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogProfilingDebugging: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogWindows: Enabling Tpause support
+LogWindows: Custom abort handler registered for crash reporting.
+LogCore: Display: UTS: The Unreal Trace Server binary is not available ('../../../Engine/Binaries/Win64/UnrealTraceServer.exe')
+LogTrace: Initializing trace...
+LogTrace: Finished trace initialization.
+LogCsvProfiler: Display: Metadata set : platform="Windows"
+LogCsvProfiler: Display: Metadata set : config="Development"
+LogCsvProfiler: Display: Metadata set : buildversion="UE5-CL-0"
+LogCsvProfiler: Display: Metadata set : engineversion="5.4.4-0+UE5"
+LogCsvProfiler: Display: Metadata set : os="Windows 11 (23H2) [10.0.22631.5039] "
+LogCsvProfiler: Display: Metadata set : cpu="GenuineIntel|12th Gen Intel(R) Core(TM) i7-12700K"
+LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+LogCsvProfiler: Display: Metadata set : asan="0"
+LogCsvProfiler: Display: Metadata set : commandline="" inventorykit -log""
+LogCsvProfiler: Display: Metadata set : loginid="d81a49c74e28d61bc1b25e84f4ed01a3"
+LogCsvProfiler: Display: Metadata set : llm="0"
+LogPakFile: Initializing PakPlatformFile
+LogIoDispatcher: Display: Reading toc: ../../../inventorykit/Content/Paks/global.utoc
+LogIoDispatcher: Display: Toc signature hash: 0000000000000000000000000000000000000000
+LogIoDispatcher: Display: Mounting container '../../../inventorykit/Content/Paks/global.utoc' in location slot 0
+LogPakFile: Display: Initialized I/O dispatcher file backend. Mounted the global container: ../../../inventorykit/Content/Paks/global.utoc
+LogPakFile: Display: Found Pak file ../../../inventorykit/Content/Paks/inventorykit-WindowsServer.pak attempting to mount.
+LogPakFile: Display: Mounting pak file ../../../inventorykit/Content/Paks/inventorykit-WindowsServer.pak.
+LogIoDispatcher: Display: Reading toc: ../../../inventorykit/Content/Paks/inventorykit-WindowsServer.utoc
+LogIoDispatcher: Display: Toc signature hash: 0000000000000000000000000000000000000000
+LogIoDispatcher: Display: Mounting container '../../../inventorykit/Content/Paks/inventorykit-WindowsServer.utoc' in location slot 0
+LogPakFile: Display: Mounted IoStore container "../../../inventorykit/Content/Paks/inventorykit-WindowsServer.utoc"
+LogPakFile: Display: Mounted Pak file '../../../inventorykit/Content/Paks/inventorykit-WindowsServer.pak', mount point: '../../../'
+LogStats: Stats thread started at 0.129471
+LogAssetRegistry: Premade AssetRegistry loaded from '../../../inventorykit/AssetRegistry.bin'
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +9:00, Platform Override: ''
+LogInit: Session CrashGUID >====================================================
+         Session CrashGUID >   UECC-Windows-210A8DBC4C5D78AB359E7F9B9300ED98
+         Session CrashGUID >====================================================
+LogPluginManager: Mounting Engine plugin Paper2D
+LogPluginManager: Mounting Engine plugin AISupport
+LogPluginManager: Mounting Engine plugin EnvironmentQueryEditor
+LogPluginManager: Mounting Engine plugin ACLPlugin
+LogPluginManager: Mounting Engine plugin AnimationData
+LogPluginManager: Mounting Engine plugin ControlRigModules
+LogPluginManager: Mounting Engine plugin ControlRigSpline
+LogPluginManager: Mounting Engine plugin ControlRig
+LogPluginManager: Mounting Engine plugin IKRig
+LogPluginManager: Mounting Engine plugin Bridge
+LogPluginManager: Mounting Engine plugin CameraShakePreviewer
+LogPluginManager: Mounting Engine plugin GameplayCameras
+LogPluginManager: Mounting Engine plugin ChaosCloth
+LogPluginManager: Mounting Engine plugin ChaosVD
+LogPluginManager: Found config from plugin[ChaosVD] Engine
+LogPluginManager: Mounting Engine plugin OodleNetwork
+LogPluginManager: Mounting Engine plugin AnimationSharing
+LogPluginManager: Mounting Engine plugin PluginUtils
+LogPluginManager: Mounting Engine plugin RenderDocPlugin
+LogPluginManager: Mounting Engine plugin UObjectPlugin
+LogPluginManager: Mounting Engine plugin AssetManagerEditor
+LogPluginManager: Mounting Engine plugin BlueprintHeaderView
+LogPluginManager: Mounting Engine plugin EditorScriptingUtilities
+LogPluginManager: Mounting Engine plugin FacialAnimation
+LogPluginManager: Mounting Engine plugin GeometryMode
+LogPluginManager: Mounting Engine plugin LightMixer
+LogPluginManager: Mounting Engine plugin ObjectMixer
+LogPluginManager: Mounting Engine plugin SequencerAnimTools
+LogPluginManager: Mounting Engine plugin SpeedTreeImporter
+LogPluginManager: Mounting Engine plugin UVEditor
+LogPluginManager: Mounting Engine plugin EnhancedInput
+LogPluginManager: Found config from plugin[EnhancedInput] Input
+LogPluginManager: Mounting Engine plugin DatasmithContent
+LogPluginManager: Mounting Engine plugin GLTFExporter
+LogPluginManager: Mounting Engine plugin VariantManagerContent
+LogPluginManager: Mounting Engine plugin VariantManager
+LogPluginManager: Mounting Engine plugin AutomationUtils
+LogPluginManager: Mounting Engine plugin BackChannel
+LogPluginManager: Mounting Engine plugin ChaosCaching
+LogPluginManager: Mounting Engine plugin ChaosEditor
+LogPluginManager: Mounting Engine plugin ChaosNiagara
+LogPluginManager: Mounting Engine plugin ChaosSolverPlugin
+LogPluginManager: Mounting Engine plugin ChaosUserDataPT
+LogPluginManager: Mounting Engine plugin CharacterAI
+LogPluginManager: Mounting Engine plugin Dataflow
+LogPluginManager: Mounting Engine plugin Fracture
+LogPluginManager: Mounting Engine plugin FullBodyIK
+LogPluginManager: Mounting Engine plugin GeometryCollectionPlugin
+LogPluginManager: Mounting Engine plugin LocalizableMessage
+LogPluginManager: Mounting Engine plugin MetaHumanProjectUtilities
+LogPluginManager: Mounting Engine plugin OpenImageDenoise
+LogPluginManager: Mounting Engine plugin PlatformCrypto
+LogPluginManager: Mounting Engine plugin PythonScriptPlugin
+LogPluginManager: Mounting Engine plugin StructUtils
+LogPluginManager: Mounting Engine plugin ToolPresets
+LogPluginManager: Mounting Engine plugin NiagaraSimCaching
+LogPluginManager: Mounting Engine plugin Niagara
+LogPluginManager: Mounting Engine plugin Fab
+LogPluginManager: Mounting Engine plugin AlembicImporter
+LogPluginManager: Mounting Engine plugin InterchangeEditor
+LogPluginManager: Mounting Engine plugin Interchange
+LogPluginManager: Mounting Engine plugin AvfMedia
+LogPluginManager: Mounting Engine plugin ImgMedia
+LogPluginManager: Mounting Engine plugin MediaCompositing
+LogPluginManager: Mounting Engine plugin MediaPlate
+LogPluginManager: Mounting Engine plugin MeshPainting
+LogPluginManager: Mounting Engine plugin TcpMessaging
+LogPluginManager: Mounting Engine plugin UdpMessaging
+LogPluginManager: Mounting Engine plugin ActorSequence
+LogPluginManager: Mounting Engine plugin LevelSequenceEditor
+LogPluginManager: Mounting Engine plugin SequencerScripting
+LogPluginManager: Mounting Engine plugin TemplateSequence
+LogPluginManager: Mounting Engine plugin OnlineBase
+LogPluginManager: Mounting Engine plugin OnlineServices
+LogPluginManager: Mounting Engine plugin OnlineSubsystemNull
+LogPluginManager: Mounting Engine plugin OnlineSubsystemUtils
+LogPluginManager: Mounting Engine plugin OnlineSubsystem
+LogPluginManager: Mounting Engine plugin LauncherChunkInstaller
+LogPluginManager: Mounting Engine plugin ActorLayerUtilities
+LogPluginManager: Mounting Engine plugin AndroidFileServer
+LogPluginManager: Mounting Engine plugin AndroidPermission
+LogPluginManager: Mounting Engine plugin AppleImageUtils
+LogPluginManager: Mounting Engine plugin ArchVisCharacter
+LogPluginManager: Mounting Engine plugin AssetTags
+LogPluginManager: Mounting Engine plugin AudioCapture
+LogPluginManager: Mounting Engine plugin AudioSynesthesia
+LogPluginManager: Mounting Engine plugin AudioWidgets
+LogPluginManager: Mounting Engine plugin CableComponent
+LogPluginManager: Mounting Engine plugin ChunkDownloader
+LogPluginManager: Mounting Engine plugin CustomMeshComponent
+LogPluginManager: Mounting Engine plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin GeometryCache
+LogPluginManager: Mounting Engine plugin GeometryProcessing
+LogPluginManager: Mounting Engine plugin GooglePAD
+LogPluginManager: Mounting Engine plugin InputDebugging
+LogPluginManager: Found config from plugin[InputDebugging] Input
+LogPluginManager: Mounting Engine plugin LocationServicesBPLibrary
+LogPluginManager: Mounting Engine plugin Metasound
+LogPluginManager: Mounting Engine plugin MobilePatchingUtils
+LogPluginManager: Mounting Engine plugin MsQuic
+LogPluginManager: Mounting Engine plugin ProceduralMeshComponent
+LogPluginManager: Mounting Engine plugin PropertyAccessEditor
+LogPluginManager: Mounting Engine plugin ResonanceAudio
+LogPluginManager: Mounting Engine plugin RigVM
+LogPluginManager: Mounting Engine plugin SignificanceManager
+LogPluginManager: Mounting Engine plugin SoundFields
+LogPluginManager: Mounting Engine plugin Synthesis
+LogPluginManager: Mounting Engine plugin WaveTable
+LogPluginManager: Mounting Engine plugin WindowsDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin WindowsMoviePlayer
+LogPluginManager: Mounting Engine plugin XInputDevice
+LogPluginManager: Mounting Engine plugin InterchangeTests
+LogPluginManager: Mounting Engine plugin TraceUtilities
+LogPluginManager: Mounting Engine plugin Takes
+LogPluginManager: Mounting Engine plugin WorldMetrics
+LogConfig: Applying CVar settings from Section [/Script/RenderDocPlugin.RenderDocPluginSettings] File [Engine]
+RenderDocPlugin: Display: RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+LogInit: Using libcurl 8.4.0
+LogInit:  - built for Windows
+LogInit:  - supports SSL with OpenSSL/1.1.1t
+LogInit:  - supports HTTP deflate (compression) using libz 1.3
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogInit: CreateHttpThread using FCurlHttpThread
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: Created online subsystem instance for: NULL
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+LogInit: ExecutableName: inventorykitServer.exe
+LogInit: Build: UE5-CL-0
+LogInit: Platform=WindowsServer
+LogInit: MachineId=d81a49c74e28d61bc1b25e84f4ed01a3
+LogInit: DeviceId=
+LogInit: Engine Version: 5.4.4-0+UE5
+LogInit: Compatible Engine Version: 5.4.0-0+UE5
+LogInit: Net CL: 0
+LogInit: OS: Windows 11 (23H2) [10.0.22631.5039] (), CPU: 12th Gen Intel(R) Core(TM) i7-12700K, GPU: NVIDIA GeForce RTX 3070 Ti
+LogInit: Compiled (64-bit): Mar 24 2025 01:14:30
+LogInit: Architecture: x64
+LogInit: Compiled with Visual C++: 19.38.33144.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: UE5
+LogInit: Command Line: -log
+LogInit: Base Directory: C:/UEProject/inventorykit/Package/WindowsServer/inventorykit/Binaries/Win64/
+LogInit: Allocator: binned2
+LogInit: Installed Engine Build: 0
+LogInit: This binary is optimized with LTO: no, PGO: no, instrumented for PGO data collection: no
+LogDevObjectVersion: Number of dev versions registered: 39
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 20
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 48
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 134
+LogDevObjectVersion:   FortniteValkyrie (8DBC2C5B-54A7-43E0-A768-FCBB7DA29060): 8
+LogDevObjectVersion:   FortniteSeason (5B4C06B7-2463-4AF8-805B-BF70CDF5D0DD): 12
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 13
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   UE5-Main (697DD581-E64F-41AB-AA4A-51ECBEB7B628): 119
+LogDevObjectVersion:   UE5-Release (D89B5E42-24BD-4D46-8412-ACA8DF641779): 51
+LogDevObjectVersion:   UE5-PrivateFrosty (59DA5D52-1232-4948-B878-597870B8E98B): 8
+LogDevObjectVersion:   UE5-Dev-Cooker (26075A32-730F-4708-88E9-8C32F1599D05): 0
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogDevObjectVersion:   UE5-Dev-LWCRendering (30D58BE3-95EA-4282-A6E3-B159D8EBB06A): 1
+LogDevObjectVersion:   Dev-RigVM (DC49959B-53C0-4DE7-9156-EA885E7C5D39): 9
+LogDevObjectVersion:   Dev-ControlRig (A7820CFB-20A7-4359-8C54-2C149623CF50): 30
+LogDevObjectVersion:   Dev-IKRig (F6DFBB78-BB50-A0E4-4018-B84D60CBAF23): 2
+LogInit: Presizing for max 2097152 objects, including 1 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogStreaming: Display: AsyncLoading2 - Created: Event Driven Loader: false, Async Loading Thread: false, Async Post Load: false
+LogStreaming: Display: AsyncLoading2 - Initialized
+LogInit: Object subsystem initialized
+LogConfig: Set CVar [[con.DebugEarlyDefault:1]]
+LogConfig: CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
+LogConfig: CVar [[con.DebugLateCheat:1]] deferred - dummy variable created
+LogConfig: CVar [[LogNamedEventFilters:Frame *]] deferred - dummy variable created
+LogConfig: Set CVar [[r.setres:1280x720]]
+LogConfig: CVar [[framepro.ScopeMinTimeMicroseconds:10]] deferred - dummy variable created
+LogConfig: Set CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]]
+LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
+LogConfig: CVar [[r.Occlusion.SingleRHIThreadStall:1]] deferred - dummy variable created
+LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
+LogConfig: CVar [[D3D12.Bindless.ResourceDescriptorHeapSize:100000]] deferred - dummy variable created
+LogConfig: CVar [[D3D12.Bindless.SamplerDescriptorHeapSize:2048]] deferred - dummy variable created
+[2025.03.23-17.16.53:304][  0]LogConfig: CVar [[con.DebugLateDefault:1]] deferred - dummy variable created
+[2025.03.23-17.16.53:304][  0]LogConfig: CVar [[con.DebugLateCheat:1]] deferred - dummy variable created
+[2025.03.23-17.16.53:305][  0]LogConfig: CVar [[LogNamedEventFilters:Frame *]] deferred - dummy variable created
+[2025.03.23-17.16.53:305][  0]LogConfig: CVar [[framepro.ScopeMinTimeMicroseconds:10]] deferred - dummy variable created
+[2025.03.23-17.16.53:305][  0]LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
+[2025.03.23-17.16.53:306][  0]LogConfig: CVar [[r.Occlusion.SingleRHIThreadStall:1]] deferred - dummy variable created
+[2025.03.23-17.16.53:306][  0]LogConfig: CVar [[D3D12.Bindless.ResourceDescriptorHeapSize:100000]] deferred - dummy variable created
+[2025.03.23-17.16.53:306][  0]LogConfig: CVar [[D3D12.Bindless.SamplerDescriptorHeapSize:2048]] deferred - dummy variable created
+[2025.03.23-17.16.53:307][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [Engine]
+[2025.03.23-17.16.53:307][  0]LogConfig: CVar [[VisualizeCalibrationColorMaterialPath:/Engine/EngineMaterials/PPM_DefaultCalibrationColor.PPM_DefaultCalibrationColor]] deferred - dummy variable created
+[2025.03.23-17.16.53:307][  0]LogConfig: CVar [[VisualizeCalibrationGrayscaleMaterialPath:/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale.PPM_DefaultCalibrationGrayscale]] deferred - dummy variable created
+[2025.03.23-17.16.53:307][  0]LogConfig: Set CVar [[r.GPUCrashDebugging:0]]
+[2025.03.23-17.16.53:307][  0]LogConfig: CVar [[MaxSkinBones:(Default=65536,PerPlatform=(("Mobile", 256)))]] deferred - dummy variable created
+[2025.03.23-17.16.53:308][  0]LogConfig: Set CVar [[r.DefaultFeature.MotionBlur:0]]
+[2025.03.23-17.16.53:308][  0]LogConfig: Set CVar [[r.Shaders.RemoveUnusedInterpolators:1]]
+[2025.03.23-17.16.53:308][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [Engine]
+[2025.03.23-17.16.53:308][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [Engine]
+[2025.03.23-17.16.53:309][  0]LogConfig: Set CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2025.03.23-17.16.53:309][  0]LogConfig: Set CVar [[s.AsyncLoadingThreadEnabled:1]]
+[2025.03.23-17.16.53:309][  0]LogConfig: Set CVar [[s.EventDrivenLoaderEnabled:1]]
+[2025.03.23-17.16.53:309][  0]LogConfig: Set CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2025.03.23-17.16.53:310][  0]LogConfig: Set CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2025.03.23-17.16.53:310][  0]LogConfig: Set CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2025.03.23-17.16.53:310][  0]LogConfig: Set CVar [[s.UseBackgroundLevelStreaming:1]]
+[2025.03.23-17.16.53:310][  0]LogConfig: Set CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2025.03.23-17.16.53:311][  0]LogConfig: Set CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2025.03.23-17.16.53:313][  0]LogConfig: Set CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2025.03.23-17.16.53:313][  0]LogConfig: Set CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2025.03.23-17.16.53:314][  0]LogConfig: Set CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2025.03.23-17.16.53:314][  0]LogConfig: Set CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2025.03.23-17.16.53:314][  0]LogConfig: CVar [[s.MaxPackageSummarySize:16384]] deferred - dummy variable created
+[2025.03.23-17.16.53:315][  0]LogConfig: Set CVar [[s.FlushStreamingOnExit:1]]
+[2025.03.23-17.16.53:315][  0]LogConfig: CVar [[FixedBootOrder:/Script/Engine/Default__SoundBase]] deferred - dummy variable created
+[2025.03.23-17.16.53:315][  0]LogConfig: CVar [[FixedBootOrder:/Script/Engine/Default__MaterialInterface]] deferred - dummy variable created
+[2025.03.23-17.16.53:315][  0]LogConfig: CVar [[FixedBootOrder:/Script/Engine/Default__DeviceProfileManager]] deferred - dummy variable created
+[2025.03.23-17.16.53:316][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [Engine]
+[2025.03.23-17.16.53:316][  0]LogConfig: Set CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2025.03.23-17.16.53:316][  0]LogConfig: Set CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2025.03.23-17.16.53:316][  0]LogConfig: Set CVar [[gc.FlushStreamingOnGC:0]]
+[2025.03.23-17.16.53:317][  0]LogConfig: Set CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2025.03.23-17.16.53:317][  0]LogConfig: Set CVar [[gc.AllowParallelGC:1]]
+[2025.03.23-17.16.53:318][  0]LogConfig: Set CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2025.03.23-17.16.53:318][  0]LogConfig: Set CVar [[gc.MaxObjectsInEditor:25165824]]
+[2025.03.23-17.16.53:318][  0]LogConfig: Set CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2025.03.23-17.16.53:319][  0]LogConfig: Set CVar [[gc.CreateGCClusters:1]]
+[2025.03.23-17.16.53:319][  0]LogConfig: Set CVar [[gc.MinGCClusterSize:5]]
+[2025.03.23-17.16.53:319][  0]LogConfig: Set CVar [[gc.AssetClustreringEnabled:0]]
+[2025.03.23-17.16.53:319][  0]LogConfig: Set CVar [[gc.ActorClusteringEnabled:0]]
+[2025.03.23-17.16.53:320][  0]LogConfig: Set CVar [[gc.UseDisregardForGCOnDedicatedServers:1]]
+[2025.03.23-17.16.53:320][  0]LogConfig: Set CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2025.03.23-17.16.53:320][  0]LogConfig: Set CVar [[gc.VerifyUObjectsAreNotFGCObjects:0]]
+[2025.03.23-17.16.53:320][  0]LogConfig: Set CVar [[gc.GarbageEliminationEnabled:1]]
+[2025.03.23-17.16.53:320][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [Engine]
+[2025.03.23-17.16.53:321][  0]LogConfig: CVar [[NetworkEmulationProfiles:(ProfileName="Average",ToolTip="Simulates average internet conditions")]] deferred - dummy variable created
+[2025.03.23-17.16.53:321][  0]LogConfig: CVar [[NetworkEmulationProfiles:(ProfileName="Bad",ToolTip="Simulates laggy internet conditions")]] deferred - dummy variable created
+[2025.03.23-17.16.53:321][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [Scalability]
+[2025.03.23-17.16.53:321][  0]LogConfig: Set CVar [[r.SkeletalMeshLODBias:0]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.ViewDistanceScale:1.0]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [Scalability]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.FXAA.Quality:4]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.TemporalAA.Quality:2]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.TSR.History.R11G11B10:1]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.TSR.History.ScreenPercentage:200]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.TSR.History.UpdateQuality:3]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.TSR.ShadingRejection.Flickering:1]]
+[2025.03.23-17.16.53:322][  0]LogConfig: Set CVar [[r.TSR.RejectionAntiAliasingQuality:2]]
+[2025.03.23-17.16.53:323][  0]LogConfig: Set CVar [[r.TSR.Resurrection:1]]
+[2025.03.23-17.16.53:323][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [Scalability]
+[2025.03.23-17.16.53:323][  0]LogConfig: Set CVar [[r.LightFunctionQuality:1]]
+[2025.03.23-17.16.53:323][  0]LogConfig: Set CVar [[r.ShadowQuality:5]]
+[2025.03.23-17.16.53:323][  0]LogConfig: Set CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2025.03.23-17.16.53:323][  0]LogConfig: Set CVar [[r.Shadow.MaxResolution:2048]]
+[2025.03.23-17.16.53:324][  0]LogConfig: Set CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2025.03.23-17.16.53:324][  0]LogConfig: Set CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2025.03.23-17.16.53:324][  0]LogConfig: Set CVar [[r.Shadow.DistanceScale:1.0]]
+[2025.03.23-17.16.53:324][  0]LogConfig: Set CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2025.03.23-17.16.53:324][  0]LogConfig: Set CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2025.03.23-17.16.53:324][  0]LogConfig: Set CVar [[r.DistanceFieldShadowing:1]]
+[2025.03.23-17.16.53:325][  0]LogConfig: Set CVar [[r.VolumetricFog:1]]
+[2025.03.23-17.16.53:325][  0]LogConfig: Set CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2025.03.23-17.16.53:325][  0]LogConfig: Set CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2025.03.23-17.16.53:325][  0]LogConfig: Set CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2025.03.23-17.16.53:325][  0]LogConfig: Set CVar [[r.LightMaxDrawDistanceScale:1]]
+[2025.03.23-17.16.53:326][  0]LogConfig: Set CVar [[r.CapsuleShadows:1]]
+[2025.03.23-17.16.53:327][  0]LogConfig: Set CVar [[r.Shadow.Virtual.MaxPhysicalPages:4096]]
+[2025.03.23-17.16.53:327][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectional:-1.5]]
+[2025.03.23-17.16.53:327][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectionalMoving:-1.5]]
+[2025.03.23-17.16.53:328][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocal:0.0]]
+[2025.03.23-17.16.53:328][  0]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocalMoving:1.0]]
+[2025.03.23-17.16.53:328][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountDirectional:8]]
+[2025.03.23-17.16.53:328][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayDirectional:4]]
+[2025.03.23-17.16.53:328][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountLocal:8]]
+[2025.03.23-17.16.53:328][  0]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayLocal:4]]
+[2025.03.23-17.16.53:329][  0]LogConfig: Applying CVar settings from Section [GlobalIlluminationQuality@3] File [Scalability]
+[2025.03.23-17.16.53:329][  0]LogConfig: Set CVar [[r.DistanceFieldAO:1]]
+[2025.03.23-17.16.53:329][  0]LogConfig: Set CVar [[r.AOQuality:2]]
+[2025.03.23-17.16.53:329][  0]LogConfig: Set CVar [[r.Lumen.DiffuseIndirect.Allow:1]]
+[2025.03.23-17.16.53:329][  0]LogConfig: Set CVar [[r.LumenScene.Radiosity.ProbeSpacing:4]]
+[2025.03.23-17.16.53:330][  0]LogConfig: Set CVar [[r.LumenScene.Radiosity.HemisphereProbeResolution:4]]
+[2025.03.23-17.16.53:330][  0]LogConfig: Set CVar [[r.Lumen.TraceMeshSDFs.Allow:1]]
+[2025.03.23-17.16.53:330][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution:32]]
+[2025.03.23-17.16.53:330][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget:300]]
+[2025.03.23-17.16.53:330][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.DownsampleFactor:16]]
+[2025.03.23-17.16.53:330][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.TracingOctahedronResolution:8]]
+[2025.03.23-17.16.53:331][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.IrradianceFormat:0]]
+[2025.03.23-17.16.53:331][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.StochasticInterpolation:0]]
+[2025.03.23-17.16.53:331][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.FullResolutionJitterWidth:1]]
+[2025.03.23-17.16.53:331][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse:1]]
+[2025.03.23-17.16.53:332][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth:1]]
+[2025.03.23-17.16.53:332][  0]LogConfig: Set CVar [[r.Lumen.ScreenProbeGather.ShortRangeAO.HardwareRayTracing:0]]
+[2025.03.23-17.16.53:332][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.GridPixelSize:32]]
+[2025.03.23-17.16.53:332][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.TraceFromVolume:1]]
+[2025.03.23-17.16.53:332][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.TracingOctahedronResolution:3]]
+[2025.03.23-17.16.53:332][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution:8]]
+[2025.03.23-17.16.53:333][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget:200]]
+[2025.03.23-17.16.53:333][  0]LogConfig: Set CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2025.03.23-17.16.53:333][  0]LogConfig: Applying CVar settings from Section [ReflectionQuality@3] File [Scalability]
+[2025.03.23-17.16.53:333][  0]LogConfig: Set CVar [[r.SSR.Quality:3]]
+[2025.03.23-17.16.53:333][  0]LogConfig: Set CVar [[r.SSR.HalfResSceneColor:0]]
+[2025.03.23-17.16.53:334][  0]LogConfig: Set CVar [[r.Lumen.Reflections.Allow:1]]
+[2025.03.23-17.16.53:334][  0]LogConfig: Set CVar [[r.Lumen.Reflections.DownsampleFactor:1]]
+[2025.03.23-17.16.53:334][  0]LogConfig: Set CVar [[r.Lumen.Reflections.MaxRoughnessToTraceForFoliage:0.4]]
+[2025.03.23-17.16.53:334][  0]LogConfig: Set CVar [[r.Lumen.Reflections.ScreenSpaceReconstruction.TonemapStrength:0]]
+[2025.03.23-17.16.53:334][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyReflections.FrontLayer.Allow:1]]
+[2025.03.23-17.16.53:334][  0]LogConfig: Set CVar [[r.Lumen.TranslucencyReflections.FrontLayer.Enable:0]]
+[2025.03.23-17.16.53:335][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [Scalability]
+[2025.03.23-17.16.53:335][  0]LogConfig: Set CVar [[r.MotionBlurQuality:4]]
+[2025.03.23-17.16.53:335][  0]LogConfig: Set CVar [[r.MotionBlur.HalfResGather:0]]
+[2025.03.23-17.16.53:335][  0]LogConfig: Set CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2025.03.23-17.16.53:335][  0]LogConfig: Set CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2025.03.23-17.16.53:336][  0]LogConfig: Set CVar [[r.AmbientOcclusionLevels:-1]]
+[2025.03.23-17.16.53:336][  0]LogConfig: Set CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2025.03.23-17.16.53:336][  0]LogConfig: Set CVar [[r.DepthOfFieldQuality:2]]
+[2025.03.23-17.16.53:336][  0]LogConfig: Set CVar [[r.RenderTargetPoolMin:400]]
+[2025.03.23-17.16.53:336][  0]LogConfig: Set CVar [[r.LensFlareQuality:2]]
+[2025.03.23-17.16.53:336][  0]LogConfig: Set CVar [[r.SceneColorFringeQuality:1]]
+[2025.03.23-17.16.53:337][  0]LogConfig: Set CVar [[r.EyeAdaptationQuality:2]]
+[2025.03.23-17.16.53:337][  0]LogConfig: Set CVar [[r.BloomQuality:5]]
+[2025.03.23-17.16.53:337][  0]LogConfig: Set CVar [[r.Bloom.ScreenPercentage:50.000]]
+[2025.03.23-17.16.53:337][  0]LogConfig: Set CVar [[r.FastBlurThreshold:100]]
+[2025.03.23-17.16.53:337][  0]LogConfig: Set CVar [[r.Upscale.Quality:3]]
+[2025.03.23-17.16.53:337][  0]LogConfig: Set CVar [[r.LightShaftQuality:1]]
+[2025.03.23-17.16.53:338][  0]LogConfig: Set CVar [[r.Filter.SizeScale:1]]
+[2025.03.23-17.16.53:338][  0]LogConfig: Set CVar [[r.Tonemapper.Quality:5]]
+[2025.03.23-17.16.53:338][  0]LogConfig: Set CVar [[r.DOF.Gather.ResolutionDivisor:2         ; lower gathering resolution]]
+[2025.03.23-17.16.53:338][  0]LogConfig: Set CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2025.03.23-17.16.53:338][  0]LogConfig: Set CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2025.03.23-17.16.53:338][  0]LogConfig: Set CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2025.03.23-17.16.53:339][  0]LogConfig: Set CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2025.03.23-17.16.53:339][  0]LogConfig: Set CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2025.03.23-17.16.53:339][  0]LogConfig: Set CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2025.03.23-17.16.53:339][  0]LogConfig: Set CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2025.03.23-17.16.53:339][  0]LogConfig: Set CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [Scalability]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.Streaming.MipBias:0]]
+[2025.03.23-17.16.53:340][  0]LogConfig: Set CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2025.03.23-17.16.53:342][  0]LogConfig: Set CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2025.03.23-17.16.53:343][  0]LogConfig: Set CVar [[r.Streaming.Boost:1]]
+[2025.03.23-17.16.53:343][  0]LogConfig: Set CVar [[r.MaxAnisotropy:8]]
+[2025.03.23-17.16.53:343][  0]LogConfig: Set CVar [[r.VT.MaxAnisotropy:8]]
+[2025.03.23-17.16.53:343][  0]LogConfig: Set CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2025.03.23-17.16.53:344][  0]LogConfig: Set CVar [[r.Streaming.PoolSize:1000]]
+[2025.03.23-17.16.53:344][  0]LogConfig: Set CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2025.03.23-17.16.53:344][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [Scalability]
+[2025.03.23-17.16.53:344][  0]LogConfig: Set CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2025.03.23-17.16.53:344][  0]LogConfig: Set CVar [[r.RefractionQuality:2]]
+[2025.03.23-17.16.53:344][  0]LogConfig: Set CVar [[r.SceneColorFormat:4]]
+[2025.03.23-17.16.53:344][  0]LogConfig: Set CVar [[r.DetailMode:3]]
+[2025.03.23-17.16.53:345][  0]LogConfig: Set CVar [[r.TranslucencyVolumeBlur:1]]
+[2025.03.23-17.16.53:345][  0]LogConfig: Set CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2025.03.23-17.16.53:345][  0]LogConfig: Set CVar [[r.SSS.Scale:1]]
+[2025.03.23-17.16.53:345][  0]LogConfig: Set CVar [[r.SSS.SampleSet:2]]
+[2025.03.23-17.16.53:345][  0]LogConfig: Set CVar [[r.SSS.Quality:1]]
+[2025.03.23-17.16.53:345][  0]LogConfig: Set CVar [[r.SSS.HalfRes:0]]
+[2025.03.23-17.16.53:346][  0]LogConfig: Set CVar [[r.SSGI.Quality:3]]
+[2025.03.23-17.16.53:346][  0]LogConfig: Set CVar [[r.EmitterSpawnRateScale:1.0]]
+[2025.03.23-17.16.53:346][  0]LogConfig: Set CVar [[r.ParticleLightQuality:2]]
+[2025.03.23-17.16.53:346][  0]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2025.03.23-17.16.53:346][  0]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2025.03.23-17.16.53:347][  0]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2025.03.23-17.16.53:347][  0]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2025.03.23-17.16.53:347][  0]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2025.03.23-17.16.53:347][  0]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2025.03.23-17.16.53:348][  0]LogConfig: Set CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2025.03.23-17.16.53:348][  0]LogConfig: Set CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2025.03.23-17.16.53:348][  0]LogConfig: Set CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2025.03.23-17.16.53:348][  0]LogConfig: Set CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2025.03.23-17.16.53:348][  0]LogConfig: Set CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2025.03.23-17.16.53:349][  0]LogConfig: Set CVar [[fx.Niagara.QualityLevel:3]]
+[2025.03.23-17.16.53:349][  0]LogConfig: Set CVar [[r.Refraction.OffsetQuality:1]]
+[2025.03.23-17.16.53:350][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [Scalability]
+[2025.03.23-17.16.53:350][  0]LogConfig: Set CVar [[foliage.DensityScale:1.0]]
+[2025.03.23-17.16.53:350][  0]LogConfig: Set CVar [[grass.DensityScale:1.0]]
+[2025.03.23-17.16.53:350][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [Scalability]
+[2025.03.23-17.16.53:350][  0]LogConfig: Set CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2025.03.23-17.16.53:350][  0]LogConfig: Set CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2025.03.23-17.16.53:351][  0]LogConfig: Set CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2025.03.23-17.16.53:351][  0]LogConfig: Set CVar [[r.AnisotropicMaterials:1]]
+[2025.03.23-17.16.53:351][  0]LogConfig: Applying CVar settings from Section [LandscapeQuality@3] File [Scalability]
+[2025.03.23-17.16.53:351][  0]LogInit: Selected Device Profile: [WindowsServer]
+[2025.03.23-17.16.53:351][  0]LogHAL: Display: Platform has ~ 32 GB [34125176832 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2025.03.23-17.16.53:351][  0]LogDeviceProfileManager: Going up to parent DeviceProfile [Windows]
+[2025.03.23-17.16.53:351][  0]LogDeviceProfileManager: Going up to parent DeviceProfile []
+[2025.03.23-17.16.53:352][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2025.03.23-17.16.53:352][  0]LogConfig: Set CVar [[r.DumpShaderDebugInfo:2]]
+[2025.03.23-17.16.53:352][  0]LogConfig: Set CVar [[r.Shaders.WarningsAsErrors:0 ;; 0: off, 1: global shaders, 2: all]]
+[2025.03.23-17.16.53:352][  0]LogConfig: Set CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2025.03.23-17.16.53:352][  0]LogConfig: Set CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2025.03.23-17.16.53:353][  0]LogConfig: Applying CVar settings from Section [Startup_Windows] File [../../../Engine/Config/ConsoleVariables.ini]
+[2025.03.23-17.16.53:353][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [Engine]
+[2025.03.23-17.16.53:353][  0]LogConfig: Set CVar [[memory.MemoryPressureCriticalThresholdMB:512]]
+[2025.03.23-17.16.53:353][  0]LogInit: Computer: HYUNIL
+[2025.03.23-17.16.53:353][  0]LogInit: User: gusdu
+[2025.03.23-17.16.53:353][  0]LogInit: CPU Page size=4096, Cores=12
+[2025.03.23-17.16.53:354][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2025.03.23-17.16.53:701][  0]LogMemory: Process is running as part of a Windows Job with separate resource limits
+[2025.03.23-17.16.53:702][  0]LogMemory: Memory total: Physical=31.8GB (32GB approx) Virtual=41.3GB
+[2025.03.23-17.16.53:702][  0]LogMemory: Platform Memory Stats for WindowsServer
+[2025.03.23-17.16.53:702][  0]LogMemory: Process Physical Memory: 138.79 MB used, 139.44 MB peak
+[2025.03.23-17.16.53:703][  0]LogMemory: Process Virtual Memory: 104.36 MB used, 104.36 MB peak
+[2025.03.23-17.16.53:703][  0]LogMemory: Physical Memory: 18405.10 MB used,  14139.20 MB free, 32544.30 MB total
+[2025.03.23-17.16.53:703][  0]LogMemory: Virtual Memory: 31918.26 MB used,  10354.05 MB free, 42272.30 MB total
+[2025.03.23-17.16.53:703][  0]LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+[2025.03.23-17.16.53:709][  0]LogWindows: WindowsPlatformFeatures disabled or dedicated server build
+[2025.03.23-17.16.53:710][  0]LogInit: Physics initialised using underlying interface: Chaos
+[2025.03.23-17.16.53:710][  0]LogInit: Using OS detected language (ko-KR).
+[2025.03.23-17.16.53:710][  0]LogInit: Using OS detected locale (ko-KR).
+[2025.03.23-17.16.53:710][  0]LogTextLocalizationManager: No localization for 'ko-KR' exists, so 'en' will be used for the language.
+[2025.03.23-17.16.53:711][  0]LogTextLocalizationManager: No localization for 'ko-KR' exists, so 'en' will be used for the locale.
+[2025.03.23-17.16.53:711][  0]LogInit: Setting process to per monitor DPI aware
+[2025.03.23-17.16.53:724][  0]LogInit: Initializing FReadOnlyCVARCache
+[2025.03.23-17.16.53:729][  0]LogRendererCore: Ray tracing is disabled. Reason: disabled through project setting (r.RayTracing=0).
+[2025.03.23-17.16.53:735][  0]LogInit: Using OS detected language (ko-KR).
+[2025.03.23-17.16.53:735][  0]LogInit: Using OS detected locale (ko-KR).
+[2025.03.23-17.16.53:736][  0]LogTextLocalizationManager: No localization for 'ko-KR' exists, so 'en' will be used for the language.
+[2025.03.23-17.16.53:736][  0]LogTextLocalizationManager: No localization for 'ko-KR' exists, so 'en' will be used for the locale.
+[2025.03.23-17.16.53:736][  0]LogAssetRegistry: FAssetRegistry took 0.0002 seconds to start up
+[2025.03.23-17.16.53:810][  0]LogStreaming: Display: FlushAsyncLoading(1): 1 QueuedPackages, 0 AsyncPackages
+[2025.03.23-17.16.53:813][  0]LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+[2025.03.23-17.16.53:813][  0]LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+[2025.03.23-17.16.53:814][  0]LogDeviceProfileManager: Active device profile: [000002BD9D06B980][000002BD9C8BB6E0 66] WindowsServer
+[2025.03.23-17.16.53:814][  0]LogCsvProfiler: Display: Metadata set : deviceprofile="WindowsServer"
+[2025.03.23-17.16.53:817][  0]LogTextureEncodingSettings: Display: Texture Encode Speed: Final (cook).
+[2025.03.23-17.16.53:817][  0]LogTextureEncodingSettings: Display: Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+[2025.03.23-17.16.53:818][  0]LogTextureEncodingSettings: Display: Shared linear texture encoding: Disabled
+[2025.03.23-17.16.53:835][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2025.03.23-17.16.53:835][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2025.03.23-17.16.53:843][  0]LogPackageLocalizationCache: Processed 46 localized package path(s) for 1 prioritized culture(s) in 0.000104 seconds
+[2025.03.23-17.16.53:847][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: 945AF207A1344BE18000000000009B00 | Instance: F4969B5C4B5D6B5902FD158822B0FF7B (HYUNIL-27516).
+[2025.03.23-17.16.53:869][  0]LogAudio: Display: Registering Engine Module Parameter Interfaces...
+[2025.03.23-17.16.53:870][  0]LogMetasoundEngine: MetaSound Engine Initialized
+[2025.03.23-17.16.53:870][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2025.03.23-17.16.53:876][  0]LogUObjectArray: 24512 objects as part of root set at end of initial load.
+[2025.03.23-17.16.53:876][  0]LogUObjectArray: 4 objects are not in the root set, but can never be destroyed because they are in the DisregardForGC set.
+[2025.03.23-17.16.53:877][  0]LogUObjectAllocator: 5214752 out of 0 bytes used by permanent object pool.
+[2025.03.23-17.16.53:877][  0]LogUObjectArray: CloseDisregardForGC: 24512/24512 objects in disregard for GC pool
+[2025.03.23-17.16.53:884][  0]LogStreaming: Display: AsyncLoading2 - NotifyRegistrationComplete: Registered 23949 public script object entries (632.00 KB)
+[2025.03.23-17.16.53:884][  0]LogStreaming: Display: AsyncLoading2 - Thread Started: false, IsInitialLoad: false
+[2025.03.23-17.16.53:884][  0]LogEngine: Initializing Engine...
+[2025.03.23-17.16.53:885][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2025.03.23-17.16.53:887][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2025.03.23-17.16.53:887][  0]LogInit: Texture streaming: Disabled
+[2025.03.23-17.16.53:889][  0]LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+[2025.03.23-17.16.53:908][  0]LogWorldMetrics: [UWorldMetricsSubsystem::Initialize]
+[2025.03.23-17.16.53:908][  0]LogNiagara: UAV Float16 is not supported, compressed GPU emitters will be disabled.
+[2025.03.23-17.16.53:909][  0]LogInit: Display: Game Engine Initialized.
+[2025.03.23-17.16.53:910][  0]LogInit: Display: Starting Game.
+[2025.03.23-17.16.53:910][  0]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/InventoryKit/Environment/Maps/PersistentLevel?Name=Player"
+[2025.03.23-17.16.53:910][  0]LogNet: Browse: /Game/InventoryKit/Environment/Maps/PersistentLevel?Name=Player
+[2025.03.23-17.16.53:911][  0]LogLoad: LoadMap: /Game/InventoryKit/Environment/Maps/PersistentLevel?Name=Player
+[2025.03.23-17.16.53:911][  0]LogWorld: BeginTearingDown for /Temp/Untitled_0
+[2025.03.23-17.16.53:912][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2025.03.23-17.16.53:913][  0]LogWorldMetrics: [UWorldMetricsSubsystem::Deinitialize]
+[2025.03.23-17.16.53:913][  0]LogWorldMetrics: [UWorldMetricsSubsystem::Clear]
+[2025.03.23-17.16.53:919][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2025.03.23-17.16.53:921][  0]LogStreaming: Display: 0.001 ms for processing 38 objects in RemoveUnreachableObjects(Queued=1, Async=0). Removed 0 (296->296) packages and 1 (727->726) public exports.
+[2025.03.23-17.16.53:924][  0]LogWorldMetrics: [UWorldMetricsSubsystem::Initialize]
+[2025.03.23-17.16.53:925][  0]LogLoad: Game class is 'BP_GameGameMode_C'
+[2025.03.23-17.16.53:925][  0]LogCsvProfiler: Display: Metadata set : iris="0"
+[2025.03.23-17.16.53:925][  0]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2025.03.23-17.16.53:925][  0]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2025.03.23-17.16.53:925][  0]LogNet: InitBase GameNetDriver (NetDriverDefinition GameNetDriver) using replication model Generic
+[2025.03.23-17.16.53:926][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumConnections
+[2025.03.23-17.16.53:926][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric Connections
+[2025.03.23-17.16.53:927][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric GatherPrioritizeTimeMS
+[2025.03.23-17.16.53:927][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric InPacketsClientAvg
+[2025.03.23-17.16.53:927][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric InPacketsClientMax
+[2025.03.23-17.16.53:927][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumberOfActiveActors
+[2025.03.23-17.16.53:927][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumberOfFullyDormantActors
+[2025.03.23-17.16.53:927][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumClientUpdateLevelVisibility
+[2025.03.23-17.16.53:928][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumOpenChannels
+[2025.03.23-17.16.53:928][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumReplicateActorCallsPerConAvg
+[2025.03.23-17.16.53:928][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumSkippedObjectEmptyUpdates
+[2025.03.23-17.16.53:928][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric NumTickingChannels
+[2025.03.23-17.16.53:929][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric OutKBytes
+[2025.03.23-17.16.53:930][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric OutNetGUIDKBytesSec
+[2025.03.23-17.16.53:930][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric OutPacketsClientAvg
+[2025.03.23-17.16.53:930][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric OutPacketsClientMax
+[2025.03.23-17.16.53:930][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric ReplicateActorTimeMS
+[2025.03.23-17.16.53:931][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric SatConnections
+[2025.03.23-17.16.53:931][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric ServerReplicateActorTimeMS
+[2025.03.23-17.16.53:931][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric SharedSerializationPropertyHit
+[2025.03.23-17.16.53:932][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric SharedSerializationPropertyMiss
+[2025.03.23-17.16.53:932][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric SharedSerializationRPCHit
+[2025.03.23-17.16.53:932][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric SharedSerializationRPCMiss
+[2025.03.23-17.16.53:932][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric OutgoingReliableMessageQueueMaxSize
+[2025.03.23-17.16.53:932][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsCSV_Replication for metric IncomingReliableMessageQueueMaxSize
+[2025.03.23-17.16.53:932][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric NumConnections
+[2025.03.23-17.16.53:933][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric AvgPing
+[2025.03.23-17.16.53:933][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InBunches
+[2025.03.23-17.16.53:933][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InPackets
+[2025.03.23-17.16.53:933][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InPacketsClientPerSecondAvg
+[2025.03.23-17.16.53:933][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InPacketsClientPerSecondMax
+[2025.03.23-17.16.53:933][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InPacketsClientPerSecondMin
+[2025.03.23-17.16.53:934][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InPacketsLost
+[2025.03.23-17.16.53:934][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InRate
+[2025.03.23-17.16.53:934][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InRateClientAvg
+[2025.03.23-17.16.53:934][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InRateClientMax
+[2025.03.23-17.16.53:934][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric InRateClientMin
+[2025.03.23-17.16.53:934][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric MaxPacketOverhead
+[2025.03.23-17.16.53:935][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric MaxPing
+[2025.03.23-17.16.53:935][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric MinPing
+[2025.03.23-17.16.53:935][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric NumClients
+[2025.03.23-17.16.53:936][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric Connections
+[2025.03.23-17.16.53:936][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutBunches
+[2025.03.23-17.16.53:936][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutPackets
+[2025.03.23-17.16.53:936][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutPacketsClientPerSecondAvg
+[2025.03.23-17.16.53:937][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutPacketsClientPerSecondMax
+[2025.03.23-17.16.53:937][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutPacketsClientPerSecondMin
+[2025.03.23-17.16.53:937][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutPacketsLost
+[2025.03.23-17.16.53:937][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutRate
+[2025.03.23-17.16.53:937][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutRateClientAvg
+[2025.03.23-17.16.53:937][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutRateClientMax
+[2025.03.23-17.16.53:938][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric OutRateClientMin
+[2025.03.23-17.16.53:938][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt0
+[2025.03.23-17.16.53:938][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt1
+[2025.03.23-17.16.53:938][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt2
+[2025.03.23-17.16.53:938][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt3
+[2025.03.23-17.16.53:938][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt4
+[2025.03.23-17.16.53:939][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt5
+[2025.03.23-17.16.53:939][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt6
+[2025.03.23-17.16.53:939][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric PingBucketInt7
+[2025.03.23-17.16.53:939][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric ClosedConnectionsDueToReliableBufferOverflow
+[2025.03.23-17.16.53:939][  0]LogNet: Registering network metrics listener /Script/Engine.NetworkMetricsPerfCounters for metric AddedConnections
+[2025.03.23-17.16.53:940][  0]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2025.03.23-17.16.53:940][  0]LogNet: Created socket for bind address: 0.0.0.0:7777
+[2025.03.23-17.16.53:940][  0]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2025.03.23-17.16.53:940][  0]LogNet: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522 IpNetDriver listening on port 7777
+[2025.03.23-17.16.53:942][  0]LogWorld: Bringing World /Game/InventoryKit/Environment/Maps/PersistentLevel.PersistentLevel up for play (max tick rate 30) at 2025.03.24-02.16.53
+[2025.03.23-17.16.53:943][  0]LogWorld: Bringing up level for play took: 0.002451
+[2025.03.23-17.16.53:944][  0]LogLoad: Took 0.032944 seconds to LoadMap(/Game/InventoryKit/Environment/Maps/PersistentLevel)
+[2025.03.23-17.16.53:944][  0]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/InventoryKit/Environment/Maps/PersistentLevel
+[2025.03.23-17.16.53:944][  0]LogPakFile: AllPaks IndexSizes: DirectoryHashSize=175584, PathHashSize=16, EntriesSize=19104, TotalSize=194704
+[2025.03.23-17.16.53:950][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2025.03.23-17.16.53:950][  0]LogLoad: (Engine Initialization) Total time: 1.04 seconds
+[2025.03.23-17.17.14:946][623]LogNet: NotifyAcceptingConnection accepted from: 192.168.0.1:54816
+[2025.03.23-17.17.14:946][623]LogNetVersion: inventorykit 1.0.0.0, NetCL: 0, EngineNetworkVersion: 34, GameNetworkVersion: 0 (Checksum: 4171368751)
+[2025.03.23-17.17.14:946][623]LogHandshake: SendConnectChallenge. Timestamp: 20.995002, Cookie: 096241157224210182039140222229061216060248233239002042210238
+[2025.03.23-17.17.14:980][624]LogNet: NotifyAcceptingConnection accepted from: 192.168.0.1:54816
+[2025.03.23-17.17.14:980][624]LogHandshake: SendChallengeAck. InCookie: 096241157224210182039140222229061216060248233239002042210238
+[2025.03.23-17.17.14:980][624]LogNet: Server accepting post-challenge connection from: 192.168.0.1:54816
+[2025.03.23-17.17.14:980][624]LogNet: IpConnection_2147482448 setting maximum channels to: 32767
+[2025.03.23-17.17.14:981][624]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2025.03.23-17.17.14:982][624]LogNet: NotifyAcceptedConnection: Name: PersistentLevel, TimeStamp: 03/24/25 02:17:14, [UNetConnection] RemoteAddr: 192.168.0.1:54816, Name: IpConnection_2147482448, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2025.03.23-17.17.14:982][624]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 192.168.0.1:54816, Name: IpConnection_2147482448, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2025.03.23-17.17.15:014][625]LogNet: NotifyAcceptingChannel Control 0 server World /Game/InventoryKit/Environment/Maps/PersistentLevel.PersistentLevel: Accepted
+[2025.03.23-17.17.15:014][625]LogNet: Remote platform little endian=1
+[2025.03.23-17.17.15:014][625]LogNet: This platform little endian=1
+[2025.03.23-17.17.15:048][626]LogNet: Login request: ?Name=hyunil-161FD090454BFA9AC81E89B332B31428 userId: NULL:hyunil-161FD090454BFA9AC81E89B332B31428 platform: NULL
+[2025.03.23-17.17.15:114][628]LogNet: Client netspeed is 100000
+[2025.03.23-17.17.15:114][628]LogNet: Join request: /Game/InventoryKit/Environment/Maps/PersistentLevel?Name=hyunil-161FD090454BFA9AC81E89B332B31428?SplitscreenCount=1
+[2025.03.23-17.17.15:117][628]LogNet: Join succeeded: hyunil-161FD090454BF
+[2025.03.23-17.17.25:183][920]LogNet: NotifyAcceptingConnection accepted from: 192.168.0.1:61953
+[2025.03.23-17.17.25:183][920]LogHandshake: SendConnectChallenge. Timestamp: 31.232181, Cookie: 055136123137245025100114145123172221238249196098204185141047
+[2025.03.23-17.17.25:217][921]LogNet: NotifyAcceptingConnection accepted from: 192.168.0.1:61953
+[2025.03.23-17.17.25:217][921]LogHandshake: SendChallengeAck. InCookie: 055136123137245025100114145123172221238249196098204185141047
+[2025.03.23-17.17.25:217][921]LogNet: Server accepting post-challenge connection from: 192.168.0.1:61953
+[2025.03.23-17.17.25:217][921]LogNet: IpConnection_2147482425 setting maximum channels to: 32767
+[2025.03.23-17.17.25:218][921]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2025.03.23-17.17.25:218][921]LogNet: NotifyAcceptedConnection: Name: PersistentLevel, TimeStamp: 03/24/25 02:17:25, [UNetConnection] RemoteAddr: 192.168.0.1:61953, Name: IpConnection_2147482425, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2025.03.23-17.17.25:218][921]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 192.168.0.1:61953, Name: IpConnection_2147482425, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2025.03.23-17.17.25:250][922]LogNet: NotifyAcceptingChannel Control 0 server World /Game/InventoryKit/Environment/Maps/PersistentLevel.PersistentLevel: Accepted
+[2025.03.23-17.17.25:250][922]LogNet: Remote platform little endian=1
+[2025.03.23-17.17.25:250][922]LogNet: This platform little endian=1
+[2025.03.23-17.17.25:283][923]LogNet: Login request: ?Name=hyunil-5E45ED9942020A3676C41BB6320B7563 userId: NULL:hyunil-5E45ED9942020A3676C41BB6320B7563 platform: NULL
+[2025.03.23-17.17.25:351][925]LogNet: Client netspeed is 100000
+[2025.03.23-17.17.25:352][925]LogNet: Join request: /Game/InventoryKit/Environment/Maps/PersistentLevel?Name=hyunil-5E45ED9942020A3676C41BB6320B7563?SplitscreenCount=1
+[2025.03.23-17.17.25:355][925]LogNet: Join succeeded: hyunil-5E45ED9942020
+[2025.03.23-17.17.55:109][816]LogStreaming: Display: 0.001 ms for processing 53 objects in RemoveUnreachableObjects(Queued=0, Async=0). Removed 0 (313->313) packages and 0 (786->786) public exports.
+[2025.03.23-17.18.02:217][ 29]LogNet: UChannel::ReceivedSequencedBunch: Bunch.bClose == true. ChIndex == 0. Calling ConditionalCleanUp.
+[2025.03.23-17.18.02:217][ 29]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 192.168.0.1:54816, Name: IpConnection_2147482448, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: BP_GamePlayerController_C_2147482442, Owner: BP_GamePlayerController_C_2147482442, UniqueId: NULL:hyunil-161FD090454BFA9AC81E89B332B31428
+[2025.03.23-17.18.02:217][ 29]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 192.168.0.1:54816, Name: IpConnection_2147482448, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: BP_GamePlayerController_C_2147482442, Owner: BP_GamePlayerController_C_2147482442, UniqueId: NULL:hyunil-161FD090454BFA9AC81E89B332B31428, Channels: 13, Time: 2025.03.23-17.18.02
+[2025.03.23-17.18.02:217][ 29]LogNet: UNetConnection::SendCloseReason:
+[2025.03.23-17.18.02:218][ 29]LogNet:  - Result=ControlChannelClose, ErrorContext="ControlChannelClose"
+[2025.03.23-17.18.02:218][ 29]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 192.168.0.1:54816, Name: IpConnection_2147482448, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: BP_GamePlayerController_C_2147482442, Owner: BP_GamePlayerController_C_2147482442, UniqueId: NULL:hyunil-161FD090454BFA9AC81E89B332B31428
+[2025.03.23-17.18.03:181][ 58]LogNet: UChannel::ReceivedSequencedBunch: Bunch.bClose == true. ChIndex == 0. Calling ConditionalCleanUp.
+[2025.03.23-17.18.03:181][ 58]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 192.168.0.1:61953, Name: IpConnection_2147482425, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: BP_GamePlayerController_C_2147482419, Owner: BP_GamePlayerController_C_2147482419, UniqueId: NULL:hyunil-5E45ED9942020A3676C41BB6320B7563
+[2025.03.23-17.18.03:182][ 58]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 192.168.0.1:61953, Name: IpConnection_2147482425, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: BP_GamePlayerController_C_2147482419, Owner: BP_GamePlayerController_C_2147482419, UniqueId: NULL:hyunil-5E45ED9942020A3676C41BB6320B7563, Channels: 11, Time: 2025.03.23-17.18.03
+[2025.03.23-17.18.03:182][ 58]LogNet: UNetConnection::SendCloseReason:
+[2025.03.23-17.18.03:183][ 58]LogNet:  - Result=ControlChannelClose, ErrorContext="ControlChannelClose"
+[2025.03.23-17.18.03:183][ 58]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 192.168.0.1:61953, Name: IpConnection_2147482425, Driver: Name:GameNetDriver Def:GameNetDriver IpNetDriver_2147482522, IsServer: YES, PC: BP_GamePlayerController_C_2147482419, Owner: BP_GamePlayerController_C_2147482419, UniqueId: NULL:hyunil-5E45ED9942020A3676C41BB6320B7563
+[2025.03.23-17.18.05:776][137]LogCore: Engine exit requested (reason: ConsoleCtrl RequestExit)

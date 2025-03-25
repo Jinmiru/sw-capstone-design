@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LocalizableMessage.cpp.obj": [
+			"LocalizableMessage.gen.cpp.obj",
+			"LocalizableMessage.init.gen.cpp.obj",
+			"LocalizableMessageBaseParameters.gen.cpp.obj",
+			"LocalizableMessage.cpp.obj",
+			"LocalizableMessageModule.cpp.obj",
+			"LocalizableMessageProcessor.cpp.obj",
+			"LocalizableMessageTypes.cpp.obj"
+		]
+	}
+}

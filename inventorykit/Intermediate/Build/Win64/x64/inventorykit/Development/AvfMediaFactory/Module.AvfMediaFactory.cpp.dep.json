@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\avfmediafactory\\module.avfmediafactory.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\avfmediafactory\\definitions.avfmediafactory.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\avfmediafactory\\uht\\avfmediafactory.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\avfmediafactory\\uht\\avfmediasettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\avfmedia\\source\\avfmediafactory\\public\\avfmediasettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\avfmediafactory\\uht\\avfmediasettings.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\avfmedia\\source\\avfmediafactory\\private\\avfmediafactoryclasses.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\avfmedia\\source\\avfmediafactory\\private\\avfmediafactorymodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\avfmedia\\source\\avfmediafactory\\private\\avfmediafactoryprivate.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\media\\public\\imediamodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\media\\public\\imediaplayerfactory.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\avfmedia\\source\\avfmedia\\public\\iavfmediamodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

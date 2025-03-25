@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ReliableHComp.cpp.obj": [
+			"ReliabilityHandlerComponent.cpp.obj"
+		]
+	}
+}

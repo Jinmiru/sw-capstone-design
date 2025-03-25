@@ -1,0 +1,363 @@
+"Runtime/Experimental/Chaos/Private/Chaos/PBDSpringConstraints.ispc"
+-o "C:/UEProject/inventorykit/Intermediate/Build/Win64/x64/inventorykitServer/Development/Chaos/PBDSpringConstraints.ispc.obj"
+--target-os=windows
+--arch=x86-64
+--target=avx512skx-i32x8,avx2,avx,sse4
+--emit-obj
+-O3
+-I"."
+-I"Runtime/Experimental/Chaos/Private"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/Chaos/UHT"
+-I"Runtime/Experimental/Chaos/Public"
+-I"Runtime/Core/Public"
+-I"Runtime/Core/Internal"
+-I"Runtime/TraceLog/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/CoreUObject/UHT"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/CoreUObject/VerseVMBytecode"
+-I"Runtime/CoreUObject/Public"
+-I"Runtime/CoreUObject/Internal"
+-I"Runtime/Experimental/ChaosCore/Public"
+-I"Runtime/Experimental/Voronoi/Public"
+-I"Runtime/GeometryCore/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AnimationCore/UHT"
+-I"Runtime/AnimationCore/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/Engine/UHT"
+-I"Runtime/Engine/Classes"
+-I"Runtime/Engine/Public"
+-I"Runtime/Engine/Internal"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AudioExtensions/UHT"
+-I"Runtime/AudioExtensions/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AudioMixer/UHT"
+-I"Runtime/AudioMixer/Classes"
+-I"Runtime/AudioMixer/Public"
+-I"Developer/TargetPlatform/Public"
+-I"Developer/TextureFormat/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/DeveloperSettings/UHT"
+-I"Runtime/DeveloperSettings/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AudioPlatformConfiguration/UHT"
+-I"Runtime/AudioPlatformConfiguration/Public"
+-I"Developer/DesktopPlatform/Public"
+-I"Developer/DesktopPlatform/Internal"
+-I"Runtime/Analytics/Analytics/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AudioLinkEngine/UHT"
+-I"Runtime/AudioLink/AudioLinkEngine/Public"
+-I"Runtime/SignalProcessing/Public"
+-I"Runtime/AudioMixerCore/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/InputCore/UHT"
+-I"Runtime/InputCore/Classes"
+-I"Runtime/InputCore/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/MovieSceneCapture/UHT"
+-I"Runtime/MovieSceneCapture/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/PacketHandler/UHT"
+-I"Runtime/PacketHandlers/PacketHandler/Classes"
+-I"Runtime/PacketHandlers/PacketHandler/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/NetCore/UHT"
+-I"Runtime/Net/Core/Classes"
+-I"Runtime/Net/Core/Public"
+-I"Runtime/Net/Common/Public"
+-I"Runtime/PacketHandlers/ReliabilityHandlerComponent/Public"
+-I"Runtime/Sockets/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/Renderer/UHT"
+-I"Runtime/Renderer/Public"
+-I"Runtime/Renderer/Internal"
+-I"Runtime/RHI/Public"
+-I"../Shaders/Public"
+-I"../Shaders/Shared"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/TypedElementFramework/UHT"
+-I"Runtime/TypedElementFramework/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/TypedElementRuntime/UHT"
+-I"Runtime/TypedElementRuntime/Public"
+-I"Runtime/RenderCore/Public"
+-I"Runtime/RenderCore/Internal"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/CoreOnline/UHT"
+-I"Runtime/CoreOnline/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/PhysicsCore/UHT"
+-I"Runtime/PhysicsCore/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/ChaosVDRuntime/UHT"
+-I"Runtime/Experimental/ChaosVisualDebugger/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/Slate/UHT"
+-I"Runtime/Slate/Public"
+-I"Runtime/Json/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/SlateCore/UHT"
+-I"Runtime/SlateCore/Public"
+-I"Runtime/ApplicationCore/Public"
+-I"Runtime/ImageWrapper/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/ImageCore/UHT"
+-I"Runtime/ImageCore/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/MeshDescription/UHT"
+-I"Runtime/MeshDescription/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/ClothSysRuntimeIntrfc/UHT"
+-I"Runtime/ClothingSystemRuntimeInterface/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/FieldNotification/UHT"
+-I"Runtime/FieldNotification/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/JsonUtilities/UHT"
+-I"Runtime/JsonUtilities/Public"
+-I"Runtime/Messaging/Public"
+-I"Runtime/MessagingCommon/Public"
+-I"Runtime/Analytics/AnalyticsET/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AssetRegistry/UHT"
+-I"Runtime/AssetRegistry/Public"
+-I"Runtime/AssetRegistry/Internal"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/EngineMessages/UHT"
+-I"Runtime/EngineMessages/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/EngineSettings/UHT"
+-I"Runtime/EngineSettings/Classes"
+-I"Runtime/EngineSettings/Public"
+-I"Runtime/SynthBenchmark/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/GameplayTags/UHT"
+-I"Runtime/GameplayTags/Classes"
+-I"Runtime/GameplayTags/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/StaticMeshDescription/UHT"
+-I"Runtime/StaticMeshDescription/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/SkeletalMeshDescription/UHT"
+-I"Runtime/SkeletalMeshDescription/Public"
+-I"Runtime/PakFile/Public"
+-I"Runtime/PakFile/Internal"
+-I"Runtime/RSA/Public"
+-I"Runtime/NetworkReplayStreaming/NetworkReplayStreaming/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/AudioLinkCore/UHT"
+-I"Runtime/AudioLink/AudioLinkCore/Public"
+-I"Runtime/CookOnTheFly/Internal"
+-I"Runtime/Networking/Public"
+-I"Runtime/Experimental/IoStoreOnDemand/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/inventorykitServer/Inc/IrisCore/UHT"
+-I"Runtime/Experimental/Iris/Core/Public"
+-I"C:/UEProject/inventorykit/Intermediate/Build/Win64/x64/inventorykitServer/Development/Chaos"
+-I"ThirdParty/Eigen"
+-I"ThirdParty/Eigen/Eigen"
+-I"ThirdParty/LibTiff/Source/Win64"
+-I"ThirdParty/LibTiff/Source"
+-DIS_PROGRAM=0
+-DUE_SERVER=1
+-DUSE_NULL_RHI=1
+-DUSE_SHADER_COMPILER_WORKER_TRACE=0
+-DUE_REFERENCE_COLLECTOR_REQUIRE_OBJECTPTR=1
+-DWITH_VERSE_VM=0
+-DENABLE_PGO_PROFILE=0
+-DUSE_VORBIS_FOR_STREAMING=1
+-DUSE_XMA2_FOR_STREAMING=1
+-DWITH_DEV_AUTOMATION_TESTS=1
+-DWITH_PERF_AUTOMATION_TESTS=1
+-DWITH_LOW_LEVEL_TESTS=0
+-DEXPLICIT_TESTS_TARGET=0
+-DWITH_TESTS=1
+-DUNICODE
+-D_UNICODE
+-D__UNREAL__
+-DIS_MONOLITHIC=1
+-DWITH_ENGINE=1
+-DWITH_UNREAL_DEVELOPER_TOOLS=1
+-DWITH_UNREAL_TARGET_DEVELOPER_TOOLS=1
+-DWITH_APPLICATION_CORE=1
+-DWITH_COREUOBJECT=1
+-DUE_TRACE_ENABLED=1
+-DWITH_VERSE=1
+-DUE_USE_VERSE_PATHS=1
+-DWITH_VERSE_BPVM=1
+-DUSE_STATS_WITHOUT_ENGINE=0
+-DWITH_PLUGIN_SUPPORT=0
+-DWITH_ACCESSIBILITY=1
+-DWITH_PERFCOUNTERS=1
+-DWITH_FIXED_TIME_STEP_SUPPORT=1
+-DUSE_LOGGING_IN_SHIPPING=0
+-DALLOW_CONSOLE_IN_SHIPPING=0
+-DALLOW_PROFILEGPU_IN_TEST=0
+-DALLOW_PROFILEGPU_IN_SHIPPING=0
+-DWITH_LOGGING_TO_MEMORY=0
+-DUSE_CACHE_FREED_OS_ALLOCS=1
+-DUSE_CHECKS_IN_SHIPPING=0
+-DUSE_UTF8_TCHARS=0
+-DUSE_ESTIMATED_UTCNOW=0
+-DUE_ALLOW_EXEC_COMMANDS_IN_SHIPPING=1
+-DWITH_EDITOR=0
+-DWITH_EDITORONLY_DATA=0
+-DWITH_SERVER_CODE=1
+-DUE_FNAME_OUTLINE_NUMBER=0
+-DWITH_PUSH_MODEL=0
+-DWITH_CEF3=0
+-DWITH_LIVE_CODING=1
+-DWITH_CPP_MODULES=0
+-DWITH_CPP_COROUTINES=0
+-DWITH_PROCESS_PRIORITY_CONTROL=0
+-DUBT_MODULE_MANIFEST=inventorykitServer.modules
+-DUBT_MODULE_MANIFEST_DEBUGGAME=inventorykitServer-Win64-DebugGame.modules
+-DUBT_COMPILED_PLATFORM=Win64
+-DUBT_COMPILED_TARGET=Server
+-DUE_APP_NAME=inventorykitServer
+-DUE_WARNINGS_AS_ERRORS=0
+-DUE_ENGINE_DIRECTORY=../../../../Github/UnrealEngine5/Engine/
+-DNDIS_MINIPORT_MAJOR_VERSION=0
+-DWIN32=1
+-D_WIN32_WINNT=0x0601
+-DWINVER=0x0601
+-DPLATFORM_WINDOWS=1
+-DPLATFORM_MICROSOFT=1
+-DOVERRIDE_PLATFORM_HEADER_NAME=Windows
+-DWINDOWS_MAX_NUM_TLS_SLOTS=2048
+-DWINDOWS_MAX_NUM_THREADS_WITH_TLS_SLOTS=512
+-DNDEBUG=1
+-DUE_BUILD_DEVELOPMENT=1
+-DUE_IS_ENGINE_MODULE=1
+-DUE_VALIDATE_FORMAT_STRINGS=1
+-DUE_VALIDATE_INTERNAL_API=0
+-DUE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_2=0
+-DUE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_3=0
+-DUE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_4=0
+-DUE_PROJECT_NAME=inventorykit
+-DUE_TARGET_NAME=inventorykitServer
+-DCOMPILE_WITHOUT_UNREAL_SUPPORT=0
+-DCHAOS_MEMORY_TRACKING=0
+-DWITH_CHAOS_VISUAL_DEBUGGER=1
+-DCHAOS_INCLUDE_LEVEL_1=1
+-DUE_MODULE_NAME=Chaos
+-DUE_PLUGIN_NAME=
+-DEIGEN_MPL2_ONLY
+-DEIGEN_USE_THREADS
+-DEIGEN_HAS_C99_MATH
+-DEIGEN_HAS_CONSTEXPR
+-DEIGEN_HAS_VARIADIC_TEMPLATES
+-DEIGEN_HAS_CXX11_MATH
+-DEIGEN_HAS_CXX11_ATOMIC
+-DEIGEN_STRONG_INLINE=inline
+-DEIGEN_UE_OVERRIDE_ALLOCATORS=1
+-DCOMPILE_WITHOUT_UNREAL_SUPPORT=0
+-DCHAOS_MEMORY_TRACKING=0
+-DWITH_CHAOS_VISUAL_DEBUGGER=1
+-DCHAOS_API=
+-DUE_MEMORY_TAGS_TRACE_ENABLED=1
+-DUE_ENABLE_ICU=1
+-DWITH_ADDITIONAL_CRASH_CONTEXTS=1
+-DWITH_VS_PERF_PROFILER=1
+-DWITH_CONCURRENCYVIEWER_PROFILER=0
+-DWITH_DIRECTXMATH=0
+-DUE_WITH_IRIS=1
+-DPLATFORM_SUPPORTS_PLATFORM_EVENTS=1
+-DPLATFORM_SUPPORTS_TRACE_WIN32_VIRTUAL_MEMORY_HOOKS=1
+-DPLATFORM_SUPPORTS_TRACE_WIN32_MODULE_DIAGNOSTICS=1
+-DPLATFORM_SUPPORTS_TRACE_WIN32_CALLSTACK=1
+-DUE_MEMORY_TRACE_AVAILABLE=1
+-DWITH_MALLOC_STOMP=1
+-DCORE_API=
+-DTRACELOG_API=
+-DCOREUOBJECT_API=
+-DCOMPILE_WITHOUT_UNREAL_SUPPORT=0
+-DCHAOS_CHECKED=0
+-DCHAOS_DEBUG_NAME=1
+-DCHAOSCORE_API=
+-DINTEL_ISPC=1
+-DVORONOI_API=
+-DGEOMETRYCORE_API=
+-DANIMATIONCORE_API=
+-DWITH_CLOTH_COLLISION_DETECTION=1
+-DWITH_CHAOS_VISUAL_DEBUGGER=1
+-DINCLUDE_CHAOS='UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS_CLOTHING='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS_NEEDS_TO_BE_FIXED='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1'
+-DWITH_PHYSX='UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1'
+-DWITH_PHYSX_COOKING='UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0'
+-DPHYSICS_INTERFACE_PHYSX='UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0'
+-DWITH_APEX='UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0'
+-DWITH_APEX_CLOTHING='UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0'
+-DWITH_NVCLOTH='UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0'
+-DWITH_IMMEDIATE_PHYSX='UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0'
+-DWITH_CUSTOM_SQ_STRUCTURE='UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0'
+-DGPUPARTICLE_LOCAL_VF_ONLY=0
+-DWITH_ODSC=1
+-DUE_WITH_IRIS=1
+-DENGINE_API=
+-DAUDIOEXTENSIONS_API=
+-DAUDIOMIXER_API=
+-DTARGETPLATFORM_API=
+-DTEXTUREFORMAT_API=
+-DDEVELOPERSETTINGS_API=
+-DAUDIOPLATFORMCONFIGURATION_API=
+-DDESKTOPPLATFORM_API=
+-DANALYTICS_API=
+-DAUDIOLINKENGINE_API=
+-DSIGNALPROCESSING_API=
+-DAUDIOMIXERCORE_API=
+-DINPUTCORE_API=
+-DMOVIESCENECAPTURE_API=
+-DPACKETHANDLER_API=
+-DNETCORE_API=
+-DNETCOMMON_API=
+-DRELIABILITYHANDLERCOMPONENT_API=
+-DSOCKETS_PACKAGE=1
+-DSOCKETS_API=
+-DRENDERER_API=
+-DRHI_API=
+-DTYPEDELEMENTFRAMEWORK_API=
+-DTYPEDELEMENTRUNTIME_API=
+-DRENDERCORE_API=
+-DPLATFORM_MAX_LOCAL_PLAYERS=0
+-DCOREONLINE_API=
+-DWITH_CLOTH_COLLISION_DETECTION=1
+-DWITH_CHAOS_VISUAL_DEBUGGER=1
+-DINCLUDE_CHAOS='UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS_CLOTHING='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS_NEEDS_TO_BE_FIXED='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1'
+-DWITH_PHYSX='UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1'
+-DWITH_PHYSX_COOKING='UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0'
+-DPHYSICS_INTERFACE_PHYSX='UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0'
+-DWITH_APEX='UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0'
+-DWITH_APEX_CLOTHING='UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0'
+-DWITH_NVCLOTH='UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0'
+-DWITH_IMMEDIATE_PHYSX='UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0'
+-DWITH_CUSTOM_SQ_STRUCTURE='UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0'
+-DPHYSICSCORE_API=
+-DCHAOSVDRUNTIME_API=
+-DSLATE_API=
+-DJSON_API=
+-DWITH_FREETYPE=0
+-DWITH_HARFBUZZ=0
+-DSLATECORE_API=
+-DUE_WINDOWS_USING_UIA=1
+-DAPPLICATIONCORE_API=
+-DWITH_UNREALPNG=1
+-DWITH_UNREALJPEG=1
+-DWITH_LIBJPEGTURBO=1
+-DWITH_UNREALEXR=1
+-DWITH_UNREALEXR_MINIMAL=0
+-DIMAGEWRAPPER_API=
+-DIMAGECORE_API=
+-DWITH_LIBTIFF=1
+-DMESHDESCRIPTION_API=
+-DWITH_CLOTH_COLLISION_DETECTION=1
+-DWITH_CHAOS_VISUAL_DEBUGGER=1
+-DINCLUDE_CHAOS='UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS_CLOTHING='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1'
+-DWITH_CHAOS_NEEDS_TO_BE_FIXED='UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1'
+-DWITH_PHYSX='UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1'
+-DWITH_PHYSX_COOKING='UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0'
+-DPHYSICS_INTERFACE_PHYSX='UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0'
+-DWITH_APEX='UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0'
+-DWITH_APEX_CLOTHING='UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0'
+-DWITH_NVCLOTH='UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0'
+-DWITH_IMMEDIATE_PHYSX='UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0'
+-DWITH_CUSTOM_SQ_STRUCTURE='UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0'
+-DCLOTHINGSYSTEMRUNTIMEINTERFACE_API=
+-DFIELDNOTIFICATION_API=
+-DJSONUTILITIES_API=
+-DMESSAGING_API=
+-DMESSAGINGCOMMON_API=
+-DANALYTICSET_API=
+-DASSETREGISTRY_API=
+-DENGINEMESSAGES_API=
+-DENGINESETTINGS_API=
+-DSYNTHBENCHMARK_API=
+-DUE_WITH_IRIS=1
+-DGAMEPLAYTAGS_API=
+-DSTATICMESHDESCRIPTION_API=
+-DSKELETALMESHDESCRIPTION_API=
+-DPAKFILE_API=
+-DRSA_API=
+-DNETWORKREPLAYSTREAMING_API=
+-DAUDIOLINKCORE_API=
+-DCOOKONTHEFLY_API=
+-DNETWORKING_API=
+-DIOSTOREONDEMAND_API=
+-DUE_WITH_IRIS=1
+-DIRISCORE_API=

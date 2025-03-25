@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\navmesh\\module.navmesh.3.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\navmesh\\definitions.navmesh.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastmesh.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recast.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recastlargeworldcoordinates.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recastalloc.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\public\\recast\\recastassert.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastmeshdetail.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastrasterization.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\consolemanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navmesh\\private\\recast\\recastregion.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

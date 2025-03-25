@@ -1,0 +1,26 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\fieldnotification\\module.fieldnotification.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\fieldnotification\\definitions.fieldnotification.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\fieldnotification\\uht\\fieldnotification.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\fieldnotification\\uht\\fieldnotificationid.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\public\\fieldnotificationid.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\public\\fieldnotificationvariant.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\fieldnotification\\uht\\fieldnotificationid.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\fieldnotification\\uht\\inotifyfieldvaluechanged.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\public\\inotifyfieldvaluechanged.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\public\\ifieldnotificationclassdescriptor.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\fieldnotification\\uht\\inotifyfieldvaluechanged.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\private\\fieldnotificationdelegate.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\public\\fieldnotificationdelegate.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\private\\fieldnotificationmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\fieldnotification\\private\\tests\\fieldnotificationmulticastdelegatetest.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

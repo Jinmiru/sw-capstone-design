@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SandboxFile.cpp.obj": [
+			"IPlatformFileSandboxWrapper.cpp.obj"
+		]
+	}
+}

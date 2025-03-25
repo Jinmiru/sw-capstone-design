@@ -1,0 +1,39 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\profilevisualizer\\module.profilevisualizer.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\profilevisualizer\\definitions.profilevisualizer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\profilevisualizermodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\profilevisualizermodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\visualizerevents.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\sprofilevisualizer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\profilevisualizerstyle.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\profilevisualizerstyle.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestyleregistry.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestylemacros.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\sbarvisualizer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\sbarvisualizer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\input\\sslider.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\sgraphbar.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\stimeline.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\seventstree.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\public\\seventstree.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\input\\ssearchbox.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\sgraphbar.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\sprofilevisualizer.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\framework\\notifications\\notificationmanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\coreasynctasknotificationimpl.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\asynctasknotification.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\snotificationlist.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slate\\public\\framework\\commands\\genericcommands.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\stimeline.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\fonts\\fontmeasure.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\profilevisualizer\\private\\visualizerevents.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

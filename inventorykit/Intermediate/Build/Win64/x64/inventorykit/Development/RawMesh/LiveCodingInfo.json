@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RawMesh.cpp.obj": [
+			"RawMesh.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,11 @@
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\CleaningOps\EditNormalsOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\CleaningOps\HoleFillOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\CleaningOps\RemeshMeshOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\CompositionOps\BooleanMeshesOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\CompositionOps\VoxelMorphologyMeshesOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\CurveOps\TriangulateCurvesOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\ParameterizationOps\RecomputeUVsOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\ParameterizationOps\UVLayoutOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\ParameterizationOps\UVProjectionOp.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\Properties\RecomputeUVsProperties.h
+C:\Github\UnrealEngine5\Engine\Plugins\Runtime\MeshModelingToolset\Source\ModelingOperators\Public\Properties\UVLayoutProperties.h

@@ -1,0 +1,2 @@
+Thread: Game
+Context:'Paint' Type:'SWindow' Tag:'None' Location:'C:\Github\UnrealEngine5\Engine\Source\Runtime\Slate\Private\Framework\Docking\TabManager.cpp_1759'

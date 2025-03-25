@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\custommeshcomponent\\module.custommeshcomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\custommeshcomponent\\definitions.custommeshcomponent.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\custommeshcomponent\\uht\\custommeshcomponent.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\custommeshcomponent\\source\\custommeshcomponent\\classes\\custommeshcomponent.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\custommeshcomponent\\uht\\custommeshcomponent.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\custommeshcomponent\\uht\\custommeshcomponent.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\custommeshcomponent\\source\\custommeshcomponent\\private\\custommeshcomponent.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\materialdomain.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\materialdomain.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\materials\\materialrenderproxy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\dynamicmeshbuilder.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\custommeshcomponent\\source\\custommeshcomponent\\private\\custommeshcomponentplugin.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\custommeshcomponent\\source\\custommeshcomponent\\public\\icustommeshcomponentplugin.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\module.coreuobject.1.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\pch.coreuobject.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\coreuobject\\uht\\corenettypes.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\coreuobject\\uht\\coreuobject.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\coreuobject\\uht\\datavalidation.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\misc\\datavalidation.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\coreuobject\\uht\\datavalidation.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\coreuobject\\uht\\noexporttypes.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\assetbundledata.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\assetdata.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\assetdatatagmap.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\assetidentifier.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iohash.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hash\\blake3.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\icursor.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\iinputinterface.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

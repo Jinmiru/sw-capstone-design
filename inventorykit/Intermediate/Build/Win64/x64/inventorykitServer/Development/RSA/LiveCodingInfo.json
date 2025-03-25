@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RSA.cpp.obj": [
+			"RSA.cpp.obj"
+		]
+	}
+}

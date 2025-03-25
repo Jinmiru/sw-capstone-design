@@ -1,0 +1,31 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\httpreplaystreaming\\module.httpreplaystreaming.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\httpreplaystreaming\\definitions.httpreplaystreaming.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\httpreplaystreaming\\uht\\httpnetworkreplaystreaming.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\httpnetworkreplaystreaming\\private\\httpnetworkreplaystreaming.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\httpnetworkreplaystreaming\\public\\httpnetworkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\networkreplaystreaming\\public\\networkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticseventattribute.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticsconversion.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\connection\\netresultmanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttprequest.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttpbase.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\httpreplaystreaming\\uht\\httpnetworkreplaystreaming.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttpresponse.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\httpmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\genericplatform\\genericplatformhttp.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\scopedtimers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\httpmanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\online\\http\\public\\httppackage.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\urlrequestfilter.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\httpreplaystreaming\\uht\\httpnetworkreplaystreaming.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

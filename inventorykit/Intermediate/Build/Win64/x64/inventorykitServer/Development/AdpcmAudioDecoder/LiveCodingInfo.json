@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AdpcmAudioDecoder.cpp.obj": [
+			"ADPCMAudioInfo.cpp.obj"
+		]
+	}
+}

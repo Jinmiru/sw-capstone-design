@@ -1,0 +1,34 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\chaosvdruntime\\module.chaosvdruntime.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\chaosvdruntime\\definitions.chaosvdruntime.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdcollisiondatawrappers.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\public\\datawrappers\\chaosvdcollisiondatawrappers.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdcollisiondatawrappers.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdjointdatawrappers.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\public\\datawrappers\\chaosvdjointdatawrappers.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\public\\datawrappers\\chaosvdparticledatawrapper.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdparticledatawrapper.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdjointdatawrappers.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdparticledatawrapper.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdquerydatawrappers.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\public\\datawrappers\\chaosvdquerydatawrappers.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdquerydatawrappers.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\chaosvdruntime\\uht\\chaosvdruntime.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\private\\chaosvdruntimemodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\public\\chaosvdruntimemodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\profilingdebugging\\traceauxiliary.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\private\\datawrappers\\chaosvdcollisiondatawrappers.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\public\\datawrappers\\chaosvddataserializationmacros.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\private\\datawrappers\\chaosvdjointdatawrappers.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\private\\datawrappers\\chaosvdparticledatawrapper.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\experimental\\chaosvisualdebugger\\private\\datawrappers\\chaosvdquerydatawrappers.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

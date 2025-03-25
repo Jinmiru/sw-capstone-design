@@ -1,0 +1,23 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/UEProject/inventorykit/Content/InventoryKit/Widgets/Widget_InGame.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Framework/BP_GamePlayerController.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Framework/BP_GameInstance.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Blueprints/Components/BP_InventoryComponent.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Widgets/InventoryKit/Widget_Inventory.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Widgets/InventoryKit/Widget_ItemGridPanel.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Widgets/InventoryKit/Widget_ItemSelectionPage.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Widgets/Widget_InGameMenu.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Blueprints/BP_ExampleCharacter.uasset",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Environment/Maps/PersistentLevel.umap",
+				"C:/UEProject/inventorykit/Content/InventoryKit/Blueprints/Libraries/Common/BP_GameKitFL.uasset",
+				"C:/UEProject/inventorykit/Content/Map/InventoryKitEntry.umap"
+			]
+		}
+	]
+}

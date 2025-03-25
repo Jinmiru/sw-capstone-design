@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\networkfile\\module.networkfile.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\networkfile\\definitions.networkfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkfile\\private\\networkplatformfile.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkfile\\public\\networkplatformfile.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\containers\\spscqueue.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\networkmessage.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\arrayreader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\bufferarchive.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\servertoc.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\localtimestampdirectoryvisitor.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\deriveddatacache\\public\\deriveddatacacheinterface.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\asciiset.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\deriveddatacache\\public\\deriveddatacachemodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\pathviews.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\socketsubsystem.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\addressinfotypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\ipaddress.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sockets\\public\\sockettypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packetview.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\sockets\\socketerrors.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packettraits.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\iplatformfilemodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\cookonthefly\\internal\\cookonthefly.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\cookonthefly\\internal\\cookontheflymessages.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\packagestore.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

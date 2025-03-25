@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PythonScriptPluginPreload.cpp.obj": [
+			"PythonScriptPluginPreload.cpp.obj"
+		]
+	}
+}

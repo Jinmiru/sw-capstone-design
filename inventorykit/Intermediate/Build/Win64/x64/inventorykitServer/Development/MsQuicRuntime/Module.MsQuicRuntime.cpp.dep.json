@@ -1,0 +1,16 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\msquicruntime\\module.msquicruntime.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\msquicruntime\\definitions.msquicruntime.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\msquic\\source\\private\\msquicruntimemodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\msquic\\source\\public\\msquicruntimemodule.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\msquic\\source\\private\\msquicruntimeprivate.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

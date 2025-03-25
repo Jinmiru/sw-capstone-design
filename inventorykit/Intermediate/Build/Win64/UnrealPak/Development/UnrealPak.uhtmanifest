@@ -1,0 +1,540 @@
+{
+  "IsGameTarget": false,
+  "RootLocalPath": "C:\\Github\\UnrealEngine5",
+  "TargetName": "UnrealPak",
+  "ExternalDependenciesFile": "C:\\UEProject\\inventorykit\\Intermediate\\Build\\Win64\\UnrealPak\\Development\\UnrealPak.deps",
+  "Modules": [
+    {
+      "Name": "CoreUObject",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\CoreUObject\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject\\Public\\Misc\\DataValidation.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject\\Public\\Misc\\EditorPathObjectInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\CookedMetaData.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\CoreNetTypes.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\NoExportTypes.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\CoreUObject\\Public\\UObject\\OverriddenPropertySet.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\CoreUObject\\UHT\\CoreUObject.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "ImageCore",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\ImageCore",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\ImageCore\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\ImageCore\\Public\\ImageCoreBP.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\ImageCore\\UHT\\ImageCore.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "DeveloperSettings",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\DeveloperSettings",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\DeveloperSettings\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\DeveloperSettings\\Public\\Engine\\PlatformSettingsManager.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\DeveloperSettings\\Public\\Engine\\DeveloperSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\DeveloperSettings\\Public\\Engine\\PlatformSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\DeveloperSettings\\Public\\Engine\\DeveloperSettingsBackedByCVars.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\DeveloperSettings\\UHT\\DeveloperSettings.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "AssetRegistry",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\AssetRegistry",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\AssetRegistry\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\AssetRegistry\\Public\\AssetRegistry\\AssetRegistryHelpers.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\AssetRegistry\\Public\\AssetRegistry\\IAssetRegistry.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\AssetRegistry\\Private\\AssetRegistry.h"
+      ],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\AssetRegistry\\UHT\\AssetRegistry.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "AudioPlatformConfiguration",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\AudioPlatformConfiguration",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\AudioPlatformConfiguration\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\AudioPlatformConfiguration\\Public\\AudioCompressionSettings.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\AudioPlatformConfiguration\\UHT\\AudioPlatformConfiguration.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "InputCore",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\InputCore",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\InputCore\\UHT",
+      "ClassesHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\InputCore\\Classes\\InputCoreTypes.h"
+      ],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\InputCore\\UHT\\InputCore.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "SlateCore",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SlateCore\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Debugging\\SlateDebugging.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\CompositeFont.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\FontCache.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\FontProviderInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\FontFaceInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\FontSdfSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Input\\NavigationReply.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Input\\Events.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Layout\\Clipping.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Layout\\Geometry.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\FontBulkData.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Rendering\\RenderingCommon.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Fonts\\SlateFontInfo.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SegmentedControlStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateWidgetStyleAsset.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateTypes.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateWidgetStyleContainerInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\StyleColors.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\ToolBarStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Layout\\FlowDirection.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Types\\SlateEnums.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Types\\SlateVector2.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Widgets\\WidgetPixelSnapping.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Layout\\Margin.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Sound\\SlateSound.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateBrush.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Rendering\\SlateRendererTypes.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateColor.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SlateCore\\Public\\Styling\\SlateWidgetStyleContainerBase.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [
+        "WITH_FREETYPE=0"
+      ],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SlateCore\\UHT\\SlateCore.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "Slate",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Slate\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\SlateSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Commands\\InputChord.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Commands\\UICommandInfo.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\MultiBox\\MultiBoxDefs.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\MultiBox\\ToolMenuBase.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\ButtonWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\CheckBoxWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\ComboButtonWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\ComboBoxWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\SpinBoxWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\ProgressWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\ScrollBoxWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\TextBlockWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Text\\CharRangeList.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\ScrollBarWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\EditableTextBoxWidgetStyle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Text\\TextLayout.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Views\\ITypedTableView.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Input\\IVirtualKeyboardEntry.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Layout\\Anchors.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Layout\\SScaleBox.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Layout\\SScrollBox.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Text\\ISlateEditableTextWidget.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Notifications\\SProgressBar.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Widgets\\Views\\STableViewBase.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Slate\\Public\\Framework\\Styling\\EditableTextWidgetStyle.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Slate\\UHT\\Slate.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "SessionMessages",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SessionMessages",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SessionMessages\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\SessionMessages\\Public\\SessionServiceMessages.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SessionMessages\\UHT\\SessionMessages.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "Serialization",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Serialization",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Serialization\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\Serialization\\Private\\Tests\\StructSerializerTestTypes.h"
+      ],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Serialization\\UHT\\Serialization.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "TcpMessaging",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Plugins\\Messaging\\TcpMessaging\\Source\\TcpMessaging",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Plugins\\Messaging\\TcpMessaging\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Plugins\\Messaging\\TcpMessaging\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\TcpMessaging\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Plugins\\Messaging\\TcpMessaging\\Source\\TcpMessaging\\Private\\Settings\\TcpMessagingSettings.h"
+      ],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Plugins\\Messaging\\TcpMessaging\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\TcpMessaging\\UHT\\TcpMessaging.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "EngineSettings",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\EngineSettings\\UHT",
+      "ClassesHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\ConsoleSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\GameMapsSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\GameNetworkManagerSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\GeneralEngineSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\GameSessionSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\GeneralProjectSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\EngineSettings\\Classes\\HudSettings.h"
+      ],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\EngineSettings\\UHT\\EngineSettings.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "JsonUtilities",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\JsonUtilities",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\JsonUtilities\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\JsonUtilities\\Public\\JsonObjectWrapper.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\JsonUtilities\\UHT\\JsonUtilities.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "TypedElementFramework",
+      "ModuleType": "EngineRuntime",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\TypedElementFramework\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementHiearchyColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementLabelColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementPackageColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementMiscColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementSelectionColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementTypeInfoColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementSlateWidgetColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementTransformColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementValueCacheColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementViewportColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Framework\\TypedElementCounter.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Framework\\TypedElementHandle.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Framework\\TypedElementListProxy.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementOverrideColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Framework\\TypedElementRegistry.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Interfaces\\TypedElementDataStorageFactory.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Interfaces\\TypedElementDataStorageCompatibilityInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Interfaces\\TypedElementDataStorageInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Interfaces\\TypedElementDataStorageUiInterface.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementAlertColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementPivotOffsetColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementCompatibilityColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Public\\Elements\\Columns\\TypedElementRevisionControlColumns.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Private\\TypedElementFrameworkTests.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Tests\\Elements\\Framework\\TypedElementTestColumns.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Runtime\\TypedElementFramework\\Private\\Elements\\Framework\\TypedElementListLibrary.h"
+      ],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\TypedElementFramework\\UHT\\TypedElementFramework.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "SourceControl",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\SourceControl",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SourceControl\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\SourceControl\\Public\\SourceControlHelpers.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\SourceControl\\Public\\SourceControlPreferences.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [
+        "SOURCE_CONTROL_WITH_SLATE=0"
+      ],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SourceControl\\UHT\\SourceControl.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "Virtualization",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\Virtualization",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Virtualization\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\Virtualization\\Private\\VirtualizationFilterSettings.h"
+      ],
+      "PublicDefines": [
+        "UE_VA_WITH_SLATE=0"
+      ],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Virtualization\\UHT\\Virtualization.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "DeveloperToolSettings",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\DeveloperToolSettings",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\DeveloperToolSettings\\UHT",
+      "ClassesHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\DeveloperToolSettings\\Classes\\CookerSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\DeveloperToolSettings\\Classes\\Settings\\ProjectPackagingSettings.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\DeveloperToolSettings\\Classes\\Settings\\PlatformsMenuSettings.h"
+      ],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\DeveloperToolSettings\\UHT\\DeveloperToolSettings.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "ToolMenus",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\ToolMenus\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuContext.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuEntryScript.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuDelegates.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenu.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuEntry.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuMisc.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuOwner.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenus.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Public\\ToolMenuSection.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\ToolMenus\\Private\\ToolMenusBlueprintLibrary.h"
+      ],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\ToolMenus\\UHT\\ToolMenus.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "SourceCodeAccess",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\SourceCodeAccess",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SourceCodeAccess\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\SourceCodeAccess\\Private\\SourceCodeAccessSettings.h"
+      ],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\SourceCodeAccess\\UHT\\SourceCodeAccess.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "PIEPreviewDeviceSpecification",
+      "ModuleType": "EngineEditor",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Editor\\PIEPreviewDeviceSpecification",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\PIEPreviewDeviceSpecification\\UHT",
+      "ClassesHeaders": [],
+      "PublicHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Editor\\PIEPreviewDeviceSpecification\\Public\\PIEPreviewDeviceSpecification.h"
+      ],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\PIEPreviewDeviceSpecification\\UHT\\PIEPreviewDeviceSpecification.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "UnrealEdMessages",
+      "ModuleType": "EngineEditor",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Editor\\UnrealEdMessages",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\UnrealEdMessages\\UHT",
+      "ClassesHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Editor\\UnrealEdMessages\\Classes\\AssetEditorMessages.h",
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Editor\\UnrealEdMessages\\Classes\\FileServerMessages.h"
+      ],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\UnrealEdMessages\\UHT\\UnrealEdMessages.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "WindowsTargetPlatform",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\Windows\\WindowsTargetPlatform",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\WindowsTargetPlatform\\UHT",
+      "ClassesHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\Windows\\WindowsTargetPlatform\\Classes\\WindowsTargetSettings.h"
+      ],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\WindowsTargetPlatform\\UHT\\WindowsTargetPlatform.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    },
+    {
+      "Name": "LinuxTargetPlatform",
+      "ModuleType": "EngineDeveloper",
+      "OverrideModuleType": "None",
+      "BaseDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\Linux\\LinuxTargetPlatform",
+      "IncludeBase": "C:\\Github\\UnrealEngine5\\Engine\\Source",
+      "OutputDirectory": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Linux\\LinuxTargetPlatform\\UHT",
+      "ClassesHeaders": [
+        "C:\\Github\\UnrealEngine5\\Engine\\Source\\Developer\\Linux\\LinuxTargetPlatform\\Classes\\LinuxTargetSettings.h"
+      ],
+      "PublicHeaders": [],
+      "InternalHeaders": [],
+      "PrivateHeaders": [],
+      "PublicDefines": [],
+      "GeneratedCPPFilenameBase": "C:\\Github\\UnrealEngine5\\Engine\\Intermediate\\Build\\Win64\\UnrealPak\\Inc\\Linux\\LinuxTargetPlatform\\UHT\\LinuxTargetPlatform.gen",
+      "SaveExportedHeaders": true,
+      "UHTGeneratedCodeVersion": "None"
+    }
+  ],
+  "UhtPlugins": []
+}

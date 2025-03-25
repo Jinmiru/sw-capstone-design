@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CharacterAI.cpp.obj": [
+			"CharacterAIModule.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\sessionmessages\\module.sessionmessages.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\sessionmessages\\definitions.sessionmessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\sessionmessages\\uht\\sessionmessages.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\sessionmessages\\uht\\sessionservicemessages.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sessionmessages\\public\\sessionservicemessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\sessionmessages\\uht\\sessionservicemessages.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\sessionmessages\\private\\sessionmessagesmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

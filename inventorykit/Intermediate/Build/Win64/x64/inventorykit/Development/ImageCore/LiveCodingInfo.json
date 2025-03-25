@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ImageCore.cpp.obj": [
+			"ImageCore.init.gen.cpp.obj",
+			"ImageCoreBP.gen.cpp.obj",
+			"DDSFile.cpp.obj",
+			"ImageCore.cpp.obj",
+			"ImageCoreBP.cpp.obj",
+			"ImageCoreUtils.cpp.obj",
+			"ImageParallelFor.cpp.obj"
+		]
+	}
+}

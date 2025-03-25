@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.WorldMetricsTest.cpp.obj": [
+			"WorldMetricsTest.init.gen.cpp.obj",
+			"WorldMetricsTest.cpp.obj",
+			"WorldMetricsTestModule.cpp.obj",
+			"WorldMetricsTestTypes.cpp.obj"
+		]
+	}
+}

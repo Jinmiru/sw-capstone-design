@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\aisupportmodule\\module.aisupportmodule.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\aisupportmodule\\definitions.aisupportmodule.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\ai\\aisupport\\source\\aisupportmodule\\private\\aisupportmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\ai\\aisupport\\source\\aisupportmodule\\public\\aisupportmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentselector.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\engine\\uht\\navagentselector.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\aimodule\\uht\\aitypes.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

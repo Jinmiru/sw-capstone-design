@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\assettags\\module.assettags.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\assettags\\definitions.assettags.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\assettags\\uht\\assettags.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\assettags\\source\\assettags\\private\\assettagsmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\assettags\\source\\assettags\\private\\assettagssubsystem.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\assettags\\source\\assettags\\public\\assettagssubsystem.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\assettags\\uht\\assettagssubsystem.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\assetregistry\\public\\assetregistry\\assetregistrymodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\assetregistry\\public\\assetregistry\\iassetregistry.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\misc\\assetregistryinterface.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\assetregistry\\uht\\iassetregistry.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\assettags\\uht\\assettagssubsystem.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,65 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.NavigationSystem.1.cpp.obj": [
+			"CrowdManagerBase.gen.cpp.obj",
+			"NavigationGraphNode.gen.cpp.obj",
+			"NavigationGraphNodeComponent.gen.cpp.obj",
+			"NavigationObjectRepository.gen.cpp.obj",
+			"NavigationPathGenerator.gen.cpp.obj",
+			"NavigationSystem.init.gen.cpp.obj",
+			"NavLinkCustomInterface.gen.cpp.obj",
+			"NavLinkHostInterface.gen.cpp.obj",
+			"NavLinkTrivial.gen.cpp.obj",
+			"NavNodeInterface.gen.cpp.obj",
+			"AbstractNavData.cpp.obj",
+			"NavArea.cpp.obj",
+			"NavAreaMeta.cpp.obj",
+			"NavAreaMeta_SwitchByAgent.cpp.obj",
+			"NavArea_Default.cpp.obj",
+			"NavArea_LowHeight.cpp.obj",
+			"NavArea_Null.cpp.obj",
+			"NavArea_Obstacle.cpp.obj",
+			"NavCollision.cpp.obj",
+			"NavigationQueryFilter.cpp.obj",
+			"RecastFilter_UseDefaultArea.cpp.obj",
+			"NavGraphGenerator.cpp.obj",
+			"NavigationGraph.cpp.obj",
+			"NavigationData.cpp.obj",
+			"NavigationDataHandler.cpp.obj",
+			"NavigationDirtyAreasController.cpp.obj",
+			"NavigationInterfaces.cpp.obj",
+			"NavigationInvokerComponent.cpp.obj",
+			"NavigationObjectRepository.cpp.obj",
+			"NavigationOctree.cpp.obj",
+			"NavigationOctreeController.cpp.obj",
+			"NavigationPath.cpp.obj",
+			"NavigationSystem.cpp.obj",
+			"NavigationSystemModule.cpp.obj",
+			"NavigationSystemTypes.cpp.obj"
+		],
+		"Module.NavigationSystem.2.cpp.obj": [
+			"NavigationTestingActor.cpp.obj",
+			"NavLinkComponent.cpp.obj",
+			"NavLinkCustomComponent.cpp.obj",
+			"NavLinkRenderingComponent.cpp.obj",
+			"NavMeshBoundsVolume.cpp.obj",
+			"NavMeshPath.cpp.obj",
+			"NavMeshRenderingComponent.cpp.obj",
+			"NavTestRenderingComponent.cpp.obj",
+			"PImplRecastNavMesh.cpp.obj",
+			"RecastHelpers.cpp.obj",
+			"RecastNavMesh.cpp.obj"
+		],
+		"Module.NavigationSystem.3.cpp.obj": [
+			"RecastNavMeshDataChunk.cpp.obj",
+			"RecastNavMeshGenerator.cpp.obj",
+			"NavModifierComponent.cpp.obj",
+			"NavModifierVolume.cpp.obj",
+			"NavRelevantComponent.cpp.obj",
+			"NavSystemConfigOverride.cpp.obj",
+			"SplineNavModifierComponent.cpp.obj",
+			"RecastInternalDebugData.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\textureutilitiescommon\\module.textureutilitiescommon.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\textureutilitiescommon\\definitions.textureutilitiescommon.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\textureutilitiescommon\\uht\\textureutilitiescommon.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\private\\normalmapidentification.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\public\\normalmapidentification.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\private\\textureimportsettings.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\public\\textureimportsettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\textureutilitiescommon\\uht\\textureimportsettings.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\imagecore\\public\\imagecoreutils.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\textureutilitiescommon\\uht\\textureimportsettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\private\\textureimportutils.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\public\\textureimportutils.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\private\\texturesourcedatautils.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\public\\texturesourcedatautils.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\private\\textureutilitiescommonmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\private\\udimutilities.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\textureutilitiescommon\\public\\udimutilities.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

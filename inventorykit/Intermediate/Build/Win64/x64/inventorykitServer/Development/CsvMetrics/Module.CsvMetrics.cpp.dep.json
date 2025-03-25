@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\csvmetrics\\module.csvmetrics.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\csvmetrics\\definitions.csvmetrics.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\csvmetrics\\uht\\csvmetrics.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\csvmetrics\\private\\csvactorcountmetric.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\csvmetrics\\public\\csvactorcountmetric.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\worldmetricscore\\public\\worldmetricinterface.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\worldmetricscore\\uht\\worldmetricinterface.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\worldmetricscore\\public\\worldmetricsactortrackersubscriber.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\worldmetricscore\\uht\\worldmetricsactortrackersubscriber.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\csvmetrics\\uht\\csvactorcountmetric.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\worldmetricscore\\public\\worldmetricsactortracker.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\worldmetricscore\\public\\worldmetricsextension.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\worldmetricscore\\uht\\worldmetricsextension.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\worldmetricscore\\uht\\worldmetricsactortracker.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\csvmetrics\\uht\\csvactorcountmetric.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\worldmetricscore\\public\\worldmetricssubsystem.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\worldmetricscore\\uht\\worldmetricssubsystem.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\csvmetrics\\private\\csvmetricsmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\csvmetrics\\private\\csvmetricssubsystem.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\worldmetrics\\source\\csvmetrics\\public\\csvmetricssubsystem.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\csvmetrics\\uht\\csvmetricssubsystem.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\csvmetrics\\uht\\csvmetricssubsystem.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

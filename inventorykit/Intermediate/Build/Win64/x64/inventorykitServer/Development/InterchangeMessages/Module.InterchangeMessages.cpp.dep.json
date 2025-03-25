@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\interchangemessages\\module.interchangemessages.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\interchangemessages\\definitions.interchangemessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangemessages\\uht\\interchangemessages.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\messages\\private\\fbx\\interchangefbxmessages.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\messages\\public\\fbx\\interchangefbxmessages.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\interchange\\core\\public\\interchangeresult.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangecore\\uht\\interchangeresult.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangemessages\\uht\\interchangefbxmessages.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\interchangemessages\\uht\\interchangefbxmessages.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\interchange\\runtime\\source\\messages\\private\\fbx\\interchangemessagesmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

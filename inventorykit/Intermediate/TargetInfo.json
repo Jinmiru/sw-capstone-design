@@ -1,0 +1,19 @@
+{
+	"Targets": [
+		{
+			"Name": "inventorykit",
+			"Path": "..\\Source\\inventorykit.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "inventorykitEditor",
+			"Path": "..\\Source\\inventorykitEditor.Target.cs",
+			"Type": "Editor"
+		},
+		{
+			"Name": "inventorykitServer",
+			"Path": "..\\Source\\inventorykitServer.Target.cs",
+			"Type": "Server"
+		}
+	]
+}

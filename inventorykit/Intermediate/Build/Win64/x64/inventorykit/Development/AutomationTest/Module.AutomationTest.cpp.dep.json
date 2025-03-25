@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\automationtest\\module.automationtest.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\automationtest\\definitions.automationtest.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationstate.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\public\\automationstate.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationstate.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationtest.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\private\\automationtestexcludelist.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\public\\automationtestexcludelist.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\public\\automationtestplatform.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationtestplatform.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationtestexcludelist.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationtestexcludelist.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\private\\automationtestmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\public\\automationtestmodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\private\\automationtestplatform.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationtestplatform.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

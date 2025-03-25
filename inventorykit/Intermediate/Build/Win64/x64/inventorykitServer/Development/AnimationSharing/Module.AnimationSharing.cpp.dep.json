@@ -1,0 +1,37 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\animationsharing\\module.animationsharing.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\animationsharing\\definitions.animationsharing.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharing.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharingtypes.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\animationsharingtypes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharingtypes.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\private\\additiveanimationinstance.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\additiveanimationinstance.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\animationsharinginstances.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharinginstances.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\animationsharingmanager.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharingmanager.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\private\\animationsharinginstances.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharinginstances.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\private\\animationsharingmanager.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\animationsharingmodule.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\transitionblendinstance.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\significancemanager\\source\\significancemanager\\public\\significancemanager.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\significancemanager\\uht\\significancemanager.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\public\\animationsharingsetup.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharingsetup.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharingmanager.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\private\\animationsharingmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\private\\animationsharingsetup.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\animationsharing\\uht\\animationsharingsetup.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\developer\\animationsharing\\source\\animationsharing\\private\\transitionblendinstance.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

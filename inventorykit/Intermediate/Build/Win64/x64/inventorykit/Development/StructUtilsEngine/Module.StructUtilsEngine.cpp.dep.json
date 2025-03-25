@@ -1,0 +1,26 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\structutilsengine\\module.structutilsengine.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\structutilsengine\\definitions.structutilsengine.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\structutilsengine\\uht\\structutilsengine.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutilsengine\\private\\structutilsdelegates.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutilsengine\\public\\structutilsdelegates.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutilsengine\\private\\structutilsenginemodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutilsengine\\public\\structutilsenginemodule.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutilsengine\\private\\structutilsfunctionlibrary.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutilsengine\\public\\structutilsfunctionlibrary.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutils\\public\\instancedstruct.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\experimental\\structutils\\source\\structutils\\public\\structutils.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\structutils\\uht\\instancedstruct.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\structutilsengine\\uht\\structutilsfunctionlibrary.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\coreuobject\\public\\blueprint\\blueprintexceptioninfo.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\structutilsengine\\uht\\structutilsfunctionlibrary.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

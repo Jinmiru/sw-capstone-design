@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ChaosVDRuntime.cpp.obj": [
+			"ChaosVDCollisionDataWrappers.gen.cpp.obj",
+			"ChaosVDJointDataWrappers.gen.cpp.obj",
+			"ChaosVDParticleDataWrapper.gen.cpp.obj",
+			"ChaosVDQueryDataWrappers.gen.cpp.obj",
+			"ChaosVDRuntime.init.gen.cpp.obj",
+			"ChaosVDRuntimeModule.cpp.obj",
+			"ChaosVDCollisionDataWrappers.cpp.obj",
+			"ChaosVDJointDataWrappers.cpp.obj",
+			"ChaosVDParticleDataWrapper.cpp.obj",
+			"ChaosVDQueryDataWrappers.cpp.obj"
+		]
+	}
+}

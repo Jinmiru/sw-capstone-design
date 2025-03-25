@@ -1,0 +1,36 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SequencerScripting.1.cpp.obj": [
+			"MovieSceneScriptingActorReference.gen.cpp.obj",
+			"MovieSceneScriptingBool.gen.cpp.obj",
+			"MovieSceneScriptingByte.gen.cpp.obj",
+			"MovieSceneScriptingChannel.gen.cpp.obj",
+			"MovieSceneScriptingDouble.gen.cpp.obj",
+			"MovieSceneScriptingEvent.gen.cpp.obj"
+		],
+		"Module.SequencerScripting.2.cpp.obj": [
+			"MovieSceneScriptingFloat.gen.cpp.obj",
+			"MovieSceneScriptingInteger.gen.cpp.obj",
+			"MovieSceneScriptingObjectPath.gen.cpp.obj",
+			"MovieSceneScriptingString.gen.cpp.obj",
+			"SequencerScripting.init.gen.cpp.obj",
+			"SequencerScriptingRange.gen.cpp.obj",
+			"SequenceTimeUnit.gen.cpp.obj",
+			"MovieSceneBindingExtensions.cpp.obj"
+		],
+		"Module.SequencerScripting.3.cpp.obj": [
+			"MovieSceneEventTrackExtensions.cpp.obj",
+			"MovieSceneFolderExtensions.cpp.obj",
+			"MovieSceneMaterialTrackExtensions.cpp.obj",
+			"MovieScenePrimitiveMaterialTrackExtensions.cpp.obj",
+			"MovieScenePropertyTrackExtensions.cpp.obj",
+			"MovieSceneSectionExtensions.cpp.obj",
+			"MovieSceneSequenceExtensions.cpp.obj",
+			"MovieSceneTrackExtensions.cpp.obj",
+			"MovieSceneVectorTrackExtensions.cpp.obj",
+			"SequencerScriptingRangeExtensions.cpp.obj",
+			"SequencerScripting.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\netcommon\\module.netcommon.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\netcommon\\definitions.netcommon.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\private\\net\\common\\netcommonmodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\common\\public\\net\\common\\packets\\packettraits.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

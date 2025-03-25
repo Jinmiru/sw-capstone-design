@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EventLoop.cpp.obj": [
+			"EventLoopIOManagerBSDSocketSelect.cpp.obj",
+			"EventLoopLog.cpp.obj",
+			"EventLoopModule.cpp.obj"
+		]
+	}
+}

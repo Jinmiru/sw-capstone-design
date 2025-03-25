@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\binkaudiodecoder\\module.binkaudiodecoder.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\binkaudiodecoder\\definitions.binkaudiodecoder.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\binkaudiodecoder\\module\\private\\binkaudioinfo.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\binkaudiodecoder\\module\\public\\binkaudioinfo.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\audiodecompress.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\targetplatform\\public\\interfaces\\iaudioformat.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\binkaudiodecoder\\sdk\\binkaudio\\include\\binka_ue_file_header.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\binkaudiodecoder\\sdk\\binkaudio\\include\\binka_ue_decode.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

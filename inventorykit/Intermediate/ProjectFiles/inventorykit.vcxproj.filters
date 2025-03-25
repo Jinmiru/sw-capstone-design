@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\inventorykit.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\inventorykit.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\inventorykitEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\inventorykitServer.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\inventorykit.png" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\inventorykit">
+      <UniqueIdentifier>{B93087AE-1D32-3947-9C5A-21D45035A2AA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\inventorykit\inventorykit.Build.cs">
+      <Filter>Source\inventorykit</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\inventorykit\inventorykit.cpp">
+      <Filter>Source\inventorykit</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\inventorykit\inventorykit.h">
+      <Filter>Source\inventorykit</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\inventorykit\MyClass.cpp">
+      <Filter>Source\inventorykit</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\inventorykit\MyClass.h">
+      <Filter>Source\inventorykit</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

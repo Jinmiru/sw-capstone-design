@@ -1,0 +1,35 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\virtualfilecache\\module.virtualfilecache.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\core\\sharedpch.core.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\virtualfilecache\\definitions.virtualfilecache.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\virtualfilecache\\private\\virtualfilecache.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\virtualfilecache\\public\\virtualfilecache.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iodispatcher.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iobuffer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iochunkid.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iocontainerid.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iodispatcherpriority.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iohash.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hash\\blake3.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\io\\iostatus.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\ienginecrypto.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\serialization\\fileregions.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\pixelformat.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\tasks\\task.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\async\\manualresetevent.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\async\\parkinglot.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\monotonictime.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\virtualfilecache\\private\\virtualfilecacheinternal.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\misc\\scoperwlock.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\async\\mappedfilehandle.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\containers\\intrusivedoublelinkedlist.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\virtualfilecache\\private\\virtualfilecacheinternal.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

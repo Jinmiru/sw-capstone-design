@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\imgmediafactory\\module.imgmediafactory.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\imgmediafactory\\definitions.imgmediafactory.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\imgmediafactory\\uht\\imgmediafactory.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\imgmedia\\source\\imgmediafactory\\private\\imgmediafactorymodule.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\imgmedia\\source\\imgmediafactory\\private\\imgmediafactoryprivate.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\media\\public\\imediamodule.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\media\\public\\imediaoptions.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\media\\public\\imediaplayerfactory.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\imgmedia\\source\\imgmediafactory\\public\\imgmediasettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\imgmediafactory\\uht\\imgmediasettings.generated.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\imgmedia\\source\\imgmedia\\public\\iimgmediamodule.h",
+            "c:\\github\\unrealengine5\\engine\\plugins\\media\\imgmedia\\source\\imgmediafactory\\private\\imgmediasettings.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykitserver\\inc\\imgmediafactory\\uht\\imgmediasettings.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

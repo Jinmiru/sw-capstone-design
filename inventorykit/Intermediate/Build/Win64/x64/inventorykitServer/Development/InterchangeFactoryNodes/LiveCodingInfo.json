@@ -1,0 +1,44 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InterchangeFactoryNodes.1.cpp.obj": [
+			"InterchangeCameraFactoryNode.gen.cpp.obj",
+			"InterchangeDecalActorFactoryNode.gen.cpp.obj",
+			"InterchangeDecalMaterialFactoryNode.gen.cpp.obj",
+			"InterchangeFactoryNodes.init.gen.cpp.obj",
+			"InterchangeLevelSequenceFactoryNode.gen.cpp.obj",
+			"InterchangeLightFactoryNode.gen.cpp.obj"
+		],
+		"Module.InterchangeFactoryNodes.2.cpp.obj": [
+			"InterchangePhysicsAssetFactoryNode.gen.cpp.obj",
+			"InterchangeSceneVariantSetsFactoryNode.gen.cpp.obj",
+			"InterchangeSkeletonFactoryNode.gen.cpp.obj",
+			"InterchangeTexture2DArrayFactoryNode.gen.cpp.obj",
+			"InterchangeTexture2DFactoryNode.gen.cpp.obj",
+			"InterchangeTextureCubeArrayFactoryNode.gen.cpp.obj",
+			"InterchangeTextureCubeFactoryNode.gen.cpp.obj",
+			"InterchangeTextureFactoryNode.gen.cpp.obj"
+		],
+		"Module.InterchangeFactoryNodes.3.cpp.obj": [
+			"InterchangeTextureLightProfileFactoryNode.gen.cpp.obj",
+			"InterchangeVolumeTextureFactoryNode.gen.cpp.obj",
+			"InterchangeActorFactoryNode.cpp.obj",
+			"InterchangeAnimSequenceFactoryNode.cpp.obj",
+			"InterchangeCommonPipelineDataFactoryNode.cpp.obj",
+			"InterchangeDecalActorFactoryNode.cpp.obj",
+			"InterchangeDecalMaterialFactoryNode.cpp.obj",
+			"InterchangeFactoryNodesModule.cpp.obj",
+			"InterchangeLevelSequenceFactoryNode.cpp.obj",
+			"InterchangeLightFactoryNode.cpp.obj",
+			"InterchangeMaterialFactoryNode.cpp.obj",
+			"InterchangeMeshActorFactoryNode.cpp.obj",
+			"InterchangeMeshFactoryNode.cpp.obj",
+			"InterchangeSceneImportAssetFactoryNode.cpp.obj",
+			"InterchangeSceneVariantSetsFactoryNode.cpp.obj",
+			"InterchangeSkeletalMeshFactoryNode.cpp.obj",
+			"InterchangeSkeletalMeshLodDataNode.cpp.obj",
+			"InterchangeStaticMeshFactoryNode.cpp.obj",
+			"InterchangeStaticMeshLodDataNode.cpp.obj"
+		]
+	}
+}

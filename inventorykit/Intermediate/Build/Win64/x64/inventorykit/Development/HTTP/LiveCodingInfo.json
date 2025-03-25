@@ -1,0 +1,35 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HTTP.cpp.obj": [
+			"CurlHttp.cpp.obj",
+			"CurlHttpManager.cpp.obj",
+			"CurlHttpThread.cpp.obj",
+			"CurlMultiPollEventLoopHttpThread.cpp.obj",
+			"CurlMultiWaitEventLoopHttpThread.cpp.obj",
+			"CurlSocketEventLoopHttpThread.cpp.obj",
+			"EventLoopHttpThread.cpp.obj",
+			"GenericPlatformHttp.cpp.obj",
+			"HttpRequestCommon.cpp.obj",
+			"HttpRequestImpl.cpp.obj",
+			"HttpRequestPayload.cpp.obj",
+			"HttpResponseCommon.cpp.obj",
+			"HttpManager.cpp.obj",
+			"HttpModule.cpp.obj",
+			"HttpRequestAdapter.cpp.obj",
+			"HttpRetrySystem.cpp.obj",
+			"HttpTests.cpp.obj",
+			"HttpThread.cpp.obj",
+			"IHttpThreadedRequest.cpp.obj",
+			"NullHttp.cpp.obj",
+			"WindowsPlatformHttp.cpp.obj",
+			"WinHttpConnection.cpp.obj",
+			"WinHttpConnectionHttp.cpp.obj",
+			"WinHttpErrorHelper.cpp.obj",
+			"WinHttpHandle.cpp.obj",
+			"WinHttpSession.cpp.obj",
+			"WinHttpTypes.cpp.obj",
+			"WinHttpHttpManager.cpp.obj"
+		]
+	}
+}

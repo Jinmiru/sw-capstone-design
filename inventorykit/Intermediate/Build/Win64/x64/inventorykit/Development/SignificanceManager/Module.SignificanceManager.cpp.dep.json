@@ -1,0 +1,38 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\significancemanager\\module.significancemanager.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\significancemanager\\definitions.significancemanager.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\significancemanager\\uht\\significancemanager.init.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\significancemanager\\source\\significancemanager\\private\\significancemanager.cpp",
+            "c:\\github\\unrealengine5\\engine\\plugins\\runtime\\significancemanager\\source\\significancemanager\\public\\significancemanager.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\significancemanager\\uht\\significancemanager.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\canvas.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\canvasitem.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\font.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\fontimportoptions.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\fontimportoptions.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\slatecore\\public\\fonts\\fontproviderinterface.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\slatecore\\uht\\fontproviderinterface.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\font.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\canvastypes.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\canvastypes.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\canvas.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\gameframework\\hud.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\gameframework\\hudhitbox.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\debugtextinfo.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\hud.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\significancemanager\\uht\\significancemanager.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\classes\\engine\\console.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\consolesettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\consolesettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\engine\\uht\\console.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

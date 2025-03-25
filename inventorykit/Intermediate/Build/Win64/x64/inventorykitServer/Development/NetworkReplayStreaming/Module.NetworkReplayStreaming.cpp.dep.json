@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\networkreplaystreaming\\module.networkreplaystreaming.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykitserver\\development\\networkreplaystreaming\\definitions.networkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\networkreplaystreaming\\private\\networkreplaystreaming.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\networkreplaystreaming\\networkreplaystreaming\\public\\networkreplaystreaming.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticseventattribute.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\analytics\\analytics\\public\\analyticsconversion.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\connection\\netresult.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\connection\\netresultmanager.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonserializermacros.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\policies\\prettyjsonprintpolicy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\policies\\jsonprintpolicy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\policies\\condensedjsonprintpolicy.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsondatabag.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonserializable.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\dom\\jsonobject.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\dom\\jsonvalue.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsontypes.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\jsonglobals.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonwriter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonserializer.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonreader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonserializerreader.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonserializerbase.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\json\\public\\serialization\\jsonserializerwriter.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\core\\public\\hal\\consolemanager.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

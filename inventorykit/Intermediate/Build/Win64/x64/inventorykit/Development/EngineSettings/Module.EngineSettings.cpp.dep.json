@@ -1,0 +1,37 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\enginesettings\\module.enginesettings.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\enginesettings\\definitions.enginesettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\consolesettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\consolesettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\consolesettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\enginesettings.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\gamemapssettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\gamemapssettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\gamemapssettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\gamenetworkmanagersettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\gamenetworkmanagersettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\gamenetworkmanagersettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\gamesessionsettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\gamesessionsettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\gamesessionsettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\generalenginesettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\generalenginesettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\generalenginesettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\generalprojectsettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\generalprojectsettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\generalprojectsettings.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\hudsettings.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\classes\\hudsettings.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\enginesettings\\uht\\hudsettings.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\private\\consolesettings.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\enginesettings\\private\\enginesettingsmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\automationmessages\\module.automationmessages.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\coreuobject\\sharedpch.coreuobject.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\automationmessages\\definitions.automationmessages.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationmessages\\uht\\automationmessages.init.gen.cpp",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationmessages\\uht\\automationworkermessages.gen.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationmessages\\public\\automationworkermessages.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationtest\\public\\automationstate.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationtest\\uht\\automationstate.generated.h",
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\inventorykit\\inc\\automationmessages\\uht\\automationworkermessages.generated.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\automationmessages\\private\\automationmessagesmodule.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

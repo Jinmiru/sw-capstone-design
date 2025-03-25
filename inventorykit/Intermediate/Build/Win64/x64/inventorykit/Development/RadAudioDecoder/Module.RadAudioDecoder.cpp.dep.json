@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\radaudiodecoder\\module.radaudiodecoder.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueproject\\inventorykit\\intermediate\\build\\win64\\x64\\inventorykit\\development\\radaudiodecoder\\definitions.radaudiodecoder.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\radaudiocodec\\module\\private\\radaudioinfo.cpp",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\radaudiocodec\\module\\public\\radaudioinfo.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\engine\\public\\audiodecompress.h",
+            "c:\\github\\unrealengine5\\engine\\source\\developer\\targetplatform\\public\\interfaces\\iaudioformat.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\radaudiocodec\\sdk\\include\\rada_file_header.h",
+            "c:\\github\\unrealengine5\\engine\\source\\runtime\\radaudiocodec\\sdk\\include\\rada_decode.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
