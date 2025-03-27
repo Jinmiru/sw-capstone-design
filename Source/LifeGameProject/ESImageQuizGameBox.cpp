@@ -49,7 +49,10 @@ void AESImageQuizGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AA
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowESImageQuizGameUI();
+                if (PlayerController->IsPlayingMiniGame()) return;
+
+                PlayerController->ShowGameUI(EGameUIType::ES_ImageQuiz);
+                PlayerController->SetIsPlayingMiniGame(true);
             }
         }
     }

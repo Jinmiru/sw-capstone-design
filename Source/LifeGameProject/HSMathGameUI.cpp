@@ -38,7 +38,8 @@ void UHSMathGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideHSMathGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::HS_Math);
     }
 }
 

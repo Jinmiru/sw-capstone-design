@@ -34,7 +34,7 @@ public:
 	float SpawnRadius;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawning)
-	int32 RemainingTrashCount;      // 남은 쓰레기 개수
+	int32 CollectedTrashCount;      // 남은 쓰레기 개수
 
 public:	
 	// Sets default values for this actor's properties
@@ -59,5 +59,11 @@ public:
 	// 쓰레기 주웠을 때 호출되는 함수
 	UFUNCTION()
 	void TrashPickedUp();
+
+	UFUNCTION()
+	void CancelGame();
+
+private:
+	class UESServiceGameUI* GetServiceGameUI();
 
 };

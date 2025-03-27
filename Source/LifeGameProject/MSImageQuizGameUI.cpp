@@ -39,7 +39,8 @@ void UMSImageQuizGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideMSImageQuizGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::MS_ImageQuiz);
     }
 }
 

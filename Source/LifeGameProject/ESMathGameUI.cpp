@@ -38,7 +38,8 @@ void UESMathGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideESMathGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::ES_Math);
     }
 }
 

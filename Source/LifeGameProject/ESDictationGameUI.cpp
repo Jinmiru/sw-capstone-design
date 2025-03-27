@@ -38,7 +38,8 @@ void UESDictationGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideESDictationGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::ES_Dictation);
     }
 }
 

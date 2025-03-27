@@ -112,7 +112,8 @@ void UESRunningGameUI::OnCloseButtonClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideESRunningGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::ES_Running);
     }
 }
 

@@ -2,11 +2,13 @@
 
 
 #include "ESServiceGameBox.h"
-#include "Components/BoxComponent.h"
+#include "ESServiceGameUI.h"
+#include "LifeGameProjectPlayerController.h"
 #include "LifeGameProjectCharacter.h"
+#include "TrashActor.h"
+#include "Components/BoxComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "LifeGameProjectPlayerController.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -26,7 +28,7 @@ AESServiceGameBox::AESServiceGameBox()
 
     NumTrashToSpawn = 10;                       // 기본값 설정, 쓰레기 생성 개수
     SpawnRadius = 500.0f;                       // 기본값 설정, 쓰레기 스폰 범위
-    RemainingTrashCount = 0;                    // 남은 쓰레기 개수 초기화
+    CollectedTrashCount = 0;                    // 주운 쓰레기 개수 초기화
 
     bIsGameRunning = false;                     // 게임 진행 상태 초기화
 
@@ -49,7 +51,6 @@ void AESServiceGameBox::Tick(float DeltaTime)
 void AESServiceGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
     int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-    // 게임이 이미 진행 중이면 무시
     if (bIsGameRunning)
         return;
 
@@ -61,15 +62,20 @@ void AESServiceGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AAct
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowESServiceGameUI();
+                if (PlayerController->IsPlayingMiniGame()) return;
+
+                bIsGameRunning = true;
+                CollectedTrashCount = 0;
+
+                PlayerController->ShowGameUI(EGameUIType::ES_Service);
+                PlayerController->SetIsPlayingMiniGame(true);
+
+                if (UESServiceGameUI* ServiceUI = GetServiceGameUI())
+                {
+                    ServiceUI->UpdateQuestionText(CollectedTrashCount, NumTrashToSpawn);
+                }
 
                 SpawnTrashActors();
-
-                // 게임 시작 상태로 설정
-                bIsGameRunning = true;
-
-                // 쓰레기 개수를 초기화(기본값: 10개)
-                RemainingTrashCount = NumTrashToSpawn;
             }
         }
     }
@@ -78,46 +84,93 @@ void AESServiceGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AAct
 
 void AESServiceGameBox::SpawnTrashActors()
 {
-	if (TrashActorClass)
-	{
-		ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-		if (PlayerCharacter)
-		{
-			FVector PlayerLocation = PlayerCharacter->GetActorLocation();
-			FVector PlayerFloorLocation = FVector(PlayerLocation.X, PlayerLocation.Y, 0.0f);
+    if (!TrashActorClass) return;
 
-			for (int32 i = 0; i < NumTrashToSpawn; ++i)
-			{
-				// 🔹 0도 ~ 360도 중 랜덤한 방향 각도
-				float RandAngleDeg = UKismetMathLibrary::RandomFloatInRange(0.0f, 360.0f);
+    ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+    if (!PlayerCharacter) return;
 
-				// 🔹 200cm ~ SpawnRadius 사이 랜덤 거리
-				float RandDistance = UKismetMathLibrary::RandomFloatInRange(200.0f, SpawnRadius);
+    FVector PlayerLocation = PlayerCharacter->GetActorLocation();
+    FVector FloorLocation = FVector(PlayerLocation.X, PlayerLocation.Y, 0.f);
 
-				// 🔹 방향 벡터 계산
-				float Rad = FMath::DegreesToRadians(RandAngleDeg);
-				float X = FMath::Cos(Rad) * RandDistance;
-				float Y = FMath::Sin(Rad) * RandDistance;
+    for (int32 i = 0; i < NumTrashToSpawn; ++i)
+    {
+        float AngleRad = FMath::DegreesToRadians(FMath::FRandRange(0.f, 360.f));
+        float Dist = FMath::FRandRange(200.f, SpawnRadius);
+        FVector Offset = FVector(FMath::Cos(AngleRad) * Dist, FMath::Sin(AngleRad) * Dist, 0.f);
+        FVector SpawnLocation = FloorLocation + Offset;
 
-				FVector Offset = FVector(X, Y, 0.0f);
-				FVector SpawnLocation = PlayerFloorLocation + Offset;
+        ATrashActor* Trash = Cast<ATrashActor>(
+            GetWorld()->SpawnActor<AActor>(TrashActorClass, SpawnLocation, FRotator::ZeroRotator)
+        );
 
-				GetWorld()->SpawnActor<AActor>(TrashActorClass.Get(), SpawnLocation, FRotator::ZeroRotator);
-			}
-		}
-	}
+        if (Trash)
+        {
+            Trash->SetOwningGameBox(this);
+        }
+    }
 }
 
 
 void AESServiceGameBox::TrashPickedUp()
 {
-    RemainingTrashCount--;
-    if (RemainingTrashCount <= 0)
-    {
-        // 게임 종료 로직
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("모든 쓰레기를 주웠습니다!"));
+    CollectedTrashCount++;
 
-        // 게임 종료 상태로 변경
-        bIsGameRunning = false;
+    UESServiceGameUI* GameUI = nullptr;
+    APlayerController* Controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+    if (ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller))
+    {
+        GameUI = Cast<UESServiceGameUI>(PlayerController->GetGameUIInstance(EGameUIType::ES_Service));
+        if (GameUI)
+        {
+            GameUI->UpdateQuestionText(CollectedTrashCount, NumTrashToSpawn);
+        }
     }
+
+    if (CollectedTrashCount >= NumTrashToSpawn)
+    {
+        if (UESServiceGameUI* ServiceUI = GetServiceGameUI())
+        {
+            ServiceUI->EndGame(true); // 성공 처리
+        }
+
+        FTimerHandle EndGameTimerHandle;
+        GetWorld()->GetTimerManager().SetTimer(
+            EndGameTimerHandle,
+            FTimerDelegate::CreateLambda([this]()
+                {
+                    bIsGameRunning = false;
+                }),
+            2.0f,
+            false
+        );
+    }
+}
+
+UESServiceGameUI* AESServiceGameBox::GetServiceGameUI()
+{
+    APlayerController* Controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+    if (ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller))
+    {
+        UUserWidget* Widget = PlayerController->GetGameUIInstance(EGameUIType::ES_Service);
+        return Cast<UESServiceGameUI>(Widget);
+    }
+    return nullptr;
+}
+
+void AESServiceGameBox::CancelGame()
+{
+    // 흩뿌려진 쓰레기 제거
+    TArray<AActor*> TrashActors;
+    UGameplayStatics::GetAllActorsOfClass(GetWorld(), TrashActorClass, TrashActors);
+    for (AActor* Trash : TrashActors)
+    {
+        Trash->Destroy();
+    }
+
+    FTimerHandle ResetStateHandle;
+    GetWorld()->GetTimerManager().SetTimer(ResetStateHandle, FTimerDelegate::CreateLambda([this]()
+        {
+            bIsGameRunning = false;
+            CollectedTrashCount = 0;
+        }), 2.0f, false);
 }

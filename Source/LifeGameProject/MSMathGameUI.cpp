@@ -38,7 +38,8 @@ void UMSMathGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideMSMathGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::MS_Math);
     }
 }
 

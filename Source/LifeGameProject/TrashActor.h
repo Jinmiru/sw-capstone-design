@@ -18,10 +18,15 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = MathGameBox, meta = (AllowPrivateAccess = "true"))
 	class UBoxComponent* CollisionBox;
+
+	UPROPERTY()
+	AActor* OwningGameBox;
 	
 public:	
 	// Sets default values for this actor's properties
 	ATrashActor();
+
+	void SetOwningGameBox(AActor* GameBoxActor);
 
 protected:
 	// Called when the game starts or when spawned

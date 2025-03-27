@@ -49,7 +49,10 @@ void AMSEnglishGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AAct
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowMSEnglishGameUI();
+                if (PlayerController->IsPlayingMiniGame()) return;
+
+                PlayerController->ShowGameUI(EGameUIType::MS_English);
+                PlayerController->SetIsPlayingMiniGame(true);
             }
         }
     }

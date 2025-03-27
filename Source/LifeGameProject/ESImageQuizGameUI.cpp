@@ -39,7 +39,8 @@ void UESImageQuizGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideESImageQuizGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::ES_ImageQuiz);
     }
 }
 

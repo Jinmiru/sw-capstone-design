@@ -39,7 +39,8 @@ void UHSImageQuizGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideHSImageQuizGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::HS_ImageQuiz);
     }
 }
 

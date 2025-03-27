@@ -4,7 +4,38 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Blueprint/UserWidget.h"
 #include "LifeGameProjectPlayerController.generated.h"
+
+UENUM(BlueprintType)
+enum class EGameUIType : uint8
+{
+	ES_Math,
+	ES_Dictation,
+	ES_ImageQuiz,
+	ES_Service,
+	ES_Running,
+	MS_Math,
+	MS_English,
+	MS_ImageQuiz,
+	MS_Service,
+	HS_Math,
+	HS_Quiz,
+	HS_ImageQuiz,
+	HS_Service
+};
+
+USTRUCT(BlueprintType)
+struct FGameUIInfo
+{
+	GENERATED_BODY()
+
+	UPROPERTY()
+	UUserWidget* WidgetInstance = nullptr;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> WidgetClass = nullptr;
+};
 
 UCLASS()
 class LIFEGAMEPROJECT_API ALifeGameProjectPlayerController : public APlayerController
@@ -12,101 +43,36 @@ class LIFEGAMEPROJECT_API ALifeGameProjectPlayerController : public APlayerContr
 	GENERATED_BODY()
 
 public:
+	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UESMathGameUI> BP_ESMathGameUI;
-	
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UESDictationGameUI> BP_ESDictationGameUI;
-	
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UESImageQuizGameUI> BP_ESImageQuizGameUI;
+	// 수업(미니게임) 중복 실행 방지 함수
+	UFUNCTION(BlueprintCallable, Category = "MiniGame")
+	bool IsPlayingMiniGame() const;
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UESServiceGameUI> BP_ESServiceGameUI;
-	
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UESRunningGameUI> BP_ESRunningGameUI;
+	UFUNCTION(BlueprintCallable, Category = "MiniGame")
+	void SetIsPlayingMiniGame(bool bPlaying);
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UMSMathGameUI> BP_MSMathGameUI;
+	// UI 표시 및 숨김 함수
+	UFUNCTION(BlueprintCallable)
+	void ShowGameUI(EGameUIType UIType);
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UMSEnglishGameUI> BP_MSEnglishGameUI;
+	UFUNCTION(BlueprintCallable)
+	void HideGameUI(EGameUIType UIType);
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UMSImageQuizGameUI> BP_MSImageQuizGameUI;
-	
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UHSMathGameUI> BP_HSMathGameUI;
+	UFUNCTION(BlueprintCallable, Category = "UI")
+	UUserWidget* GetGameUIInstance(EGameUIType UIType);
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UHSQuizGameUI> BP_HSQuizGameUI;
-	
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<class UHSImageQuizGameUI> BP_HSImageQuizGameUI;
-
-	// 초등학교 UI 보이기/숨기기
-	void ShowESMathGameUI();
-	void HideESMathGameUI();
-	void ShowESDictationGameUI();
-	void HideESDictationGameUI();
-	void ShowESImageQuizGameUI();
-	void HideESImageQuizGameUI();
-	void ShowESServiceGameUI();
-	void HideESServiceGameUI();
-	void ShowESRunningGameUI();
-	void HideESRunningGameUI();
-
-	// 중학교 UI 보이기/숨기기
-	void ShowMSMathGameUI();
-	void HideMSMathGameUI();
-	void ShowMSEnglishGameUI();
-	void HideMSEnglishGameUI();
-	void ShowMSImageQuizGameUI();
-	void HideMSImageQuizGameUI();
-	
-	// 고등학교 UI 보이기/숨기기
-	void ShowHSMathGameUI();
-	void HideHSMathGameUI();
-	void ShowHSQuizGameUI();
-	void HideHSQuizGameUI();
-	void ShowHSImageQuizGameUI();
-	void HideHSImageQuizGameUI();
+protected:
+	// UI 위젯 클래스 에디터에서 설정
+	UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TMap<EGameUIType, TSubclassOf<UUserWidget>> GameUIClasses;
 
 private:
+	// UI 인스턴스 저장용
+	TMap<EGameUIType, UUserWidget*> GameUIInstances;
 
-	UPROPERTY()
-	class UESMathGameUI* ESMathGameUI;
-	
-	UPROPERTY()
-	class UESDictationGameUI* ESDictationGameUI;
+	UPROPERTY(VisibleAnywhere, Category = "MiniGame")
+	bool bIsPlayingMiniGame = false;
 
-	UPROPERTY()
-	class UESImageQuizGameUI* ESImageQuizGameUI;
-
-	UPROPERTY()
-	class UESServiceGameUI* ESServiceGameUI;
-	
-	UPROPERTY()
-	class UESRunningGameUI* ESRunningGameUI;
-	
-	UPROPERTY()
-	class UMSMathGameUI* MSMathGameUI;
-
-	UPROPERTY()
-	class UMSEnglishGameUI* MSEnglishGameUI;
-
-	UPROPERTY()
-	class UMSImageQuizGameUI* MSImageQuizGameUI;
-
-	UPROPERTY()
-	class UHSMathGameUI* HSMathGameUI;
-
-	UPROPERTY()
-	class UHSQuizGameUI* HSQuizGameUI;
-
-	UPROPERTY()
-	class UHSImageQuizGameUI* HSImageQuizGameUI;
-
+	void LogMissingBlueprint(EGameUIType UIType);
 };

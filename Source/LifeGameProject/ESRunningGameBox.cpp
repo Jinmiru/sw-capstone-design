@@ -49,7 +49,10 @@ void AESRunningGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AAct
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowESRunningGameUI();
+                if (PlayerController->IsPlayingMiniGame()) return;
+
+                PlayerController->ShowGameUI(EGameUIType::ES_Running);
+                PlayerController->SetIsPlayingMiniGame(true);
             }
         }
     }

@@ -49,7 +49,10 @@ void AESDictationGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AA
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowESDictationGameUI();
+                if (PlayerController->IsPlayingMiniGame()) return;
+
+                PlayerController->ShowGameUI(EGameUIType::ES_Dictation);
+                PlayerController->SetIsPlayingMiniGame(true);
             }
         }
     }

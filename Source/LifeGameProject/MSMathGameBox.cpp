@@ -49,7 +49,10 @@ void AMSMathGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor*
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowMSMathGameUI();
+                if (PlayerController->IsPlayingMiniGame()) return;
+
+                PlayerController->ShowGameUI(EGameUIType::MS_Math);
+                PlayerController->SetIsPlayingMiniGame(true);
             }
         }
     }

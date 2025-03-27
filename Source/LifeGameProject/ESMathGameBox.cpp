@@ -2,10 +2,10 @@
 
 
 #include "ESMathGameBox.h"
-#include "Components/BoxComponent.h"
 #include "LifeGameProjectCharacter.h"
-#include "Kismet/KismetSystemLibrary.h"
 #include "LifeGameProjectPlayerController.h"
+#include "Components/BoxComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Sets default values
 AESMathGameBox::AESMathGameBox()
@@ -49,7 +49,10 @@ void AESMathGameBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor*
             ALifeGameProjectPlayerController* PlayerController = Cast<ALifeGameProjectPlayerController>(Controller);
             if (PlayerController)
             {
-                PlayerController->ShowESMathGameUI();
+				if (PlayerController->IsPlayingMiniGame()) return;
+
+				PlayerController->ShowGameUI(EGameUIType::ES_Math);
+				PlayerController->SetIsPlayingMiniGame(true);
             }
         }
     }

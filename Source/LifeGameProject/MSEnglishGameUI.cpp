@@ -38,7 +38,8 @@ void UMSEnglishGameUI::OnCloseClicked()
 
     if (PlayerController)
     {
-        PlayerController->HideMSEnglishGameUI();
+        PlayerController->SetIsPlayingMiniGame(false);
+        PlayerController->HideGameUI(EGameUIType::MS_English);
     }
 }
 
