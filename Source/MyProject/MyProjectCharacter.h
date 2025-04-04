@@ -17,15 +17,6 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
-UENUM(BlueprintType)
-enum class EColorCurseType : uint8
-{
-	Red,
-	Blue,
-	Yellow,
-	Green,
-	Purple
-};
 
 
 UCLASS(config=Game)
@@ -239,8 +230,8 @@ protected:
 
 	void IncreaseMoney();  // 돈 증가 함수
 
-	void SpawnNiagara(const FString& NiagaraPath, const FVector& Direction, const FVector& Scale); // 나이아가라 이펙트 생성
-	void SpawnNextNiagaraEffect(); // 힐 이펙트
+	void SpawnNiagara(const FString& NiagaraPath, const FVector& Direction, const FVector& Scale, float Duration); // 나이아가라 이펙트 생성
+	void HealEffect(); // 힐 이펙트
 
 	void Dash(); // 대쉬
 	void StopDash(); // 대쉬 멈추기
@@ -281,18 +272,18 @@ private:
 	TArray<UMaterialInterface*> PuddleMaterials;
 
 
-	FTimerHandle PaintTimerHandle; // 페인트 타이머
-	//void StartPaintLoop(); // 페인트 루프 시작
-	//void StopPaintLoop(); // 페인트 루프 멈춤
+	FTimerHandle PaintTimerHandle;
 
-	EColorCurseType CurrentCurseColor;
-
-	// 물감 색상별 머티리얼 (적에게 적용)
-	/*UPROPERTY(EditDefaultsOnly)
-	TMap<EColorCurseType, UMaterialInterface*> CurseMaterials;*/
 
 	UFUNCTION(BlueprintCallable)
 	void SkillOn(const FString& NiagaraPath);
 
+	void EquipWeaponWithEffect(const FString& NiagaraPath, const FString& WeaponBlueprintPath); //직업 전직 대쉬이펙트 & 무기 장착
+
+	//UFUNCTION()
+	//void Siren(); // 사이렌
+
+	//UPROPERTY()
+	//AActor* SirenActor;
 };
 

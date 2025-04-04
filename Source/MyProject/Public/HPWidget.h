@@ -10,6 +10,9 @@
 /**
  * 
  */
+
+class AMyProjectCharacter;
+
 UCLASS()
 class MYPROJECT_API UHPWidget : public UUserWidget
 {
@@ -17,13 +20,16 @@ class MYPROJECT_API UHPWidget : public UUserWidget
 	
 
 public:
+
+
+
 	UPROPERTY(meta = (BindWidget))
 	class UProgressBar* HPBar;
 
 	UFUNCTION(BlueprintCallable)
 	float GetPlayerHP();
 
-	
+
 	UFUNCTION(BlueprintCallable)
 	void UpdateHPBar(int32 HP);
 
