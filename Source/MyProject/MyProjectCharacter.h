@@ -131,8 +131,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 	UParticleSystem* HitEffect; // °ø°Ý ÀÌÆåÆ®
 
-	UPROPERTY(EditDefaultsOnly, Category = "Animation")
-	UAnimMontage* AttackMontage;
+	/*UPROPERTY(EditDefaultsOnly, Category = "Animation")
+	UAnimMontage* AttackMontage;*/
 
 	UPROPERTY(EditDefaultsOnly, Category = "Animation")
 	UAnimMontage* DashMontage;
@@ -172,6 +172,7 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<class UHPWidget> BP_HPWidget; //HP À§Á¬ Å¬·¡½º
+
 
 	
 	UFUNCTION()

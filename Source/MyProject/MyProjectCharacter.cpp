@@ -209,8 +209,11 @@ void AMyProjectCharacter::Look(const FInputActionValue& Value)
 
 void AMyProjectCharacter::Attack(const FInputActionValue& Value)
 {
-	if (AttackMontage && GetMesh()->GetAnimInstance()) {
-		GetMesh()->GetAnimInstance()->Montage_Play(AttackMontage);
+	UPlayerAnim* Panim = Cast<UPlayerAnim>(GetMesh()->GetAnimInstance());
+
+	if (Panim) 
+	{
+		Panim->PlayAttackAnim();
 	}
 
 	FVector Start = GetActorLocation();

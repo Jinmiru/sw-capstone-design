@@ -11,6 +11,16 @@
 /**
  * 
  */
+UENUM(BlueprintType)
+enum class EPlayerAnimState : uint8
+{
+	Idle        UMETA(DisplayName = "Idle"),
+	Run         UMETA(DisplayName = "Run"),
+	Jump        UMETA(DisplayName = "Jump"),
+	Attack      UMETA(DisplayName = "Attack")
+};
+
+
 UCLASS()
 class MYPROJECT_API UPlayerAnim : public UAnimInstance
 {
@@ -30,6 +40,15 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = PlayerAnim)
 	class UAnimMontage* AttackMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = FSM)
+	EPlayerAnimState CurrentState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bIsPlayingAttackMontage = false;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float BlendAlpha = 0;
+
 
 	void PlayAttackAnim();
 

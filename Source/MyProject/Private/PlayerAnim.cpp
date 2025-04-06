@@ -6,6 +6,7 @@
 
 #include "GameFramework/CharacterMovementComponent.h"
 
+static EPlayerAnimState PrevState = EPlayerAnimState::Idle;
 
 void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 {
@@ -23,6 +24,37 @@ void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 
 		auto movement = player->GetCharacterMovement();
 		isInAir = movement->IsFalling();
+
+		if (AttackMontage && Montage_IsPlaying(AttackMontage))
+		{
+			bIsPlayingAttackMontage = true;
+			BlendAlpha = 1.0f;
+			// 현재 몽타주 재생 중이면 상태 고정
+			return;
+		}
+		else
+		{
+			bIsPlayingAttackMontage = false;
+			BlendAlpha = 0.0f;
+		}
+
+
+		if (isInAir)
+		{
+			CurrentState = EPlayerAnimState::Jump;
+		}
+		else
+		{
+			// Hysteresis 적용
+			if (PrevState == EPlayerAnimState::Run)
+			{
+				CurrentState = (Speed > 10.f) ? EPlayerAnimState::Run : EPlayerAnimState::Idle;
+			}
+			else // Idle이거나 다른 상태였던 경우
+			{
+				CurrentState = (Speed > 300.f) ? EPlayerAnimState::Run : EPlayerAnimState::Idle;
+			}
+		}
 		
 	}
 
@@ -31,5 +63,9 @@ void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 
 void UPlayerAnim::PlayAttackAnim()
 {
-	Montage_Play(AttackMontage);
+	if (AttackMontage)
+	{
+		Montage_Play(AttackMontage);
+		CurrentState = EPlayerAnimState::Attack;
+	}
 }
