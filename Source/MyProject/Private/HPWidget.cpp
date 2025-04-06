@@ -5,6 +5,10 @@
 #include "MyProject/MyProjectCharacter.h"
 #include "Components/ProgressBar.h"
 
+
+
+
+
 void UHPWidget::UpdateHPBar(int32 HP1)
 {
 	if (HPBar)
@@ -17,7 +21,6 @@ void UHPWidget::UpdateHPBar(int32 HP1)
 float UHPWidget::GetPlayerHP()
 {
     APlayerController* PC = GetOwningPlayer(); // 위젯을 소유한 플레이어 컨트롤러 가져오기
-    //UE_LOG(LogTemp, Warning, TEXT("readyPlayerHP"));
 
     if (PC)
     {

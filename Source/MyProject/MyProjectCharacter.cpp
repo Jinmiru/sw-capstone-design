@@ -17,6 +17,8 @@
 #include "NiagaraSystem.h"
 #include "NiagaraFunctionLibrary.h"
 #include "HPWidget.h"
+#include "PlayerAnim.h"
+#include "Engine/StaticMeshActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -87,6 +89,9 @@ AMyProjectCharacter::AMyProjectCharacter()
 	HP_Player = 100;
 	Power = 1;
 	bCanDash = true;
+
+
+	
 }
 
 void AMyProjectCharacter::BeginPlay()
@@ -153,7 +158,7 @@ void AMyProjectCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(Skill1, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack1);
 		EnhancedInputComponent->BindAction(Skill2, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack2);
 		EnhancedInputComponent->BindAction(Skill3, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack3);
-		EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack4);
+		//EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack4);
 		EnhancedInputComponent->BindAction(Skill5, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack5);
 
 		EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Started, this, &AMyProjectCharacter::StartDashCharge);
@@ -201,6 +206,7 @@ void AMyProjectCharacter::Look(const FInputActionValue& Value)
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
 }
+
 void AMyProjectCharacter::Attack(const FInputActionValue& Value)
 {
 	if (AttackMontage && GetMesh()->GetAnimInstance()) {
@@ -285,10 +291,8 @@ void AMyProjectCharacter::PlusAge(const FInputActionValue& Value) {
 		AttackRange += 50.0f;
 
 	}
-	
-	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), LevelupEffect, GetActorLocation(), FRotator::ZeroRotator, FVector(1.0f));
 	//레벨업 이펙트
-
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), LevelupEffect, GetActorLocation(), FRotator::ZeroRotator, FVector(1.0f));
 
 }
 
@@ -296,54 +300,35 @@ void AMyProjectCharacter::PlusAge(const FInputActionValue& Value) {
 void AMyProjectCharacter::Print(const FInputActionValue& Value)
 {
 	OnHitEvent();
-	//UE_LOG(LogTemp, Warning, TEXT("\n Physical : %d \n Sensory : %d \n Logic : %d \n Linguistic : %d \n SocialSkill : %d \n MentalStrength : %d "), Physical, Sensory, Logic, Linguistic, SocialSkill, MentalStrength);
-
+	
 
 }
 
 void AMyProjectCharacter::UpdateStatus()
 {
-	if (!HUDWidget)  // HUDWidget이 nullptr이면 함수 종료
+	if (!HUDWidget) 
 	{
 		UE_LOG(LogTemp, Error, TEXT("HUDWidget is NULL in UpdateStatus!"));
 		return;
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("update"));
-
 	if (HUDWidget->AgeText)
-	{
 		HUDWidget->AgeText->SetText(FText::AsNumber(Age));
-	}
 	if (HUDWidget->PhysicalText)
-	{
 		HUDWidget->PhysicalText->SetText(FText::AsNumber(Physical));
-	}
 	if (HUDWidget->SensoryText)
-	{
 		HUDWidget->SensoryText->SetText(FText::AsNumber(Sensory));
-	}
 	if (HUDWidget->LogicText)
-	{
 		HUDWidget->LogicText->SetText(FText::AsNumber(Logic));
-	}
 	if (HUDWidget->LinguisticText)
-	{
 		HUDWidget->LinguisticText->SetText(FText::AsNumber(Linguistic));
-	}
 	if (HUDWidget->SocialSkillText)
-	{
 		HUDWidget->SocialSkillText->SetText(FText::AsNumber(SocialSkill));
-	}
 	if (HUDWidget->MentalStrengthText)
-	{
 		HUDWidget->MentalStrengthText->SetText(FText::AsNumber(MentalStrength));
-	}
-	
 	if (HUDWidget->proficiency)
-	{
 		HUDWidget->proficiency->SetText(FText::AsNumber(GetHighestStatName()));
-	}
+
 
 	if (HUDWidget->jobText)
 	{
@@ -353,9 +338,7 @@ void AMyProjectCharacter::UpdateStatus()
 		else if (Age < 17) {
 			
 			ChangeProfile(TEXT("/Game/Images/T_UI_middle.T_UI_middle"), TEXT("middle school"));
-
 			Power = 1.5;
-
 			UStaticMesh* chain = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Fist.SM_Fist'"));
 			if (chain) {
 				MeshComponent->SetStaticMesh(chain);
@@ -366,20 +349,16 @@ void AMyProjectCharacter::UpdateStatus()
 		}
 		else if(Age <20) {
 			ChangeProfile(TEXT("/Game/Images/T_UI_high.T_UI_high"), TEXT("high school"));
-
 			Power = 2;
-
 			UStaticMesh* chain2 = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Scythe.SM_Scythe'"));
 			if (chain2) {
 				MeshComponent->SetStaticMesh(chain2);
 				MeshComponent->SetWorldScale3D(FVector(0.5f));//크기 1배
 			}
-
 		}
 		else {
 			MeshComponent->SetStaticMesh(nullptr);
 		}
-		
 	}
 
 
@@ -388,6 +367,8 @@ void AMyProjectCharacter::UpdateStatus()
 		UE_LOG(LogTemp, Error, TEXT("proficiency TextBlock is NULL in HUDWidget!"));
 	}
 }	
+
+
 
 int32 AMyProjectCharacter::GetHighestStatName()
 {
@@ -402,7 +383,6 @@ int32 AMyProjectCharacter::GetHighestStatName()
 
 	FString BestStatName;
 	int32 MaxValue = TNumericLimits<int32>::Min();
-
 	for (const auto& Stat : Stats)
 	{
 		if (Stat.Value > MaxValue)
@@ -437,7 +417,6 @@ void AMyProjectCharacter::OnHitEvent()
 	UE_LOG(LogTemp, Warning, TEXT("OnHitEvent, HP : %d"), HP_Player);
 	if (HitEffect)
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("effect on"));
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitEffect, GetActorLocation());
 	}
 }
@@ -449,34 +428,18 @@ void AMyProjectCharacter::OnHitEvent2()
 }
 
 void AMyProjectCharacter::Dash() {
-	//UE_LOG(LogTemp, Warning, TEXT("Dash1"));
-
 	if (!bCanDash) return;
-
-	//UE_LOG(LogTemp, Warning, TEXT("Dash2"));
-
-
 	if (DashMontage && GetMesh()->GetAnimInstance()) {
 		GetMesh()->GetAnimInstance()->Montage_Play(DashMontage);
 	}
-	
-	//UE_LOG(LogTemp, Warning, TEXT("Dash3"));
-
 	if (this->NiagaraSystem)
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("NiagaraSystem Success"));
-
 		FVector ForwardVector = GetActorForwardVector();
 		float SpawnDistance = 200.f;
 
-		// 생성 위치: 캐릭터 앞쪽
 		FVector SpawnLocation = GetActorLocation() + ForwardVector * SpawnDistance;
-
-		// 생성 회전: 바라보는 방향
 		FRotator SpawnRotation = ForwardVector.Rotation();
-
-		// 스케일 (원하는 크기로 조절 가능)
-		FVector SpawnScale = FVector(0.5f, 0.7f, 0.7f); // 원하는 크기
+		FVector SpawnScale = FVector(0.5f, 0.7f, 0.7f); //크기
 
 		// 이펙트 생성
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(
@@ -526,322 +489,160 @@ void AMyProjectCharacter::ChangeProfile(const FString& TextureAssetPath, const F
 
 }
 
-
 void AMyProjectCharacter::ChangeJobSkill1()
 {
 
 	ChangeProfile(TEXT("/Game/Images/police.police"), TEXT("police"));
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill1"));
 
-	if(this->NiagaraSystem)
-		NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Mana.NS_Dash_Mana"));
 
-	// 이전 무기 제거
-	if (EquippedWeaponActor)
-	{
-		EquippedWeaponActor->Destroy();
-		EquippedWeaponActor = nullptr;
-		//UE_LOG(LogTemp, Warning, TEXT("Previous weapon destroyed"));
-	}
 
-	// 바톤 블루프린트 클래스 로드
-	TSubclassOf<AActor> BatonBPClass = StaticLoadClass(
-		AActor::StaticClass(),
-		nullptr,
+	EquipWeaponWithEffect(
+		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Mana.NS_Dash_Mana"),
 		TEXT("/Game/Weapon/MeleePack/BlueprintClasses/BC_Baton.BC_Baton_C")
 	);
 
-	if (BatonBPClass)
-	{
-		FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
-		FRotator SpawnRotation = GetActorRotation();
-
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-
-		// 바톤 액터 스폰
-		AActor* SpawnedBaton = GetWorld()->SpawnActor<AActor>(BatonBPClass, SpawnLocation, SpawnRotation, SpawnParams);
-
-		if (SpawnedBaton)
-		{
-			// 손에 부착
-			FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
-			SpawnedBaton->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
-
-			// 충돌 비활성화
-			if (UStaticMeshComponent* BatonMesh = SpawnedBaton->FindComponentByClass<UStaticMeshComponent>())
-			{
-				BatonMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-			}
-
-			// 무기 저장
-			EquippedWeaponActor = SpawnedBaton;
-
-			UE_LOG(LogTemp, Warning, TEXT("Baton spawned and attached to hand"));
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Failed to load Baton BP class"));
-	}
 }
 
 void AMyProjectCharacter::ChangeJobSkill2()
 {
 	ChangeProfile(TEXT("/Game/Images/cooking.cooking"), TEXT("cooking"));
-
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill2"));
 
-	if (this->NiagaraSystem)
-		NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, TEXT("/Script/Niagara.NiagaraSystem'/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Fire.NS_Dash_Fire'"));
-
-	// 기존 무기 제거
-	if (EquippedWeaponActor)
-	{
-		EquippedWeaponActor->Destroy();
-		EquippedWeaponActor = nullptr;
-		//UE_LOG(LogTemp, Warning, TEXT("Previous weapon destroyed"));
-	}
-
-	// 프라이팬 블루프린트 클래스 로드
-	TSubclassOf<AActor> FlyingPanBPClass = StaticLoadClass(
-		AActor::StaticClass(),
-		nullptr,
+	EquipWeaponWithEffect(
+		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Fire.NS_Dash_Fire"),
 		TEXT("/Game/Weapon/Pan/FlyingPan.FlyingPan_C")
 	);
-
-	if (FlyingPanBPClass)
-	{
-		FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
-		FRotator SpawnRotation = GetActorRotation();
-
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-
-		// 프라이팬 스폰
-		AActor* SpawnedFlyingPan = GetWorld()->SpawnActor<AActor>(FlyingPanBPClass, SpawnLocation, SpawnRotation, SpawnParams);
-
-		if (SpawnedFlyingPan)
-		{
-			FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
-			SpawnedFlyingPan->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
-
-			// 충돌 제거
-			if (UStaticMeshComponent* FlyingPanMesh = SpawnedFlyingPan->FindComponentByClass<UStaticMeshComponent>())
-			{
-				FlyingPanMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-				// 또는 FlyingPanMesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
-			}
-
-			// 무기 저장
-			EquippedWeaponActor = SpawnedFlyingPan;
-
-			UE_LOG(LogTemp, Warning, TEXT("FlyingPan spawned and attached"));
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Failed to load FlyingPan BP class"));
-	}
 }
 
 void AMyProjectCharacter::ChangeJobSkill3()
 {
 	ChangeProfile(TEXT("/Game/Images/boxer.boxer"), TEXT("boxer"));
-
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill3"));
 
-	if (this->NiagaraSystem)
-		NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, TEXT("/Script/Niagara.NiagaraSystem'/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Wind.NS_Dash_Wind'"));
 
-
-
-	if (EquippedWeaponActor)
-	{
-		EquippedWeaponActor->Destroy();
-		EquippedWeaponActor = nullptr;
-		//UE_LOG(LogTemp, Warning, TEXT("Previous weapon destroyed"));
-	}
-	//무기 변경
-	TSubclassOf<AActor> GloveBPClass = StaticLoadClass(
-		AActor::StaticClass(),
-		nullptr,
-		TEXT("/Game/Weapon/source/Gloves.Gloves_C") 
+	EquipWeaponWithEffect(
+		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Wind.NS_Dash_Wind"),
+		TEXT("/Game/Weapon/source/Gloves.Gloves_C")
 	);
-	if (GloveBPClass)
-	{
-		FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("hand_lSocket"));
-		FRotator SpawnRotation = GetActorRotation();
 
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-
-		AActor* SpawnedGlove = GetWorld()->SpawnActor<AActor>(GloveBPClass, SpawnLocation, SpawnRotation, SpawnParams);
-
-		if (SpawnedGlove)
-		{
-			FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
-			SpawnedGlove->AttachToComponent(GetMesh(), AttachRules, TEXT("hand_lSocket"));
-
-			// 충돌 끄기
-			if (UStaticMeshComponent* playerMesh = SpawnedGlove->FindComponentByClass<UStaticMeshComponent>())
-			{
-				playerMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-				// 또는 Mesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
-			}
-
-			//  새 무기 저장
-			EquippedWeaponActor = SpawnedGlove;
-
-			UE_LOG(LogTemp, Warning, TEXT("New weapon spawned and attached"));
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Failed to load Glove BP class"));
-	}
 }
 
 void AMyProjectCharacter::ChangeJobSkill4()
 {
 	ChangeProfile(TEXT("/Game/Images/doctor.doctor"), TEXT("doctor"));
-
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill4"));
 
-	if (this->NiagaraSystem)
-		NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, TEXT("/Script/Niagara.NiagaraSystem'/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Paladin.NS_Dash_Paladin'"));
-
-
-	if (EquippedWeaponActor)
-	{
-		EquippedWeaponActor->Destroy();
-		EquippedWeaponActor = nullptr;
-		//UE_LOG(LogTemp, Warning, TEXT("Previous weapon destroyed"));
-	}
-
-	//무기 변경 메스
-	TSubclassOf<AActor> GloveBPClass = StaticLoadClass(
-		AActor::StaticClass(),
-		nullptr,
+	EquipWeaponWithEffect(
+		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Paladin.NS_Dash_Paladin"),
 		TEXT("/Game/Weapon/scalpel/scalpel.scalpel_C")
 	);
-	if (GloveBPClass)
-	{
-		FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
-		FRotator SpawnRotation = GetActorRotation();
-
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-
-		AActor* SpawnedGlove = GetWorld()->SpawnActor<AActor>(GloveBPClass, SpawnLocation, SpawnRotation, SpawnParams);
-
-		if (SpawnedGlove)
-		{
-			FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
-			SpawnedGlove->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
-			// 충돌 끄기
-			if (UStaticMeshComponent* playerMesh = SpawnedGlove->FindComponentByClass<UStaticMeshComponent>())
-			{
-				playerMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-				// 또는 Mesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
-			}
-			//  새 무기 저장
-			EquippedWeaponActor = SpawnedGlove;
-
-			UE_LOG(LogTemp, Warning, TEXT("New weapon spawned and attached"));
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Failed to load Glove BP class"));
-	}
 
 }
 
 void AMyProjectCharacter::ChangeJobSkill5()
 {
 	ChangeProfile(TEXT("/Game/Images/artist.artist"), TEXT("artist"));
-
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill5"));
 
-	
-	if (this->NiagaraSystem)
-		NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, TEXT("/Script/Niagara.NiagaraSystem'/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Vampire.NS_Dash_Vampire'"));
+	EquipWeaponWithEffect(
+		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Vampire.NS_Dash_Vampire"),
+		TEXT("/Game/Weapon/Brush/Brush.Brush_C")
+	);
+
+}
 
 
+void AMyProjectCharacter::EquipWeaponWithEffect(const FString& NiagaraPath, const FString& WeaponBlueprintPath)
+{
+	// 1. 나이아가라 이펙트 로드
+	if (!NiagaraPath.IsEmpty())
+	{
+		FString FullNiagaraPath = NiagaraPath;
+		if (!NiagaraPath.Contains(TEXT("NiagaraSystem'")))
+		{
+			FullNiagaraPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
+		}
 
-	//무기 변경 붓
+		UNiagaraSystem* LoadedEffect = LoadObject<UNiagaraSystem>(nullptr, *FullNiagaraPath);
+		if (LoadedEffect)
+		{
+			NiagaraSystem = LoadedEffect;
+			//UE_LOG(LogTemp, Log, TEXT("Loaded Niagara: %s"), *NiagaraPath);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Failed to load NiagaraSystem: %s"), *NiagaraPath);
+		}
+	}
+
+	// 2. 기존 무기 제거
 	if (EquippedWeaponActor)
 	{
 		EquippedWeaponActor->Destroy();
 		EquippedWeaponActor = nullptr;
-		//UE_LOG(LogTemp, Warning, TEXT("Previous weapon destroyed"));
 	}
 
-	TSubclassOf<AActor> GloveBPClass = StaticLoadClass(
-		AActor::StaticClass(),
-		nullptr,
-		TEXT("/Game/Weapon/Brush/Brush.Brush_C")
-	);
-	if (GloveBPClass)
+	//  3. 무기 블루프린트 로드
+	if (!WeaponBlueprintPath.IsEmpty())
 	{
-		FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
-		FRotator SpawnRotation = GetActorRotation();
+		TSubclassOf<AActor> WeaponClass = StaticLoadClass(
+			AActor::StaticClass(),
+			nullptr,
+			*WeaponBlueprintPath
+		);
 
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-
-		AActor* SpawnedGlove = GetWorld()->SpawnActor<AActor>(GloveBPClass, SpawnLocation, SpawnRotation, SpawnParams);
-
-		if (SpawnedGlove)
+		if (WeaponClass)
 		{
-			FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
-			SpawnedGlove->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
-			// 충돌 끄기
-			if (UStaticMeshComponent* playerMesh = SpawnedGlove->FindComponentByClass<UStaticMeshComponent>())
+			FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
+			FRotator SpawnRotation = GetActorRotation();
+
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.Owner = this;
+			SpawnParams.Instigator = GetInstigator();
+
+			AActor* SpawnedWeapon = GetWorld()->SpawnActor<AActor>(WeaponClass, SpawnLocation, SpawnRotation, SpawnParams);
+			if (SpawnedWeapon)
 			{
-				playerMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-				playerMesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
-				playerMesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
+				FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
+				SpawnedWeapon->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
 
+				// 콜리전 제거
+				if (UStaticMeshComponent* MeshComp = SpawnedWeapon->FindComponentByClass<UStaticMeshComponent>())
+				{
+					MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+					MeshComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
+					MeshComp->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
+				}
 
+				EquippedWeaponActor = SpawnedWeapon;
+
+				//UE_LOG(LogTemp, Log, TEXT("Weapon spawned and attached: %s"), *WeaponBlueprintPath);
 			}
-			//  새 무기 저장
-			EquippedWeaponActor = SpawnedGlove;
-			//UE_LOG(LogTemp, Warning, TEXT("New weapon spawned and attached"));
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Failed to load Weapon Blueprint: %s"), *WeaponBlueprintPath);
 		}
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Failed to load Glove BP class"));
-	}
-
-
-
 }
 
 
 //=================================================================================================스킬 구현
 void AMyProjectCharacter::SkillAttack1()
 {
-
-
+	FString Path2 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/FlameShield/Systems/N_FlameShield.N_FlameShield";
+	SpawnNiagara(Path2, GetActorForwardVector(), FVector(1.f), 7);
 
 	FString NiagaraPath = "/Game/SkillEffect_asset/Magic_Mist_VFX/VFX/NS_Dark_Mist.NS_Dark_Mist";
 	FVector Direction = GetActorForwardVector();
 	FVector Scale = FVector(1.f);
 
-	// 새로 만든 함수 호출
-	SpawnNiagara(NiagaraPath, Direction, Scale);
+	SpawnNiagara(NiagaraPath, Direction, Scale, 8);
 
 	if (!HasAuthority()) return;
 
-	// 데미지 적용용 타이머 시작
+	// 데미지 적용용 5초 타이머
 	CurrentTick = 0;
 	GetWorldTimerManager().SetTimer(
 		ConeDamageTimerHandle,
@@ -868,34 +669,34 @@ void AMyProjectCharacter::SkillAttack1()
 
 void AMyProjectCharacter::SkillAttack2()
 {
-	FString Path1 = "/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Curse_Blink.NS_Curse_Blink";
-	SkillOn(Path1);
-	Skill2SpawnCount = 0; // 초기화
-	GetWorldTimerManager().SetTimer(
-		Skill2TimerHandle,
-		this,
-		&AMyProjectCharacter::SpawnNextNiagaraEffect,
-		0.1f,
-		true // 반복
-	);
+	
+	FString Path1 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/ArcaneShield/Systems/N_ArcaneShield.N_ArcaneShield";
+	SpawnNiagara(Path1, GetActorForwardVector(), FVector(1.f), 3);
+
+	
+	HealEffect();
 
 	UE_LOG(LogTemp, Error, TEXT("HP Plus : %i "), HP_Player++);
 }
 
 void AMyProjectCharacter::SkillAttack3() {
 	FString Path1 = "/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Blink_DarkMagic.NS_Blink_DarkMagic";
-	SkillOn(Path1);
+	SpawnNiagara(Path1, GetActorForwardVector(), FVector(1.f), 3);
+
 	Stun();
 	UE_LOG(LogTemp, Error, TEXT("skill3 end"));
 }
 
 void AMyProjectCharacter::SkillAttack4() {
 
-	//StartDashCharge();
 	UE_LOG(LogTemp, Error, TEXT("skill4 end"));
 }
+
 void AMyProjectCharacter::SkillAttack5()
 {
+	FString Path1 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/MagmaShield/Systems/N_MagmaShield.N_MagmaShield";
+	SpawnNiagara(Path1, GetActorForwardVector(), FVector(1.f), 0.5f);
+
 	FVector MyLocation = GetActorLocation();
 	AMyProjectCharacter* ClosestEnemy = nullptr;
 	float ClosestDistSq = FLT_MAX;
@@ -910,7 +711,7 @@ void AMyProjectCharacter::SkillAttack5()
 
 		AMyProjectCharacter* OtherChar = Cast<AMyProjectCharacter>(Actor);
 		if (!IsValid(OtherChar)) continue;
-		// 거리 계산 (제곱 거리로 비교)
+
 		float DistSq = FVector::DistSquared(OtherChar->GetActorLocation(), MyLocation);
 		if (DistSq < ClosestDistSq)
 		{
@@ -919,60 +720,81 @@ void AMyProjectCharacter::SkillAttack5()
 		}
 	}
 
-	// 적이 있으면 디버그 라인 그리기
+	// 적이 있으면 이펙트 + 데미지
 	if (IsValid(ClosestEnemy))
 	{
 		FString Path = "/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Blink_Fire.NS_Blink_Fire";
 		SkillOn(Path);
-		
 
-		DrawDebugLine(
-			GetWorld(),
-			MyLocation + FVector(0, 0, 50), // 내 위치에서 살짝 위
-			ClosestEnemy->GetActorLocation() + FVector(0, 0, 50),
-			FColor::Red,
-			false,
-			2.f,
-			0,
-			5.f
-		);
+		// 적 위치에 나이아가라 이펙트
+		FString HitEffectPath = "/Game/SlashHitVFX/NS/NS_Hit_GroundCrack.NS_Hit_GroundCrack";
+		FVector HitLocation = ClosestEnemy->GetActorLocation() + FVector(0, 0, 50);
+
+		UNiagaraSystem* LoadedHitEffect = LoadObject<UNiagaraSystem>(nullptr, *FString::Printf(TEXT("NiagaraSystem'%s'"), *HitEffectPath));
+
+		if (LoadedHitEffect)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+				GetWorld(),
+				LoadedHitEffect,
+				HitLocation,
+				FRotator::ZeroRotator,
+				FVector(1.f),
+				true,
+				true,
+				ENCPoolMethod::None,
+				true
+			);
+		}
+
 		ClosestEnemy->OnHitEvent();
-		UE_LOG(LogTemp, Warning, TEXT("Closest enemy : % s"), *ClosestEnemy->GetName());
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT(" No enemy found."));
+		UE_LOG(LogTemp, Warning, TEXT("Closest enemy : %s"), *ClosestEnemy->GetName());
 	}
 }
-void AMyProjectCharacter::SpawnNiagara(const FString& NiagaraPath, const FVector& Direction, const FVector& Scale)
-{
-	// 경로 문자열 → 에셋 경로로 구성
-	FString FullPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
-	UNiagaraSystem* NiagaraEffect = LoadObject<UNiagaraSystem>(nullptr, *FullPath);
 
-	if (!NiagaraEffect)
+
+void AMyProjectCharacter::SpawnNiagara(const FString& NiagaraPath, const FVector& Direction, const FVector& Scale, float Duration)
 	{
-		UE_LOG(LogTemp, Error, TEXT("NiagaraSystem 로드 실패: %s"), *NiagaraPath);
-		return;
+		// 경로 문자열 → 에셋 경로로 구성
+		FString FullPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
+		UNiagaraSystem* NiagaraEffect = LoadObject<UNiagaraSystem>(nullptr, *FullPath);
+
+		if (!NiagaraEffect)
+		{
+			UE_LOG(LogTemp, Error, TEXT("NiagaraSystem 로드 실패: %s"), *NiagaraPath);
+			return;
+		}
+
+		// 위치: 캐릭터 기준 + 방향 * 거리 + 살짝 위
+		FVector SpawnLocation = GetActorLocation() + Direction  + FVector(0.f, 0.f, 50.f);
+		FRotator SpawnRotation = Direction.Rotation();
+
+		// 나이아가라 이펙트 스폰
+		UNiagaraComponent* NiagaraComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+			GetWorld(),
+			NiagaraEffect,
+			SpawnLocation,
+			SpawnRotation,
+			Scale,
+			true,
+			true,
+			ENCPoolMethod::None,
+			true
+		);
+
+		// 유효하면 타이머로 3초 뒤 제거
+		if (NiagaraComponent)
+		{
+			FTimerHandle TimerHandle;
+			GetWorldTimerManager().SetTimer(TimerHandle, [NiagaraComponent]()
+				{
+					if (NiagaraComponent)
+					{
+						NiagaraComponent->DestroyComponent();
+					}
+				}, Duration, false);
+		}
 	}
-
-	// 위치: 캐릭터 기준 + 방향 * 거리 + 살짝 위
-	FVector SpawnLocation = GetActorLocation() + Direction * 50.f + FVector(0.f, 0.f, 50.f);
-	FRotator SpawnRotation = Direction.Rotation();
-
-	// 나이아가라 이펙트 스폰
-	UNiagaraFunctionLibrary::SpawnSystemAtLocation(
-		GetWorld(),
-		NiagaraEffect,
-		SpawnLocation,
-		SpawnRotation,
-		Scale,
-		true,
-		true,
-		ENCPoolMethod::None,
-		true
-	);
-}
 
 
 bool IsInCone(AActor* Source, AActor* Target, float ConeHalfAngleDegrees, float ConeLength)
@@ -1019,33 +841,71 @@ void AMyProjectCharacter::ApplyConeDamageTick()
 		{
 			if (AMyProjectCharacter* Enemy = Cast<AMyProjectCharacter>(Actor))
 			{
-				Enemy->OnHitEvent();
-				UE_LOG(LogTemp, Warning, TEXT("Hit Enemy HP : %i"), Enemy->HP_Player);
+				FString NiagaraPath = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicalExplosionsVFX/VFX/FlameBlast/Systems/N_FlameBlast.N_FlameBlast";
+				FString FullPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
+				UNiagaraSystem* NiagaraEffect = LoadObject<UNiagaraSystem>(nullptr, *FullPath);
+
+				if (NiagaraEffect)
+				{
+					FVector SpawnLocation = Enemy->GetActorLocation() + FVector(0, 0, 50); // 머리 위
+					FRotator SpawnRotation = FRotator::ZeroRotator;
+					FVector Scale = FVector(1.f);
+
+					// AutoDestroy = true → 자동으로 사라짐
+					UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+						GetWorld(),
+						NiagaraEffect,
+						SpawnLocation,
+						SpawnRotation,
+						Scale,
+						true,  // bAutoDestroy ← 한 번만 재생하고 사라짐
+						true,  // bAutoActivate
+						ENCPoolMethod::None,
+						true
+					);
+				}
 			}
 		}
 	}
 }
 
-void AMyProjectCharacter::SpawnNextNiagaraEffect()
+void AMyProjectCharacter::HealEffect()
 {
-	if (Skill2SpawnCount >= 10)
-	{
-		GetWorldTimerManager().ClearTimer(Skill2TimerHandle);
-		UE_LOG(LogTemp, Error, TEXT("Skill2"));
-		return;
-	}
-	FString NiagaraPath = "/Game/SlashHitVFX/NS/NS_Hit_MagicWand.NS_Hit_MagicWand";
+	FString NiagaraPath = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicalExplosionsVFX/VFX/LightBlast/Systems/N_LightBlastCharged.N_LightBlastCharged";
 	FVector Scale = FVector(1.f);
 
-	// 랜덤 방향 (Yaw)
-	float RandomYaw = FMath::RandRange(0.f, 360.f);
-	FRotator RandomRotator = FRotator(0.f, RandomYaw, 0.f);
-	FVector RandomDirection = RandomRotator.Vector();
+	TArray<FVector> Directions = {
+		GetActorForwardVector(),         // 앞
+		-GetActorForwardVector(),        // 뒤
+		GetActorRightVector(),           // 오른쪽
+		-GetActorRightVector()           // 왼쪽
+	};
 
-	SpawnNiagara(NiagaraPath, RandomDirection, Scale);
+	for (const FVector& Dir : Directions)
+	{
+		FVector SpawnLocation = GetActorLocation() + Dir * 100.f + FVector(0, 0, 50.f); // 각 방향 300cm 거리, 살짝 위로
+		FRotator Rotation = Dir.Rotation();
 
-	Skill2SpawnCount++;
+		FString FullPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
+		UNiagaraSystem* NiagaraEffect = LoadObject<UNiagaraSystem>(nullptr, *FullPath);
+
+		if (NiagaraEffect)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+				GetWorld(),
+				NiagaraEffect,
+				SpawnLocation,
+				Rotation,
+				Scale,
+				true, true,
+				ENCPoolMethod::None,
+				true
+			);
+		}
+	}
 }
+
+
 
 void AMyProjectCharacter::Stun()
 {
@@ -1084,9 +944,11 @@ void AMyProjectCharacter::Stun()
 			
 			// 1) 이펙트 소환
 			FString NiagaraPath = "/Game/SlashHitVFX/NS/NS_Hit_Block.NS_Hit_Block";
-			FVector Scale = FVector(1.5f);
+			FString NiagaraPath2 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/LightningWall/Systems/N_LightningWall.N_LightningWall";
 			FVector Direction = FVector::UpVector;
-			OtherPlayer->SpawnNiagara(NiagaraPath, Direction, Scale);
+			OtherPlayer->SpawnNiagara(NiagaraPath, Direction, FVector(1.5f), 3);
+			OtherPlayer->SpawnNiagara(NiagaraPath2, Direction, FVector(0.3f), 3);
+
 
 			// 2) 이동 정지
 			OtherPlayer->DisablePlayerMovement();
@@ -1100,6 +962,7 @@ void AMyProjectCharacter::Stun()
 						if (WeakPlayer.IsValid())
 						{
 							WeakPlayer->EnablePlayerMovement();
+							UE_LOG(LogTemp, Warning, TEXT("스턴 해제: %s"), *WeakPlayer->GetName());
 						}
 					}, 3.0f, false);
 			}
@@ -1146,7 +1009,7 @@ void AMyProjectCharacter::Skill_DashStun(float DashPower)
 	FVector Scale = FVector(1.f);
 
 	// 새로 만든 함수 호출
-	SpawnNiagara(NiagaraPath, Forward, Scale);
+	SpawnNiagara(NiagaraPath, Forward, Scale,5);
 
 
 	LaunchCharacter(Forward * DashPower, true, true); // 살짝 위도 뛸 수 있음
@@ -1192,11 +1055,13 @@ void AMyProjectCharacter::DashStun_CheckHit()
 		{
 			UE_LOG(LogTemp, Warning, TEXT("돌진 스턴 적 감지: %s"), *OtherPlayer->GetName());
 
+
 			// 이펙트 + 이동정지 + 3초 후 해제
-			FString NiagaraPath2 = "/Game/SlashHitVFX/NS/NS_Hit_CurvedSwordBloodDirection.NS_Hit_CurvedSwordBloodDirection";
-			FVector Scale2 = FVector(1.5f);
+			FString NiagaraPath = "/Game/SlashHitVFX/NS/NS_Hit_CurvedSwordBloodDirection.NS_Hit_CurvedSwordBloodDirection";
+			FString NiagaraPath2 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/LightningWall/Systems/N_LightningWall.N_LightningWall";
 			FVector Direction2 = FVector::UpVector;
-			OtherPlayer->SpawnNiagara(NiagaraPath2, Direction2, Scale2);
+			OtherPlayer->SpawnNiagara(NiagaraPath, Direction2, FVector(1.0f), 2);
+			OtherPlayer->SpawnNiagara(NiagaraPath2, Direction2, FVector(0.3f),5);
 
 			OtherPlayer->DisablePlayerMovement();
 
@@ -1220,7 +1085,7 @@ void AMyProjectCharacter::DashStun_CheckHit()
 void AMyProjectCharacter::StartDashCharge()
 {
 	DashChargeStartTime = GetWorld()->GetTimeSeconds();
-	UE_LOG(LogTemp, Log, TEXT("차징 시작!"));
+	//UE_LOG(LogTemp, Log, TEXT("차징 시작!"));
 
 	GetWorld()->GetTimerManager().SetTimer(ChargeEffectTimerHandle, this, &AMyProjectCharacter::SpawnChargeEffect, 0.2f, true);
 
@@ -1318,3 +1183,61 @@ void AMyProjectCharacter::SkillOn(const FString& NiagaraPath)
 
 	UE_LOG(LogTemp, Log, TEXT("SkillOn 이펙트 실행됨: %s"), *NiagaraPath);
 }
+
+//void AMyProjectCharacter::Siren()
+//{
+//	if (!GetWorld()) return;
+//
+//	// 사용할 스태틱 메시 로드
+//	UStaticMesh* SirenMesh = Cast<UStaticMesh>(StaticLoadObject(
+//		UStaticMesh::StaticClass(),
+//		nullptr,
+//		TEXT("/Game/SkillEffect_asset/police/police-car/SM_police_car.SM_police_car")
+//	));
+//	if (!SirenMesh) return;
+//	// 플레이어 머리 위에 소환
+//	FVector SpawnLocation = GetActorLocation() + FVector(0, 0, 200.f);
+//	FRotator SpawnRotation = FRotator::ZeroRotator;
+//
+//	AStaticMeshActor* SpawnedSiren = GetWorld()->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass(), SpawnLocation, SpawnRotation);
+//	if (SpawnedSiren)
+//	{
+//		SpawnedSiren->GetStaticMeshComponent()->SetStaticMesh(SirenMesh);
+//		SpawnedSiren->SetActorScale3D(FVector(1.f));
+//		SpawnedSiren->SetMobility(EComponentMobility::Movable);
+//
+//		FTimerHandle RotateTimerHandle;
+//		float Duration = 3.0f;
+//		float Interval = 0.02f;
+//		int32 RepeatCount = Duration / Interval;
+//
+//		TWeakObjectPtr<AStaticMeshActor> WeakSiren = SpawnedSiren;
+//		int32* RemainingTicks = new int32(RepeatCount);
+//
+//		GetWorld()->GetTimerManager().SetTimer(RotateTimerHandle, [WeakSiren, RemainingTicks]()
+//			{
+//				if (WeakSiren.IsValid())
+//				{
+//					AStaticMeshActor* ActualSiren = WeakSiren.Get();
+//					if (ActualSiren)
+//					{
+//						FRotator RotationDelta = FRotator(0.f, 360.f * 0.02f, 0.f);
+//						ActualSiren->AddActorLocalRotation(RotationDelta);
+//					}
+//				}
+//
+//				if (--(*RemainingTicks) <= 0)
+//				{
+//					if (WeakSiren.IsValid())
+//					{
+//						AStaticMeshActor* ActualSiren = WeakSiren.Get(); // ✅ 수정 포인트
+//						if (ActualSiren)
+//						{
+//							ActualSiren->Destroy();
+//						}
+//					}
+//					delete RemainingTicks;
+//				}
+//			}, Interval, true);
+//	}
+//}
