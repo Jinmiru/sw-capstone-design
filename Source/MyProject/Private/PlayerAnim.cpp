@@ -6,6 +6,10 @@
 
 #include "GameFramework/CharacterMovementComponent.h"
 
+//35 ~ 46줄 대쉬제어구문추가
+//81 ~87줄 대쉬 몽타주 실행함수
+
+
 static EPlayerAnimState PrevState = EPlayerAnimState::Idle;
 
 void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
@@ -24,16 +28,20 @@ void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 
 		auto movement = player->GetCharacterMovement();
 		isInAir = movement->IsFalling();
-
-		if (AttackMontage && Montage_IsPlaying(AttackMontage))
+		
+		if (Montage_IsPlaying(AttackMontage))
 		{
 			bIsPlayingAttackMontage = true;
 			BlendAlpha = 1.0f;
-			// 현재 몽타주 재생 중이면 상태 고정
-			return;
+		}
+		else if (Montage_IsPlaying(DashMontage))
+		{
+			bIsPlayingDashMontage = true;
+			BlendAlpha = 1.0f;
 		}
 		else
 		{
+			bIsPlayingDashMontage = true;
 			bIsPlayingAttackMontage = false;
 			BlendAlpha = 0.0f;
 		}
@@ -55,7 +63,8 @@ void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 				CurrentState = (Speed > 300.f) ? EPlayerAnimState::Run : EPlayerAnimState::Idle;
 			}
 		}
-		
+
+
 	}
 
 }
@@ -67,5 +76,13 @@ void UPlayerAnim::PlayAttackAnim()
 	{
 		Montage_Play(AttackMontage);
 		CurrentState = EPlayerAnimState::Attack;
+	}
+}
+
+void UPlayerAnim::PlayDashAnim()
+{
+	if (DashMontage)
+	{
+		Montage_Play(DashMontage);
 	}
 }

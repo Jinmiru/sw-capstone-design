@@ -11,6 +11,10 @@
 /**
  * 
  */
+
+
+//59 ~ 60, 70줄 대쉬관련 변수, 함수 정의
+
 UENUM(BlueprintType)
 enum class EPlayerAnimState : uint8
 {
@@ -19,6 +23,7 @@ enum class EPlayerAnimState : uint8
 	Jump        UMETA(DisplayName = "Jump"),
 	Attack      UMETA(DisplayName = "Attack")
 };
+
 
 
 UCLASS()
@@ -41,16 +46,31 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = PlayerAnim)
 	class UAnimMontage* AttackMontage;
 
+	//add
+
+	UPROPERTY(EditDefaultsOnly, Category = PlayerAnim)
+	class UAnimMontage* DashMontage;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = FSM)
 	EPlayerAnimState CurrentState;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool bIsPlayingAttackMontage = false;
+
+	// add
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bIsPlayingDashMontage = false;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float BlendAlpha = 0;
 
 
 	void PlayAttackAnim();
+
+	//add
+
+	void PlayDashAnim();
 
 
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;

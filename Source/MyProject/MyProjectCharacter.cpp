@@ -19,8 +19,16 @@
 #include "HPWidget.h"
 #include "PlayerAnim.h"
 #include "Engine/StaticMeshActor.h"
+#include "Net/UnrealNetwork.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
+
+// dash attack 함수 수정(RPC) 
+//217줄 어택몽타주 실행함수
+//
+//432줄 대쉬함수 수정(대쉬 몽타주, 대쉬 나이아가라 이펙트) ~490줄까지 함수 추가
+//
+//1330 ~1407줄 대쉬, 어택 RPC함수
 
 //////////////////////////////////////////////////////////////////////////
 // AMyProjectCharacter
@@ -89,9 +97,9 @@ AMyProjectCharacter::AMyProjectCharacter()
 	HP_Player = 100;
 	Power = 1;
 	bCanDash = true;
+	bCanUseSkill = true;
+	//-------------------직업 설정-------------------
 
-
-	
 }
 
 void AMyProjectCharacter::BeginPlay()
@@ -105,21 +113,33 @@ void AMyProjectCharacter::BeginPlay()
 		PlayerController->SetInputMode(FInputModeGameAndUI()); // 마우스 출력 UI와 게임 둘 다 입력 가능
 	}
 
-	if (!BP_StatusWidget)
+	if (!IsRunningDedicatedServer())
 	{
-		UE_LOG(LogTemp, Error, TEXT("StatusWidget is NULL! "));
-	}
-	else {
-		HUDWidget = CreateWidget<UStatusWidget>(GetWorld(), BP_StatusWidget);
-		HUDWidget->AddToViewport();
-	}
+		APlayerController* PC = Cast<APlayerController>(GetController());
+		if (PC && PC->IsLocalController())
+		{
+			if (BP_StatusWidget)
+			{
+				if (!HUDWidget)
+				{
+					HUDWidget = CreateWidget<UStatusWidget>(PC, BP_StatusWidget);
+					if (HUDWidget)
+					{
+						HUDWidget->AddToViewport();
 
+						UpdateStatus(); //스텟 UI 추가
+					}
+				}
+			}
+			
+
+
+		}
+		GetWorldTimerManager().SetTimer(MoneyTimerHandle, this, &AMyProjectCharacter::IncreaseMoney, 5.0f, true);
+		// 5초마다 돈 증가
+	}
 	
 
-	UpdateStatus(); //스텟 UI 추가
-
-	GetWorldTimerManager().SetTimer(MoneyTimerHandle, this, &AMyProjectCharacter::IncreaseMoney, 5.0f, true);
-	// 5초마다 돈 증가
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -145,7 +165,7 @@ void AMyProjectCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Started, this, &AMyProjectCharacter::Attack);
 		EnhancedInputComponent->BindAction(levelup, ETriggerEvent::Started, this, &AMyProjectCharacter::PlusAge);
 		EnhancedInputComponent->BindAction(printAction, ETriggerEvent::Started, this, &AMyProjectCharacter::Print);
-		EnhancedInputComponent->BindAction(inventoryAction, ETriggerEvent::Started, this, &AMyProjectCharacter::Inventory);
+		//EnhancedInputComponent->BindAction(inventoryAction, ETriggerEvent::Started, this, &AMyProjectCharacter::Inventory);
 		EnhancedInputComponent->BindAction(DashAction, ETriggerEvent::Started, this, &AMyProjectCharacter::Dash);
 
 		EnhancedInputComponent->BindAction(ChangeJob1, ETriggerEvent::Started, this, &AMyProjectCharacter::ChangeJobSkill1);
@@ -153,13 +173,15 @@ void AMyProjectCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(ChangeJob3, ETriggerEvent::Started, this, &AMyProjectCharacter::ChangeJobSkill3);
 		EnhancedInputComponent->BindAction(ChangeJob4, ETriggerEvent::Started, this, &AMyProjectCharacter::ChangeJobSkill4);
 		EnhancedInputComponent->BindAction(ChangeJob5, ETriggerEvent::Started, this, &AMyProjectCharacter::ChangeJobSkill5);
+		
+		EnhancedInputComponent->BindAction(Skill, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack);
 
 
-		EnhancedInputComponent->BindAction(Skill1, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack1);
-		EnhancedInputComponent->BindAction(Skill2, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack2);
-		EnhancedInputComponent->BindAction(Skill3, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack3);
-		//EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack4);
-		EnhancedInputComponent->BindAction(Skill5, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack5);
+		//EnhancedInputComponent->BindAction(Skill1, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack1);
+		//EnhancedInputComponent->BindAction(Skill2, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack2);
+		//EnhancedInputComponent->BindAction(Skill3, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack3);
+		////EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack4);
+		//EnhancedInputComponent->BindAction(Skill5, ETriggerEvent::Started, this, &AMyProjectCharacter::SkillAttack5);
 
 		EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Started, this, &AMyProjectCharacter::StartDashCharge);
 		EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Completed, this, &AMyProjectCharacter::ReleaseDashCharge);
@@ -207,15 +229,29 @@ void AMyProjectCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+
 void AMyProjectCharacter::Attack(const FInputActionValue& Value)
 {
-	UPlayerAnim* Panim = Cast<UPlayerAnim>(GetMesh()->GetAnimInstance());
 
-	if (Panim) 
+	RequestAttack();
+
+	if (HasAuthority())
 	{
-		Panim->PlayAttackAnim();
+		PerformAttack();
 	}
+	else
+	{
+		ServerAttack();
+	}
+}
 
+void AMyProjectCharacter::ServerAttack_Implementation()
+{
+	PerformAttack();
+}
+
+void AMyProjectCharacter::PerformAttack()
+{
 	FVector Start = GetActorLocation();
 	FVector ForwardDirection = GetActorForwardVector();
 	FVector End = Start + ForwardDirection * AttackRange;
@@ -251,7 +287,6 @@ void AMyProjectCharacter::Attack(const FInputActionValue& Value)
 			if (AMyProjectCharacter* EnemyPlayer = Cast<AMyProjectCharacter>(HitActor))
 			{
 				// 자기 자신 제외
-				// 현재 씬에 thirperson캐릭터 두명 놓고 했을대는 it Myself — Damage Applied실행중
 				if (EnemyPlayer == this) 
 				{
 					UE_LOG(LogTemp, Warning, TEXT("Hit Myself — Skipping"));
@@ -259,17 +294,11 @@ void AMyProjectCharacter::Attack(const FInputActionValue& Value)
 				}
 
 				// 적 구분
-				if (!EnemyPlayer->IsLocallyControlled())
+				if (EnemyPlayer->HasAuthority())
 				{
 					EnemyPlayer->HP_Player -= 10;
+					EnemyPlayer->Multicast_OnHitEvent();
 					UE_LOG(LogTemp, Warning, TEXT("Hit Other Player! Damage Applied"));
-				}
-				else
-				{
-					// 자기 자신도 데미지 입는다면 (혹은 이 부분 삭제)
-					EnemyPlayer->HP_Player -= 10;
-					EnemyPlayer->OnHitEvent();
-					UE_LOG(LogTemp, Warning, TEXT("Hit Myself — Damage Applied"));
 				}
 			}
 		}
@@ -278,9 +307,22 @@ void AMyProjectCharacter::Attack(const FInputActionValue& Value)
 
 
 void AMyProjectCharacter::PlusAge(const FInputActionValue& Value) {
-	Age++;
-	Linguistic++;
-	UE_LOG(LogTemp, Warning, TEXT("AGE : %d"), Age);
+
+	if (HasAuthority())
+	{
+		ServerPlusAge();
+	}
+	else
+	{
+		ServerPlusAge(); // 클라이언트도 무조건 서버 호출
+	}
+	//레벨업 이펙트
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), LevelupEffect, GetActorLocation(), FRotator::ZeroRotator, FVector(1.0f));
+
+}
+
+void AMyProjectCharacter::OnRep_Age()
+{
 	UpdateStatus();
 	if (Age >= 14 && middle) {
 		middle = false;
@@ -294,75 +336,73 @@ void AMyProjectCharacter::PlusAge(const FInputActionValue& Value) {
 		AttackRange += 50.0f;
 
 	}
-	//레벨업 이펙트
-	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), LevelupEffect, GetActorLocation(), FRotator::ZeroRotator, FVector(1.0f));
-
 }
 
 
 void AMyProjectCharacter::Print(const FInputActionValue& Value)
 {
 	OnHitEvent();
-	
-
 }
 
 void AMyProjectCharacter::UpdateStatus()
 {
-	if (!HUDWidget) 
+	if (!HasAuthority())
 	{
-		UE_LOG(LogTemp, Error, TEXT("HUDWidget is NULL in UpdateStatus!"));
-		return;
+		if (!HUDWidget)
+		{
+			UE_LOG(LogTemp, Error, TEXT("HUDWidget is NULL in UpdateStatus!"));
+			return;
+		}
+
+		if (HUDWidget->AgeText)
+			HUDWidget->AgeText->SetText(FText::AsNumber(Age));
+		if (HUDWidget->PhysicalText)
+			HUDWidget->PhysicalText->SetText(FText::AsNumber(Physical));
+		if (HUDWidget->SensoryText)
+			HUDWidget->SensoryText->SetText(FText::AsNumber(Sensory));
+		if (HUDWidget->LogicText)
+			HUDWidget->LogicText->SetText(FText::AsNumber(Logic));
+		if (HUDWidget->LinguisticText)
+			HUDWidget->LinguisticText->SetText(FText::AsNumber(Linguistic));
+		if (HUDWidget->SocialSkillText)
+			HUDWidget->SocialSkillText->SetText(FText::AsNumber(SocialSkill));
+		if (HUDWidget->MentalStrengthText)
+			HUDWidget->MentalStrengthText->SetText(FText::AsNumber(MentalStrength));
+		if (HUDWidget->proficiency)
+			HUDWidget->proficiency->SetText(FText::AsNumber(GetHighestStatName()));
+		if (HUDWidget->jobText)
+		{
+			if (Age < 14) {
+				ChangeProfile(TEXT("/Game/Images/elemental.elemental"), TEXT("elemental\n school"));
+				//HUDWidget->jobText->SetText(FText::FromString(FString::Printf(TEXT("Elemental"))));
+			}
+			else if (Age < 17) {
+				ChangeProfile(TEXT("/Game/Images/middle.middle"), TEXT("middle\n school"));
+				Power = 1.5;
+
+				//UStaticMesh* chain = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Fist.SM_Fist'"));
+				//if (chain) {
+				//	MeshComponent->SetStaticMesh(chain);
+				//	MeshComponent->SetWorldScale3D(FVector(0.5f));//크기 1배
+				//}
+			}
+			else if (Age < 20) {
+				ChangeProfile(TEXT("/Game/Images/high.high"), TEXT("high\n school"));
+				Power = 2;
+
+				//UStaticMesh* chain2 = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Scythe.SM_Scythe'"));
+				//if (chain2) {
+				//	MeshComponent->SetStaticMesh(chain2);
+				//	MeshComponent->SetWorldScale3D(FVector(0.5f));//크기 1배
+				//}
+			}
+			else {
+				//MeshComponent->SetStaticMesh(nullptr);
+			}
+			RequestWeaponUpdate(); // 클라이언트 → 서버
+		}
 	}
 
-	if (HUDWidget->AgeText)
-		HUDWidget->AgeText->SetText(FText::AsNumber(Age));
-	if (HUDWidget->PhysicalText)
-		HUDWidget->PhysicalText->SetText(FText::AsNumber(Physical));
-	if (HUDWidget->SensoryText)
-		HUDWidget->SensoryText->SetText(FText::AsNumber(Sensory));
-	if (HUDWidget->LogicText)
-		HUDWidget->LogicText->SetText(FText::AsNumber(Logic));
-	if (HUDWidget->LinguisticText)
-		HUDWidget->LinguisticText->SetText(FText::AsNumber(Linguistic));
-	if (HUDWidget->SocialSkillText)
-		HUDWidget->SocialSkillText->SetText(FText::AsNumber(SocialSkill));
-	if (HUDWidget->MentalStrengthText)
-		HUDWidget->MentalStrengthText->SetText(FText::AsNumber(MentalStrength));
-	if (HUDWidget->proficiency)
-		HUDWidget->proficiency->SetText(FText::AsNumber(GetHighestStatName()));
-
-
-	if (HUDWidget->jobText)
-	{
-		if (Age < 14) {
-			HUDWidget->jobText->SetText(FText::FromString(FString::Printf(TEXT("Elemental"))));
-		}
-		else if (Age < 17) {
-			
-			ChangeProfile(TEXT("/Game/Images/T_UI_middle.T_UI_middle"), TEXT("middle school"));
-			Power = 1.5;
-			UStaticMesh* chain = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Fist.SM_Fist'"));
-			if (chain) {
-				MeshComponent->SetStaticMesh(chain);
-				MeshComponent->SetWorldScale3D(FVector(0.5f));//크기 1배
-			}
-		
-
-		}
-		else if(Age <20) {
-			ChangeProfile(TEXT("/Game/Images/T_UI_high.T_UI_high"), TEXT("high school"));
-			Power = 2;
-			UStaticMesh* chain2 = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Scythe.SM_Scythe'"));
-			if (chain2) {
-				MeshComponent->SetStaticMesh(chain2);
-				MeshComponent->SetWorldScale3D(FVector(0.5f));//크기 1배
-			}
-		}
-		else {
-			MeshComponent->SetStaticMesh(nullptr);
-		}
-	}
 
 
 	else
@@ -370,6 +410,15 @@ void AMyProjectCharacter::UpdateStatus()
 		UE_LOG(LogTemp, Error, TEXT("proficiency TextBlock is NULL in HUDWidget!"));
 	}
 }	
+
+void AMyProjectCharacter::RequestWeaponUpdate()
+{
+	if (!HasAuthority())  // 클라이언트 → 서버 요청
+	{
+		Server_RequestWeaponUpdate();
+	}
+}
+
 
 
 
@@ -398,16 +447,16 @@ int32 AMyProjectCharacter::GetHighestStatName()
 	return MaxValue;
 }
 
-void AMyProjectCharacter::Inventory(const FInputActionValue& Value)
-{
-	UE_LOG(LogTemp, Warning, TEXT("Inventory!"));
-}
+//void AMyProjectCharacter::Inventory(const FInputActionValue& Value)
+//{
+//	UE_LOG(LogTemp, Warning, TEXT("Inventory!"));
+//}
 
 void AMyProjectCharacter::IncreaseMoney()
 {
 	money += 10;  // 돈 증가 
 	//UE_LOG(LogTemp, Error, TEXT("plus monety"));
-	if (HUDWidget->moneyText)
+	if (HUDWidget && HUDWidget->moneyText)
 	{
 		HUDWidget->moneyText->SetText(FText::AsNumber(money));
 	}
@@ -416,12 +465,17 @@ void AMyProjectCharacter::IncreaseMoney()
 
 void AMyProjectCharacter::OnHitEvent()
 {
-	HP_Player--;
 	UE_LOG(LogTemp, Warning, TEXT("OnHitEvent, HP : %d"), HP_Player);
 	if (HitEffect)
 	{
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitEffect, GetActorLocation());
 	}
+
+}
+
+void AMyProjectCharacter::Multicast_OnHitEvent_Implementation()
+{
+	OnHitEvent();
 }
 
 
@@ -430,54 +484,39 @@ void AMyProjectCharacter::OnHitEvent2()
 	UE_LOG(LogTemp, Warning, TEXT("OnHitEvent2"));
 }
 
+//Edit
 void AMyProjectCharacter::Dash() {
 	if (!bCanDash) return;
-	if (DashMontage && GetMesh()->GetAnimInstance()) {
-		GetMesh()->GetAnimInstance()->Montage_Play(DashMontage);
-	}
-	if (this->NiagaraSystem)
+
+	RequestDash(); // dash animation
+
+	if (!HasAuthority())
 	{
-		FVector ForwardVector = GetActorForwardVector();
-		float SpawnDistance = 200.f;
+		Server_RequestDash();
+	}
+}
 
-		FVector SpawnLocation = GetActorLocation() + ForwardVector * SpawnDistance;
-		FRotator SpawnRotation = ForwardVector.Rotation();
-		FVector SpawnScale = FVector(0.5f, 0.7f, 0.7f); //크기
-
-		// 이펙트 생성
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(
-			GetWorld(),
-			NiagaraSystem,
-			SpawnLocation,
-			SpawnRotation,
-			SpawnScale,
-			true,   // bAutoDestroy
-			true,   // bAutoActivate
-			ENCPoolMethod::None,
-			true    // bPreCullCheck
-		);
+//add
+void AMyProjectCharacter::PerformDash()
+{
+	bCanDash = false; // 연속 사용 방지
 
 
-		bCanDash = false; // 연속 사용 방지
-
-		FVector DashDirection = GetActorForwardVector(); // 바라보는 방향
-		GetCharacterMovement()->Launch(DashDirection * 2000); // 순간적인 돌진
-
-		// 일정 시간이 지나면 멈추기
-		//GetWorldTimerManager().SetTimer(DashTimerHandle, this, &AMyProjectCharacter::StopDash, 0.5f, false);
+	FVector DashDirection = GetActorForwardVector(); // 바라보는 방향
+	GetCharacterMovement()->Launch(DashDirection * 2000); // 순간적인 돌진
 
 		// 쿨다운 설정
-		GetWorldTimerManager().SetTimer(DashCooldownTimerHandle, [this]() { bCanDash = true; }, 1.0, false);
-		UE_LOG(LogTemp, Warning, TEXT("Dash!"));
+	GetWorldTimerManager().SetTimer(DashCooldownTimerHandle, [this]() { bCanDash = true; }, 1.0, false);
+	UE_LOG(LogTemp, Warning, TEXT("Dash!"));
 
-	}
+	Multicast_PlayDashEffects();
 }
 
-
-void AMyProjectCharacter::StopDash()
+void AMyProjectCharacter::Server_RequestDash_Implementation()
 {
-	GetCharacterMovement()->StopMovementImmediately(); // 돌진 멈춤
+	PerformDash(); // 서버에서 Dash 실행
 }
+
 
 void AMyProjectCharacter::ChangeProfile(const FString& TextureAssetPath, const FString& name) {
 	FString FullPath = FString::Printf(TEXT("Texture2D'%s'"), *TextureAssetPath);
@@ -494,10 +533,9 @@ void AMyProjectCharacter::ChangeProfile(const FString& TextureAssetPath, const F
 
 void AMyProjectCharacter::ChangeJobSkill1()
 {
-
 	ChangeProfile(TEXT("/Game/Images/police.police"), TEXT("police"));
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill1"));
-
+	jobskill = 1;
 
 
 	EquipWeaponWithEffect(
@@ -507,10 +545,12 @@ void AMyProjectCharacter::ChangeJobSkill1()
 
 }
 
+
 void AMyProjectCharacter::ChangeJobSkill2()
 {
 	ChangeProfile(TEXT("/Game/Images/cooking.cooking"), TEXT("cooking"));
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill2"));
+	jobskill = 2;
 
 	EquipWeaponWithEffect(
 		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Fire.NS_Dash_Fire"),
@@ -518,11 +558,12 @@ void AMyProjectCharacter::ChangeJobSkill2()
 	);
 }
 
+
 void AMyProjectCharacter::ChangeJobSkill3()
 {
 	ChangeProfile(TEXT("/Game/Images/boxer.boxer"), TEXT("boxer"));
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill3"));
-
+	jobskill = 3;
 
 	EquipWeaponWithEffect(
 		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Wind.NS_Dash_Wind"),
@@ -531,10 +572,13 @@ void AMyProjectCharacter::ChangeJobSkill3()
 
 }
 
+
+// need RPC
 void AMyProjectCharacter::ChangeJobSkill4()
 {
 	ChangeProfile(TEXT("/Game/Images/doctor.doctor"), TEXT("doctor"));
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill4"));
+	jobskill = 4;
 
 	EquipWeaponWithEffect(
 		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Paladin.NS_Dash_Paladin"),
@@ -543,10 +587,13 @@ void AMyProjectCharacter::ChangeJobSkill4()
 
 }
 
+
+// need RPC
 void AMyProjectCharacter::ChangeJobSkill5()
 {
 	ChangeProfile(TEXT("/Game/Images/artist.artist"), TEXT("artist"));
 	UE_LOG(LogTemp, Warning, TEXT("ChangeJobSkill5"));
+	jobskill = 5;
 
 	EquipWeaponWithEffect(
 		TEXT("/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Dash_Vampire.NS_Dash_Vampire"),
@@ -556,84 +603,139 @@ void AMyProjectCharacter::ChangeJobSkill5()
 }
 
 
+// need RPC
 void AMyProjectCharacter::EquipWeaponWithEffect(const FString& NiagaraPath, const FString& WeaponBlueprintPath)
 {
-	// 1. 나이아가라 이펙트 로드
-	if (!NiagaraPath.IsEmpty())
-	{
-		FString FullNiagaraPath = NiagaraPath;
-		if (!NiagaraPath.Contains(TEXT("NiagaraSystem'")))
-		{
-			FullNiagaraPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
-		}
 
-		UNiagaraSystem* LoadedEffect = LoadObject<UNiagaraSystem>(nullptr, *FullNiagaraPath);
-		if (LoadedEffect)
-		{
-			NiagaraSystem = LoadedEffect;
-			//UE_LOG(LogTemp, Log, TEXT("Loaded Niagara: %s"), *NiagaraPath);
-		}
-		else
-		{
-			UE_LOG(LogTemp, Error, TEXT("Failed to load NiagaraSystem: %s"), *NiagaraPath);
-		}
+	if (HasAuthority())
+	{
+		EquipWeapon_Internal(NiagaraPath, WeaponBlueprintPath);
+	}
+	else
+	{
+		Server_EquipWeaponWithEffect(NiagaraPath, WeaponBlueprintPath);
 	}
 
-	// 2. 기존 무기 제거
-	if (EquippedWeaponActor)
-	{
-		EquippedWeaponActor->Destroy();
-		EquippedWeaponActor = nullptr;
-	}
 
-	//  3. 무기 블루프린트 로드
-	if (!WeaponBlueprintPath.IsEmpty())
-	{
-		TSubclassOf<AActor> WeaponClass = StaticLoadClass(
-			AActor::StaticClass(),
-			nullptr,
-			*WeaponBlueprintPath
-		);
+	// ===================== 1. 나이아가라 이펙트 로드 =====================
+	//if (!NiagaraPath.IsEmpty())
+	//{
+	//	FString FullNiagaraPath = NiagaraPath;
 
-		if (WeaponClass)
-		{
-			FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
-			FRotator SpawnRotation = GetActorRotation();
+	//	// 경로 정리 (필요 시)
+	//	if (!NiagaraPath.Contains(TEXT("NiagaraSystem'")))
+	//	{
+	//		FullNiagaraPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
+	//	}
 
-			FActorSpawnParameters SpawnParams;
-			SpawnParams.Owner = this;
-			SpawnParams.Instigator = GetInstigator();
+	//	UNiagaraSystem* LoadedEffect = LoadObject<UNiagaraSystem>(nullptr, *FullNiagaraPath);
+	//	if (IsValid(LoadedEffect))
+	//	{
+	//		NiagaraSystem = LoadedEffect;
+	//		UE_LOG(LogTemp, Log, TEXT("✅ NiagaraSystem 로드 성공: %s"), *FullNiagaraPath);
+	//	}
+	//	else
+	//	{
+	//		UE_LOG(LogTemp, Error, TEXT("❌ NiagaraSystem 로드 실패: %s"), *FullNiagaraPath);
+	//	}
+	//}
 
-			AActor* SpawnedWeapon = GetWorld()->SpawnActor<AActor>(WeaponClass, SpawnLocation, SpawnRotation, SpawnParams);
-			if (SpawnedWeapon)
-			{
-				FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
-				SpawnedWeapon->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
+	//// ===================== 2. 기존 무기 제거 =====================
+	//if (EquippedWeaponActor)
+	//{
+	//	EquippedWeaponActor->Destroy();
+	//	EquippedWeaponActor = nullptr;
+	//}
 
-				// 콜리전 제거
-				if (UStaticMeshComponent* MeshComp = SpawnedWeapon->FindComponentByClass<UStaticMeshComponent>())
-				{
-					MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-					MeshComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
-					MeshComp->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
-				}
+	//// ===================== 3. 무기 블루프린트 로드 =====================
+	//if (!WeaponBlueprintPath.IsEmpty())
+	//{
+	//	TSubclassOf<AActor> WeaponClass = StaticLoadClass(AActor::StaticClass(), nullptr, *WeaponBlueprintPath);
 
-				EquippedWeaponActor = SpawnedWeapon;
+	//	if (!WeaponClass)
+	//	{
+	//		UE_LOG(LogTemp, Error, TEXT("무기 블루프린트 로드 실패: %s"), *WeaponBlueprintPath);
+	//		return;
+	//	}
 
-				//UE_LOG(LogTemp, Log, TEXT("Weapon spawned and attached: %s"), *WeaponBlueprintPath);
-			}
-		}
-		else
-		{
-			UE_LOG(LogTemp, Error, TEXT("Failed to load Weapon Blueprint: %s"), *WeaponBlueprintPath);
-		}
-	}
+	//	FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
+	//	FRotator SpawnRotation = GetActorRotation();
+
+	//	FActorSpawnParameters SpawnParams;
+	//	SpawnParams.Owner = this;
+	//	SpawnParams.Instigator = GetInstigator();
+
+	//	AActor* SpawnedWeapon = GetWorld()->SpawnActor<AActor>(WeaponClass, SpawnLocation, SpawnRotation, SpawnParams);
+	//	if (!IsValid(SpawnedWeapon))
+	//	{
+	//		return;
+	//	}
+
+	//	// ===================== 4. 무기 부착 =====================
+	//	FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
+	//	SpawnedWeapon->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
+
+	//	// ===================== 5. 충돌 제거 =====================
+	//	if (UStaticMeshComponent* MeshComp = SpawnedWeapon->FindComponentByClass<UStaticMeshComponent>())
+	//	{
+	//		MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	//		MeshComp->SetCollisionResponseToAllChannels(ECR_Ignore);
+	//	}
+
+	//	EquippedWeaponActor = SpawnedWeapon;
+
+	//}
+	//else
+	//{
+	//	UE_LOG(LogTemp, Warning, TEXT("no weapon path"));
+	//}
 }
 
 
 //=================================================================================================스킬 구현
+
+
+void AMyProjectCharacter::SkillAttack() {
+
+	if (!bCanUseSkill)
+	{
+		UE_LOG(LogTemp, Warning, TEXT(" SkillAttack1 is on cooldown!"));
+		return;
+	}
+	bCanUseSkill = false; // 스킬 사용 잠금
+
+	switch (jobskill)
+	{
+	case 1:
+		SkillAttack3();// 경찰 스킬
+
+		break;
+	case 2:
+		SkillAttack1();// 요리사 스킬
+
+		break;
+	case 3:
+		//SkillAttack4(); // 복서 스킬
+		break;
+	case 4:
+		SkillAttack2(); //의사 스킬
+
+		break;
+	case 5:
+		SkillAttack5();// 화가 스킬
+		break;
+	default:
+		break;
+	}
+}
+
+
+// need RPC
 void AMyProjectCharacter::SkillAttack1()
 {
+
+
+
 	FString Path2 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/FlameShield/Systems/N_FlameShield.N_FlameShield";
 	SpawnNiagara(Path2, GetActorForwardVector(), FVector(1.f), 7);
 
@@ -642,6 +744,17 @@ void AMyProjectCharacter::SkillAttack1()
 	FVector Scale = FVector(1.f);
 
 	SpawnNiagara(NiagaraPath, Direction, Scale, 8);
+
+
+	GetCharacterMovement()->DisableMovement(); // 이동 비활성화
+	FTimerHandle UnfreezeTimerHandle;
+	GetWorldTimerManager().SetTimer(
+		UnfreezeTimerHandle,
+		this,
+		&AMyProjectCharacter::UnfreezeMovement,
+		7.0f, // 복구 시간
+		false
+	);
 
 	if (!HasAuthority()) return;
 
@@ -667,34 +780,67 @@ void AMyProjectCharacter::SkillAttack1()
 		false,
 		5.0f
 	);
+
+	StartCooldown(30.f);
+
 }
 
-
+// need RPC
 void AMyProjectCharacter::SkillAttack2()
 {
+
+
 	
 	FString Path1 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/ArcaneShield/Systems/N_ArcaneShield.N_ArcaneShield";
 	SpawnNiagara(Path1, GetActorForwardVector(), FVector(1.f), 3);
 
-	
+	GetCharacterMovement()->DisableMovement(); // 이동 비활성화
+	FTimerHandle UnfreezeTimerHandle;
+	GetWorldTimerManager().SetTimer(
+		UnfreezeTimerHandle,
+		this,
+		&AMyProjectCharacter::UnfreezeMovement,
+		2.5f, // 2초 후 이동 복구
+		false
+	);
+
 	HealEffect();
 
 	UE_LOG(LogTemp, Error, TEXT("HP Plus : %i "), HP_Player++);
+	StartCooldown(10.f);
+
 }
 
+
+// need RPC
 void AMyProjectCharacter::SkillAttack3() {
 	FString Path1 = "/Game/SkillEffect_asset/BlinkAndDashVFX/VFX_Niagara/NS_Blink_DarkMagic.NS_Blink_DarkMagic";
 	SpawnNiagara(Path1, GetActorForwardVector(), FVector(1.f), 3);
 
+	GetCharacterMovement()->DisableMovement(); // 이동 비활성화
+	FTimerHandle UnfreezeTimerHandle;
+	GetWorldTimerManager().SetTimer(
+		UnfreezeTimerHandle,
+		this,
+		&AMyProjectCharacter::UnfreezeMovement,
+		1.0f, // 복구 시간
+		false
+	);
+
 	Stun();
-	UE_LOG(LogTemp, Error, TEXT("skill3 end"));
+	StartCooldown(30.f);
+
+	//UE_LOG(LogTemp, Error, TEXT("skill3 end"));
 }
 
-void AMyProjectCharacter::SkillAttack4() {
+//
+//void AMyProjectCharacter::SkillAttack4() {
+//
+//	//UE_LOG(LogTemp, Error, TEXT("skill4 end"));
+//}
 
-	UE_LOG(LogTemp, Error, TEXT("skill4 end"));
-}
 
+// need RPC
 void AMyProjectCharacter::SkillAttack5()
 {
 	FString Path1 = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicShieldsVFX/VFX/DefaultVersions/MagmaShield/Systems/N_MagmaShield.N_MagmaShield";
@@ -753,7 +899,15 @@ void AMyProjectCharacter::SkillAttack5()
 		ClosestEnemy->OnHitEvent();
 		UE_LOG(LogTemp, Warning, TEXT("Closest enemy : %s"), *ClosestEnemy->GetName());
 	}
+	StartCooldown(10.f);
+
 }
+
+void AMyProjectCharacter::UnfreezeMovement()
+{
+	GetCharacterMovement()->SetMovementMode(MOVE_Walking);
+}
+
 
 
 void AMyProjectCharacter::SpawnNiagara(const FString& NiagaraPath, const FVector& Direction, const FVector& Scale, float Duration)
@@ -817,6 +971,8 @@ bool IsInCone(AActor* Source, AActor* Target, float ConeHalfAngleDegrees, float 
 
 	return Dot >= CosineThreshold;
 }
+
+// need RPC
 void AMyProjectCharacter::ApplyConeDamageTick()
 {
 	// 5회 이후 정지
@@ -872,6 +1028,8 @@ void AMyProjectCharacter::ApplyConeDamageTick()
 	}
 }
 
+
+// need RPC
 void AMyProjectCharacter::HealEffect()
 {
 	FString NiagaraPath = "/Game/SkillEffect_asset/MegaMagicVFXBundle/VFX/MagicalExplosionsVFX/VFX/LightBlast/Systems/N_LightBlastCharged.N_LightBlastCharged";
@@ -909,7 +1067,7 @@ void AMyProjectCharacter::HealEffect()
 }
 
 
-
+// need RPC
 void AMyProjectCharacter::Stun()
 {
 	
@@ -975,7 +1133,7 @@ void AMyProjectCharacter::Stun()
 }
 
 
-
+// need RPC
 void AMyProjectCharacter::DisablePlayerMovement()
 {
 	UE_LOG(LogTemp, Warning, TEXT("stun on"));
@@ -988,7 +1146,7 @@ void AMyProjectCharacter::DisablePlayerMovement()
 		DisableInput(PC);
 	}
 }
-
+// need RPC
 void AMyProjectCharacter::EnablePlayerMovement()
 {
 	GetCharacterMovement()->SetMovementMode(MOVE_Walking);
@@ -1001,7 +1159,7 @@ void AMyProjectCharacter::EnablePlayerMovement()
 	UE_LOG(LogTemp, Warning, TEXT("stun off"));
 }
 
-
+// need RPC
 void AMyProjectCharacter::Skill_DashStun(float DashPower)
 {
 	// 1. 돌진 방향
@@ -1023,6 +1181,8 @@ void AMyProjectCharacter::Skill_DashStun(float DashPower)
 			FTimerHandle TempHandle;
 			GetWorld()->GetTimerManager().SetTimer(TempHandle, this, &AMyProjectCharacter::DashStun_CheckHit, 0.3f, false);
 		});
+	StartCooldown(30.f);
+
 }
 
 void AMyProjectCharacter::DashStun_CheckHit()
@@ -1084,7 +1244,6 @@ void AMyProjectCharacter::DashStun_CheckHit()
 	}
 }
 
-
 void AMyProjectCharacter::StartDashCharge()
 {
 	DashChargeStartTime = GetWorld()->GetTimeSeconds();
@@ -1093,6 +1252,7 @@ void AMyProjectCharacter::StartDashCharge()
 	GetWorld()->GetTimerManager().SetTimer(ChargeEffectTimerHandle, this, &AMyProjectCharacter::SpawnChargeEffect, 0.2f, true);
 
 }
+
 
 void AMyProjectCharacter::ReleaseDashCharge()
 {
@@ -1104,13 +1264,14 @@ void AMyProjectCharacter::ReleaseDashCharge()
 	// 최소 0.2초 ~ 최대 2초 제한
 	HoldDuration = FMath::Clamp(HoldDuration, 0.2f, 2.0f);
 
-	float DashPower = 1500.f + (HoldDuration * 1000.f); // 누를수록 더 멀리
+	float DashPower = 500.f + (HoldDuration * 1000.f); // 누를수록 더 멀리
 
 	UE_LOG(LogTemp, Log, TEXT("차징 완료! 지속시간: %.2f초, 힘: %.1f"), HoldDuration, DashPower);
 
 	Skill_DashStun(DashPower);
 }
 
+// need RPC
 
 void AMyProjectCharacter::SpawnChargeEffect()
 {
@@ -1141,8 +1302,11 @@ void AMyProjectCharacter::SpawnChargeEffect()
 		true    // bPreCullCheck
 	);
 
-	UE_LOG(LogTemp, Log, TEXT("차징 이펙트 실행"));
+	//UE_LOG(LogTemp, Log, TEXT("차징 이펙트 실행"));
 }
+
+
+// need RPC
 
 void AMyProjectCharacter::SkillOn(const FString& NiagaraPath)
 {
@@ -1184,63 +1348,319 @@ void AMyProjectCharacter::SkillOn(const FString& NiagaraPath)
 		true
 	);
 
-	UE_LOG(LogTemp, Log, TEXT("SkillOn 이펙트 실행됨: %s"), *NiagaraPath);
+	//UE_LOG(LogTemp, Log, TEXT("SkillOn 이펙트 실행됨: %s"), *NiagaraPath);
 }
 
-//void AMyProjectCharacter::Siren()
-//{
-//	if (!GetWorld()) return;
-//
-//	// 사용할 스태틱 메시 로드
-//	UStaticMesh* SirenMesh = Cast<UStaticMesh>(StaticLoadObject(
-//		UStaticMesh::StaticClass(),
-//		nullptr,
-//		TEXT("/Game/SkillEffect_asset/police/police-car/SM_police_car.SM_police_car")
-//	));
-//	if (!SirenMesh) return;
-//	// 플레이어 머리 위에 소환
-//	FVector SpawnLocation = GetActorLocation() + FVector(0, 0, 200.f);
-//	FRotator SpawnRotation = FRotator::ZeroRotator;
-//
-//	AStaticMeshActor* SpawnedSiren = GetWorld()->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass(), SpawnLocation, SpawnRotation);
-//	if (SpawnedSiren)
-//	{
-//		SpawnedSiren->GetStaticMeshComponent()->SetStaticMesh(SirenMesh);
-//		SpawnedSiren->SetActorScale3D(FVector(1.f));
-//		SpawnedSiren->SetMobility(EComponentMobility::Movable);
-//
-//		FTimerHandle RotateTimerHandle;
-//		float Duration = 3.0f;
-//		float Interval = 0.02f;
-//		int32 RepeatCount = Duration / Interval;
-//
-//		TWeakObjectPtr<AStaticMeshActor> WeakSiren = SpawnedSiren;
-//		int32* RemainingTicks = new int32(RepeatCount);
-//
-//		GetWorld()->GetTimerManager().SetTimer(RotateTimerHandle, [WeakSiren, RemainingTicks]()
-//			{
-//				if (WeakSiren.IsValid())
-//				{
-//					AStaticMeshActor* ActualSiren = WeakSiren.Get();
-//					if (ActualSiren)
-//					{
-//						FRotator RotationDelta = FRotator(0.f, 360.f * 0.02f, 0.f);
-//						ActualSiren->AddActorLocalRotation(RotationDelta);
-//					}
-//				}
-//
-//				if (--(*RemainingTicks) <= 0)
-//				{
-//					if (WeakSiren.IsValid())
-//					{
-//						AStaticMeshActor* ActualSiren = WeakSiren.Get(); // ✅ 수정 포인트
-//						if (ActualSiren)
-//						{
-//							ActualSiren->Destroy();
-//						}
-//					}
-//					delete RemainingTicks;
-//				}
-//			}, Interval, true);
-//	}
-//}
+
+void AMyProjectCharacter::StartCooldown(float CooldownTime)
+{
+	SkillCooldownDuration = CooldownTime;
+	SkillCooldownElapsed = 0.0f;
+
+	GetWorldTimerManager().SetTimer(
+		CooldownTimerHandle,
+		this,
+		&AMyProjectCharacter::UpdateCooldownProgress,
+		0.05f,
+		true
+	);
+
+	FTimerHandle Skill1CooldownUnlockHandle;
+	GetWorldTimerManager().SetTimer(
+		Skill1CooldownUnlockHandle,
+		[this]()
+		{
+			bCanUseSkill = true;
+			UE_LOG(LogTemp, Log, TEXT("SkillAttack is ready again."));
+		},
+		CooldownTime,
+		false
+	);
+}
+
+void AMyProjectCharacter::UpdateCooldownProgress()
+{
+	SkillCooldownElapsed += 0.05f;
+
+	float Progress = FMath::Clamp(SkillCooldownElapsed / SkillCooldownDuration, 0.f, 1.f);
+
+	if (BP_StatusWidget) // ← StatusWidgetInstance는 BeginPlay에서 생성된 UStatusWidget*
+	{
+		HUDWidget->SetSkillCoolProgress(1.0f - Progress); // 점점 줄어드는 형태
+
+		
+	}
+
+	if (Progress >= 1.0f)
+	{
+		GetWorldTimerManager().ClearTimer(CooldownTimerHandle);
+	}
+}
+
+//RPC TEST
+
+
+// Attack RPC
+void AMyProjectCharacter::RequestAttack()
+{
+	if (HasAuthority())
+	{
+		MulticastPlayAttack();
+	}
+	else
+		ServerPlayAttack();
+}
+
+void AMyProjectCharacter::ServerPlayAttack_Implementation()
+{
+	MulticastPlayAttack();
+}
+
+void AMyProjectCharacter::MulticastPlayAttack_Implementation()
+{
+	if (USkeletalMeshComponent* MeshComp = GetMesh())
+	{
+		if (UAnimInstance* AnimInstance = MeshComp->GetAnimInstance())
+		{
+			if (UPlayerAnim* PlayerAnim = Cast<UPlayerAnim>(AnimInstance))
+			{
+				PlayerAnim->PlayAttackAnim();
+			}
+		}
+	}
+}
+
+
+// Dash RPC
+void AMyProjectCharacter::RequestDash()
+{
+	if (HasAuthority())
+		MulticastPlayDash();
+	else
+		ServerPlayDash();
+}
+
+void AMyProjectCharacter::ServerPlayDash_Implementation()
+{
+	MulticastPlayDash();
+}
+
+void AMyProjectCharacter::MulticastPlayDash_Implementation()
+{
+	if (USkeletalMeshComponent* MeshComp = GetMesh())
+	{
+		if (UAnimInstance* AnimInstance = MeshComp->GetAnimInstance())
+		{
+			if (UPlayerAnim* PlayerAnim = Cast<UPlayerAnim>(AnimInstance))
+			{
+				PlayerAnim->PlayDashAnim();
+			}
+		}
+	}
+}
+
+void AMyProjectCharacter::Multicast_PlayDashEffects_Implementation()
+{
+	if (this->NiagaraSystem)
+	{
+		FVector ForwardVector = GetActorForwardVector();
+		float SpawnDistance = 200.f;
+		FVector SpawnLocation = GetActorLocation() + ForwardVector * SpawnDistance;
+		FRotator SpawnRotation = ForwardVector.Rotation();
+		FVector SpawnScale = FVector(0.5f, 0.7f, 0.7f);
+
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+			GetWorld(),
+			NiagaraSystem,
+			SpawnLocation,
+			SpawnRotation,
+			SpawnScale,
+			true,
+			true,
+			ENCPoolMethod::None,
+			true
+		);
+	}
+}
+
+// Weapon update RPC
+void AMyProjectCharacter::Server_EquipWeaponWithEffect_Implementation(const FString& NiagaraPath, const FString& WeaponBlueprintPath)
+{
+	EquipWeapon_Internal(NiagaraPath, WeaponBlueprintPath);
+}
+
+void AMyProjectCharacter::EquipWeapon_Internal(const FString& NiagaraPath, const FString& WeaponBlueprintPath)
+{
+	// 1. 이펙트 로드
+	if (!NiagaraPath.IsEmpty())
+	{
+		FString FullNiagaraPath = NiagaraPath;
+
+		if (!NiagaraPath.Contains(TEXT("NiagaraSystem'")))
+		{
+			FullNiagaraPath = FString::Printf(TEXT("NiagaraSystem'%s'"), *NiagaraPath);
+		}
+
+		UNiagaraSystem* LoadedEffect = LoadObject<UNiagaraSystem>(nullptr, *FullNiagaraPath);
+		if (IsValid(LoadedEffect))
+		{
+			NiagaraSystem = LoadedEffect;
+			UE_LOG(LogTemp, Log, TEXT("✅ NiagaraSystem 로드 성공: %s"), *FullNiagaraPath);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("❌ NiagaraSystem 로드 실패: %s"), *FullNiagaraPath);
+		}
+	}
+
+	// 2. 기존 무기 제거
+	if (EquippedWeaponActor)
+	{
+		EquippedWeaponActor->Destroy();
+		EquippedWeaponActor = nullptr;
+	}
+
+	// 3. 무기 로드 및 부착
+	if (!WeaponBlueprintPath.IsEmpty())
+	{
+		TSubclassOf<AActor> WeaponClass = StaticLoadClass(AActor::StaticClass(), nullptr, *WeaponBlueprintPath);
+		if (!WeaponClass)
+		{
+			UE_LOG(LogTemp, Error, TEXT("무기 블루프린트 로드 실패: %s"), *WeaponBlueprintPath);
+			return;
+		}
+
+
+		FVector SpawnLocation = GetMesh()->GetSocketLocation(TEXT("Weapon_R"));
+		FRotator SpawnRotation = GetActorRotation();
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		AActor* SpawnedWeapon = GetWorld()->SpawnActor<AActor>(WeaponClass, SpawnLocation, SpawnRotation, SpawnParams);
+		if (!IsValid(SpawnedWeapon)) return;
+
+		// 부착
+		FAttachmentTransformRules AttachRules(EAttachmentRule::SnapToTarget, true);
+		SpawnedWeapon->AttachToComponent(GetMesh(), AttachRules, TEXT("Weapon_R"));
+
+		// 충돌 제거
+		if (UStaticMeshComponent* MeshComp = SpawnedWeapon->FindComponentByClass<UStaticMeshComponent>())
+		{
+			MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			MeshComp->SetCollisionResponseToAllChannels(ECR_Ignore);
+		}
+
+		EquippedWeaponActor = SpawnedWeapon;
+
+		// 모든 클라이언트에 이펙트 재생
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("무기 경로 없음"));
+	}
+}
+
+
+
+// HP값 갱신을 위한 Replication함수 - 실제로 사용하지는 않음
+void AMyProjectCharacter::OnRep_HPChanged(){}
+
+void AMyProjectCharacter::OnRep_WeaponChanged()
+{
+	ApplyWeaponMesh(EquippedWeaponType);
+}
+
+void AMyProjectCharacter::ApplyWeaponMesh(EWeaponType WeaponType)
+{
+	switch (WeaponType)
+	{
+	case EWeaponType::Chain:
+	{
+		UStaticMesh* ChainMesh = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Fist.SM_Fist'"));
+		if (ChainMesh)
+		{
+			MeshComponent->SetStaticMesh(ChainMesh);
+			MeshComponent->SetWorldScale3D(FVector(0.5f));
+		}
+		break;
+	}
+	case EWeaponType::Scythe:
+	{
+		UStaticMesh* ScytheMesh = LoadObject<UStaticMesh>(nullptr, TEXT("/Script/Engine.StaticMesh'/Game/SlashHitVFX/__GenericSource/FBX/SM_Scythe.SM_Scythe'"));
+		if (ScytheMesh)
+		{
+			MeshComponent->SetStaticMesh(ScytheMesh);
+			MeshComponent->SetWorldScale3D(FVector(0.5f));
+		}
+		break;
+	}
+	case EWeaponType::None:
+	default:
+		MeshComponent->SetStaticMesh(nullptr);
+		break;
+	}
+}
+
+void AMyProjectCharacter::Server_RequestWeaponUpdate_Implementation()
+{
+	UE_LOG(LogTemp, Warning, TEXT("EquippedWeaponType: %d"), (int32)EquippedWeaponType);
+
+	if (Age < 14)
+	{
+		return;
+	}
+	else if (Age < 17)
+		EquippedWeaponType = EWeaponType::Chain;
+	else if (Age < 20)
+		EquippedWeaponType = EWeaponType::Scythe;
+	else
+		EquippedWeaponType = EWeaponType::None;
+
+
+	ApplyWeaponMesh(EquippedWeaponType); // 서버에서 직접 반영
+}
+
+
+void AMyProjectCharacter::ServerPlusAge_Implementation()
+{
+	Age++;
+	Linguistic++;
+	UE_LOG(LogTemp, Warning, TEXT("AGE : %d"), Age);
+}
+
+void AMyProjectCharacter::OnRep_NiagaraSystem()
+{
+	UE_LOG(LogTemp, Warning, TEXT("클라이언트에서 나이아가라 이펙트 적용됨"));
+
+	// 여기선 Spawn 해도 되고, NiagaraComponent에 바인딩해도 됨
+	if (NiagaraComp && NiagaraSystem)
+	{
+		NiagaraComp->SetAsset(NiagaraSystem);
+		NiagaraComp->Activate(true);
+	}
+}
+
+
+
+
+
+void AMyProjectCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(AMyProjectCharacter, HP_Player);
+	DOREPLIFETIME(AMyProjectCharacter, EquippedWeaponType);
+	DOREPLIFETIME(AMyProjectCharacter, Age);
+	DOREPLIFETIME(AMyProjectCharacter, Physical);
+	DOREPLIFETIME(AMyProjectCharacter, Sensory);
+	DOREPLIFETIME(AMyProjectCharacter, Logic);
+	DOREPLIFETIME(AMyProjectCharacter, Linguistic);
+	DOREPLIFETIME(AMyProjectCharacter, SocialSkill);
+	DOREPLIFETIME(AMyProjectCharacter, MentalStrength);
+	DOREPLIFETIME(AMyProjectCharacter, bCanDash);
+	DOREPLIFETIME(AMyProjectCharacter, NiagaraSystem);
+
+}
+

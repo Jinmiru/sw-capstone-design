@@ -50,6 +50,18 @@ public:
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	class UTextBlock* jobText;
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+	class UProgressBar* SkillCoolProgressBar;
+
+	UFUNCTION(BlueprintCallable)
+	void SetSkillCoolProgress(float Progress);
+
+	/*UPROPERTY(EditAnywhere, meta = (BindWidget))
+	class UImage* skiilcoolImage;*/
+
+	/*UPROPERTY(EditAnywhere, meta = (BindWidget))
+	class UCircular*/
 	
 
 };

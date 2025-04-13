@@ -17,10 +17,22 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
+//191 ~ 217줄 실행함수 정의
+
+//24줄 클래스헤더에 MYPROJECT_API추가
+
+
+UENUM(BlueprintType)
+enum class EWeaponType : uint8
+{
+	None,
+	Chain,
+	Scythe
+};
 
 
 UCLASS(config=Game)
-class AMyProjectCharacter : public ACharacter
+class MYPROJECT_API AMyProjectCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -69,21 +81,23 @@ class AMyProjectCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* ChangeJob5;
 
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* Skill1;
+	UInputAction* Skill;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* Skill2;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	//UInputAction* Skill1;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* Skill3;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	//UInputAction* Skill2;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	//UInputAction* Skill3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* Skill4;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* Skill5;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	//UInputAction* Skill5;
 
 
 
@@ -93,8 +107,8 @@ class AMyProjectCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* printAction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	UInputAction* inventoryAction;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	//UInputAction* inventoryAction;
 
 
 
@@ -113,10 +127,10 @@ public:
 	UStaticMeshComponent* MeshComponent;// 무기 매시
 
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Stats")
+	UPROPERTY(ReplicatedUsing = OnRep_Age, EditAnywhere, BlueprintReadWrite, Category = "Player Stats")
 	int32 Age;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	UPROPERTY(ReplicatedUsing = OnRep_HPChanged, EditAnywhere, BlueprintReadWrite, Category = "Health")
 	int32 HP_Player=100;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
@@ -131,24 +145,23 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 	UParticleSystem* HitEffect; // 공격 이펙트
 
-	/*UPROPERTY(EditDefaultsOnly, Category = "Animation")
-	UAnimMontage* AttackMontage;*/
-
-	UPROPERTY(EditDefaultsOnly, Category = "Animation")
-	UAnimMontage* DashMontage;
-
 	UPROPERTY()
 	AActor* EquippedWeaponActor = nullptr;//장착 무기 초기화
 	
 	UPROPERTY(VisibleAnywhere, Category = "Effects")
 	UNiagaraComponent* NiagaraComp;
 
-
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Physical;   // 신체능력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Sensory;    // 감각 능력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Logic;             // 논리력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Linguistic;        // 언어력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 SocialSkill;       // 사회성
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 MentalStrength;    // 정신력
 	int32 money;             // 돈
 
@@ -161,7 +174,9 @@ public:
 	bool middle;
 	bool high;
 
-	UPROPERTY(EditDefaultsOnly)
+	int32 jobskill = 0; // 직업 스킬 초기화
+
+	UPROPERTY(ReplicatedUsing = OnRep_NiagaraSystem, EditDefaultsOnly)
 	UNiagaraSystem* NiagaraSystem; // 대쉬이펙트 저장소
 	
 
@@ -172,7 +187,6 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<class UHPWidget> BP_HPWidget; //HP 위젯 클래스
-
 
 	
 	UFUNCTION()
@@ -190,10 +204,82 @@ public:
 	UFUNCTION()
 	void DashStun_CheckHit(); //대쉬 스턴
 
+	UFUNCTION()
+	void UnfreezeMovement(); //스킬 정지 해제
 
+	// RPC TEST add
+	void RequestAttack();
+
+	void RequestDash();
+
+	void RequestWeaponUpdate();
+
+	void PerformDash();
+	
+	void PerformAttack();
+
+	// RPC END
 
 
 protected:
+
+	// RPC Test add
+	UFUNCTION(Server, Reliable)
+	void ServerPlayAttack();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayAttack();
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlayDash();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayDash();
+
+	UFUNCTION(Server, Reliable)
+	void Server_RequestDash();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_PlayDashEffects();
+
+	UFUNCTION(Server, Reliable)
+	void ServerAttack();
+
+	UFUNCTION(NetMulticast, Unreliable)
+	void Multicast_OnHitEvent();
+
+	UFUNCTION(Server, Reliable)
+	void Server_EquipWeaponWithEffect(const FString& NiagaraPath, const FString& WeaponBlueprintPath);
+
+	void EquipWeapon_Internal(const FString& NiagaraPath, const FString& WeaponBlueprintPath);
+
+
+	UPROPERTY(ReplicatedUsing = OnRep_WeaponChanged)
+	EWeaponType EquippedWeaponType;
+
+	UFUNCTION()
+	void OnRep_WeaponChanged();
+
+	UFUNCTION()
+	void OnRep_Age();
+
+	UFUNCTION(Server, Reliable)
+	void Server_RequestWeaponUpdate();
+
+	void ApplyWeaponMesh(EWeaponType WeaponType);
+
+	UFUNCTION()
+	void OnRep_HPChanged();
+
+	UFUNCTION()
+	void OnRep_NiagaraSystem();
+
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlusAge();
+
+
+	// RPC END
 
 	virtual void BeginPlay();
 	/** Called for movement input */
@@ -208,7 +294,7 @@ protected:
 
 	void Print(const FInputActionValue& Value);		// 능력치 출력
 
-	void Inventory(const FInputActionValue& Value);	// 인벤토리
+	//void Inventory(const FInputActionValue& Value);	// 인벤토리
 
 	void ChangeJobSkill1();// 직업 변경
 	void ChangeJobSkill2();// 직업 변경
@@ -222,7 +308,7 @@ protected:
 	void SkillAttack4();// 직업 변경
 	void SkillAttack5();// 직업 변경
 
-
+	void SkillAttack();
 
 	float DashChargeStartTime = 0.f;// 차징 시간
 
@@ -235,11 +321,12 @@ protected:
 	void HealEffect(); // 힐 이펙트
 
 	void Dash(); // 대쉬
-	void StopDash(); // 대쉬 멈추기
 	
 	void ChangeProfile(const FString& TextureAssetPath, const FString& name);
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
 
 
 private:
@@ -251,6 +338,7 @@ private:
 
 	void UpdateStatus();
 
+	UPROPERTY(Replicated)
 	bool bCanDash = true;
 	FTimerHandle DashTimerHandle; // 대시 타이머
 	FTimerHandle DashCooldownTimerHandle; // 쿨다운 타이머
@@ -281,10 +369,15 @@ private:
 
 	void EquipWeaponWithEffect(const FString& NiagaraPath, const FString& WeaponBlueprintPath); //직업 전직 대쉬이펙트 & 무기 장착
 
-	//UFUNCTION()
-	//void Siren(); // 사이렌
+	void StartCooldown(float CooldownTime);
+	void UpdateCooldownProgress();
 
-	//UPROPERTY()
-	//AActor* SirenActor;
+	float SkillCooldownDuration;
+	float SkillCooldownElapsed;
+
+	FTimerHandle CooldownTimerHandle;//스킬 쿨타임
+
+	bool bCanUseSkill = true; //스킬 재사용 금지
+
 };
 

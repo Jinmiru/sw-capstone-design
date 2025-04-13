@@ -27,11 +27,11 @@ public:
 	class UProgressBar* HPBar;
 
 	UFUNCTION(BlueprintCallable)
-	float GetPlayerHP();
+	void GetPlayerHP();
 
 
 	UFUNCTION(BlueprintCallable)
-	void UpdateHPBar(int32 HP);
+	void UpdateHPBar(int32 Hp1);
 
 	int32 HP;
 
