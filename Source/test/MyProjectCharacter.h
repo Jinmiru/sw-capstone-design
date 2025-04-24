@@ -139,9 +139,9 @@ public:
 
 	//	데이터 로드 and 세이브
 	FCharacterRuntimeData SaveCurrentState() const;
+	
+	UFUNCTION(BlueprintCallable)
 	void LoadStateFromStruct(const FCharacterRuntimeData& Data);
-
-
 
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
@@ -157,11 +157,9 @@ public:
 	UStaticMeshComponent* MeshComponent;// 무기 매시
 
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Stats")
-	int32 Age;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
-	int32 HP_Player=100;
+	UPROPERTY(ReplicatedUsing = OnRep_HPChanged, EditAnywhere, BlueprintReadWrite, Category = "Health")
+	int32 HP_Player; //동기화할 변수 마킹 작업
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 	int32 iniitialHP = 100;
@@ -188,14 +186,143 @@ public:
 	UNiagaraComponent* NiagaraComp;
 
 
+	//-------------------스텟 멀티 설정-------------------
+	UPROPERTY(Replicated)
+	int32 Age;
+	UPROPERTY(Replicated)
+	int32 jobskill;
+	UPROPERTY(Replicated)
+	int32 money;
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Physical;   // 신체능력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Sensory;    // 감각 능력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Logic;             // 논리력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 Linguistic;        // 언어력
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 SocialSkill;       // 사회성
+	UPROPERTY(ReplicatedUsing = OnRep_Age)
 	int32 MentalStrength;    // 정신력
-	int32 money;             // 돈
+	UPROPERTY(Replicated)
+	bool bCanDash;
+	UPROPERTY(ReplicatedUsing = OnRep_NiagaraSystem, EditDefaultsOnly)
+	UNiagaraSystem* NiagaraSystem; // 대쉬이펙트 저장소
 
+
+	//-------------------스텟 멀티 설정 함수-------------------
+
+	void ServerPlusAge_Implementation();
+	bool ServerPlusAge_Validate() {
+		return true;
+	}
+	//-------------------playersetting 멀티 설정 함수-------------------
+
+	void Player_Setting();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_Player_Setting();
+
+	//------------------직업 변경--------------------
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerChangeJobSkill(int32 changeJobSkill);
+	void ServerChangeJobSkill_Implementation(int32 changeJobSkill);
+	bool ServerChangeJobSkill_Validate(int32 changeJobSkill) { return true; }
+
+	UFUNCTION()
+	void OnRep_JobSkill();
+
+
+	//--------------------------------------
+	// RPC TEST add
+	void RequestAttack();
+
+	void RequestDash();
+
+	void RequestWeaponUpdate();
+
+	void PerformDash();
+
+	void PerformAttack();
+
+	// RPC END
+	//--------------skill 멀티------------------------
+	UFUNCTION(Server, Reliable)//요리사
+	void Server_SkillAttack1();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SkillAttack1();
+	
+	void StartSkill1DamageTick();
+
+
+	void ApplySkillDamage(float DamageAmount, AMyProjectCharacter* DamageCauser);
+
+
+	UFUNCTION(Server, Reliable)//의사
+	void Server_SkillAttack2();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SkillAttack2();
+
+
+	UFUNCTION(Server, Reliable)//경찰
+	void Server_SkillAttack3();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SkillAttack3();
+
+	void ExecuteSkillAttack3(); // 내부 전용 (UFUNCTION 아님)
+
+
+	UFUNCTION(Server, Reliable) // 화가
+	void Server_SkillAttack5();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SkillAttack5();
+
+	void ExecuteSkillAttack5();
+	//============================================================================================스턴 멀티 구현
+	UFUNCTION(Server, Reliable)	//광역 스턴
+	void Server_Stun();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_StunEffect(AMyProjectCharacter* Target);
+
+
+	UFUNCTION(Server, Reliable)	//대쉬 스턴
+	void Server_DashStun(float DashPower);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_DashStunEffect(AMyProjectCharacter* Target);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SpawnChargeEffect();
+
+	UFUNCTION(Server, Reliable)
+	void Server_StartChargeEffect();
+
+
+	//-----------------전직시 캐릭터 대쉬이펙트, 아이콘 변경 멀티---------------------
+	UFUNCTION(Server, Reliable)
+	void Server_EquipWeaponWithEffect(const FString& NiagaraPath, const FString& SkillEffectPath, const FString& ProfillPath);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_EquipWeaponWithEffect(const FString& NiagaraPath, const FString& SkillEffectPath, const FString& ProfillPath);
+
+
+	//------------------skillon 이펙트 멀티 --------------------
+
+	UFUNCTION(Server, Reliable)
+	void Server_SkillOn(const FString& NiagaraPath);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SkillOn(const FString& NiagaraPath);
+
+
+
+	//--------------------------------------
 	int32 Power; // 공격력
 
 	float AttackRange; // 공격	범위
@@ -205,12 +332,6 @@ public:
 	bool middle;
 	bool high;
 
-	int32 jobskill = 0; // 직업 스킬 초기화
-
-	UPROPERTY(EditDefaultsOnly)
-	UNiagaraSystem* NiagaraSystem; // 대쉬이펙트 저장소
-	
-
 	int32 GetHighestStatName();// 능력치 중 가장 높은 능력치 수련도 반환
 
 	UPROPERTY(EditDefaultsOnly)
@@ -218,6 +339,14 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<class UHPWidget> BP_HPWidget; //HP 위젯 클래스
+
+
+	// BP용 안전한 HP 함수 시발 좃같네
+	UFUNCTION(BlueprintCallable, Category = "UI")
+	float GetHPBarPercent() const
+	{
+		return FMath::Clamp((float)HP_Player / 100.0f, 0.f, 1.f);
+	}
 
 	
 	UFUNCTION()
@@ -242,6 +371,50 @@ public:
 
 
 protected:
+
+	// RPC Test add
+	UFUNCTION(Server, Reliable)
+	void ServerPlayAttack();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayAttack();
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlayDash();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayDash();
+
+	UFUNCTION(Server, Reliable)
+	void Server_RequestDash();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_PlayDashEffects();
+
+	UFUNCTION(Server, Reliable)
+	void ServerAttack();
+
+	UFUNCTION(NetMulticast, Unreliable)
+	void Multicast_OnHitEvent();
+
+
+
+
+	UFUNCTION()
+	void OnRep_Age();
+
+	UFUNCTION()
+	void OnRep_HPChanged();
+
+	UFUNCTION()
+	void OnRep_NiagaraSystem();
+
+
+	UFUNCTION(Server, Reliable)
+	void ServerPlusAge();
+
+
+	// RPC END
 
 	virtual void BeginPlay();
 	/** Called for movement input */
@@ -285,11 +458,12 @@ protected:
 	void Dash(); // 대쉬
 	void StopDash(); // 대쉬 멈추기
 	
-	void ChangeProfile(const FString& TextureAssetPath, const FString& name);
+	//========================== 프로필 변경 (ui는 멀티에서 처리하면 안대요.,......시발)
+	void ChangeProfile(const FString& TextureAssetPath, const FString& name, const FString& skillIcon);
 
+	//==========================
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void Player_Setting();
 
 
 private:
@@ -301,7 +475,6 @@ private:
 
 	void UpdateStatus();
 
-	bool bCanDash = true;
 	FTimerHandle DashTimerHandle; // 대시 타이머
 	FTimerHandle DashCooldownTimerHandle; // 쿨다운 타이머
 
@@ -323,7 +496,7 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void SkillOn(const FString& NiagaraPath);
 
-	void EquipWeaponWithEffect(const FString& NiagaraPath, const FString& SkiilEffectPath); //직업 전직 대쉬이펙트 & 무기 장착
+	void EquipWeaponWithEffect(const FString& NiagaraPath, const FString& SkiilEffectPath, const FString& ProfillPath); //직업 전직 대쉬이펙트 & 스킬아이콘 & 프로필
 
 	void StartCooldown(float CooldownTime);
 	void UpdateCooldownProgress();
@@ -340,11 +513,12 @@ private:
 
 	//멀티 플레이 위한 추가
 	UFUNCTION(Server, Reliable, WithValidation)
-	void Server_SwapToNewCharacter(const FString& BlueprintPath);
-
-	void Server_SwapToNewCharacter_Implementation(const FString& BlueprintPath);
-	bool Server_SwapToNewCharacter_Validate(const FString& BlueprintPath) { return true; }
+	void Server_SwapToNewCharacter(const FString& BlueprintPath, AController* OwningController);
 
 
+	void Server_SwapToNewCharacter_Implementation(const FString& BlueprintPath, AController* OwningController);
+	bool Server_SwapToNewCharacter_Validate(const FString& BlueprintPath, AController* OwningController) { return true; }
+
+	void SetupHUDIfNeeded();//멀티 캐릭터 변경시 ui적용
 };
 
