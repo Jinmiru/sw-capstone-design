@@ -19,7 +19,7 @@
     <tr>
       <td align="center"><a href="https://github.com/scsar">
         <img src="https://github.com/user-attachments/assets/a375767d-467d-4647-a729-7ba0f6c9f9eb" width="100px;" alt=""/><br/><sub>장현일</sub></a><br/>
-      <td>콘텐츠I전공</td>
+      <td>콘텐츠IT전공</td>
       <td>20205246</td>
     </tr>
     <tr>
