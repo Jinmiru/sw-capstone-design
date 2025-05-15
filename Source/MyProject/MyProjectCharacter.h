@@ -48,12 +48,12 @@ struct FCharacterRuntimeData
 UENUM(BlueprintType)	// 미션 클리어시 능력치 상승떄 적용
 enum class EPlayerStatType : uint8
 {
-	PhysicalStatus,
-	SensoryStatus,
-	LogicStatus,
-	LinguisticStatus,
-	SocialSkillStatus,
-	MentalStrengthStatus
+	PhysicalStatus, //신체능력
+	SensoryStatus,	//예술
+	LogicStatus,	//수학
+	LinguisticStatus,//국어
+	SocialSkillStatus,//사회
+	MentalStrengthStatus//정신ㄹ겨
 };
 
 UCLASS(config = Game)

@@ -152,7 +152,8 @@ void UESImageQuizGameUI::EndGame(bool bIsWin)
         AMyProjectCharacter* PlayerCharacter = Cast<AMyProjectCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));
         if (PlayerCharacter)//미션 보상
         {
-            PlayerCharacter->PlusStat(EPlayerStatType::LogicStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::SensoryStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::SocialSkillStatus);
         }
         ResultText->SetText(FText::FromString(TEXT("성공!")));
         ResultText->SetColorAndOpacity(FSlateColor(FLinearColor::Blue));
