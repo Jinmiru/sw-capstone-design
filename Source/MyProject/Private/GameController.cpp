@@ -199,19 +199,41 @@ void AGameController::Server_RequestSpectator_Implementation()
 {
 	if (!HasAuthority()) return;
 
-	if (GetPawn())
+	APawn* _OldPawn = GetPawn();
+	FVector SpawnLoc = _OldPawn ? _OldPawn->GetActorLocation() : FVector::ZeroVector;
+
+	if (_OldPawn)
 	{
-		GetPawn()->DetachFromControllerPendingDestroy();
+		_OldPawn->DetachFromControllerPendingDestroy();
 		UnPossess();
+
+		_OldPawn->Destroy();
 	}
 
-	FVector SpawnLoc = GetPawn() ? GetPawn()->GetActorLocation() : FVector::ZeroVector;
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+	SpawnParams.Instigator = GetPawn();
 
-	ASpectatorPawn* Spectator = GetWorld()->SpawnActor<ASpectatorPawn>(ASpectatorPawn::StaticClass(), SpawnLoc, FRotator::ZeroRotator);
+	ASpectatorPawn* Spectator = GetWorld()->SpawnActor<ASpectatorPawn>(
+		ASpectatorPawn::StaticClass(),
+		SpawnLoc,
+		FRotator::ZeroRotator,
+		SpawnParams
+	);
+
 	if (Spectator)
 	{
-		Possess(Spectator);
-		ChangeState(NAME_Spectating);
+		Possess(Spectator); // 서버에서 Possess
+
+		// SpectatorPawn의 입력을 활성화
+		Spectator->EnableInput(this);  // this는 AGameController
+
+		// 입력 모드 및 마우스 커서 설정
+		FInputModeGameOnly InputMode;
+		SetInputMode(InputMode);
+		bShowMouseCursor = false;
+
+		UE_LOG(LogTemp, Warning, TEXT("Successfully possessed SpectatorPawn"));
 	}
 }
 
