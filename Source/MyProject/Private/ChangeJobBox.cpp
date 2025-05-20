@@ -5,6 +5,7 @@
 #include "Components/BoxComponent.h"
 #include "MyProject/MyProjectCharacter.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "GameController.h"
 
 // Sets default values
 AChangeJobBox::AChangeJobBox()
@@ -35,3 +36,23 @@ void AChangeJobBox::Tick(float DeltaTime)
 
 }
 
+void AChangeJobBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+    int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (!HasAuthority()) return;
+	//UE_LOG(LogTemp, Warning, TEXT("Overlap with Job Center1")); 
+
+
+	if (AMyProjectCharacter* Character = Cast<AMyProjectCharacter>(OtherActor))
+	{
+		AController* Controller = Character->GetController();
+		AGameController* PlayerController = Cast<AGameController>(Controller);
+
+
+		if (PlayerController && !PlayerController->IsPlayingMiniGame())
+		{
+			PlayerController->SetIsPlayingMiniGame(true);
+			PlayerController->Client_ShowGameUI(EGameUIType::ES_ImageQuiz);
+		}
+	}
+}

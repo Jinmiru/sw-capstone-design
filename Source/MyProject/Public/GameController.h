@@ -39,6 +39,10 @@ enum class EGameUIType : uint8
 	JC_Artist,
 	JC_Cook,
 	JC_Doctor,
+
+	//취직
+	SUCCES,
+
 	
 };
 
