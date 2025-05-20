@@ -86,30 +86,41 @@ void AESServiceGameBox::Tick(float DeltaTime)
 void AESServiceGameBox::SpawnTrashActors()
 {
     if (!TrashActorClass) return;
-	//UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성"));
+    //UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성"))
+
     ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
     if (!PlayerCharacter) return;
     //UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성2"));
 
     FVector PlayerLocation = PlayerCharacter->GetActorLocation();
-    FVector FloorLocation = FVector(PlayerLocation.X, PlayerLocation.Y, 0.f);
-   // UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성3"));
+    // UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성3"));
 
-    for (int32 i = 0; i < NumTrashToSpawn+1; ++i)
+    for (int32 i = 0; i < NumTrashToSpawn + 1; ++i)
     {
         float AngleRad = FMath::DegreesToRadians(FMath::FRandRange(0.f, 360.f));
         float Dist = FMath::FRandRange(200.f, SpawnRadius);
         FVector Offset = FVector(FMath::Cos(AngleRad) * Dist, FMath::Sin(AngleRad) * Dist, 0.f);
-        FVector SpawnLocation = FloorLocation + Offset + FVector(0.f, 0.f, 200.f);;
+        FVector Origin = PlayerLocation + Offset + FVector(0.f, 0.f, 300.f);
+        FVector End = Origin - FVector(0.f, 0.f, 1000.f); // 아래로 1000만큼 추적
 
-        ATrashActor* Trash = Cast<ATrashActor>(
-            GetWorld()->SpawnActor<AActor>(TrashActorClass, SpawnLocation, FRotator::ZeroRotator)
-        );
+        FHitResult HitResult;
+        FCollisionQueryParams Params;
+        Params.AddIgnoredActor(this);
 
-        if (Trash)
+        bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Origin, End, ECC_Visibility, Params);
+
+        if (bHit)
         {
-            UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성 성공 : % d"), i);
-            Trash->SetOwningGameBox(this);
+            FVector SpawnLocation = HitResult.Location + FVector(0.f, 0.f, 10.f); // 바닥 위로 살짝 띄우기
+            ATrashActor* Trash = Cast<ATrashActor>(
+                GetWorld()->SpawnActor<AActor>(TrashActorClass, SpawnLocation, FRotator::ZeroRotator)
+            );
+
+            if (Trash)
+            {
+                UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성 성공 : %d"), i);
+                Trash->SetOwningGameBox(this);
+            }
         }
     }
 }
