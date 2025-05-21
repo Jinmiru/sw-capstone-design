@@ -21,6 +21,8 @@
 #include "Enemy.h"
 #include "EnemyFSM.h"
 #include "DieWidget.h"
+#include "PlayingCutsceneBox.h"
+#include "GameController.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -191,6 +193,7 @@ void AMyProjectCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 void AMyProjectCharacter::Move(const FInputActionValue& Value)
 {
+	if (bIsMovementLocked) return;
 
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -2065,4 +2068,15 @@ void AMyProjectCharacter::Multicast_FireEffect_Implementation(AMyProjectCharacte
 	if (!IsValid(Enemy)) return;
 
 	Enemy->SpawnNiagara(NiagaraPath, FVector::UpVector, FVector(3.0f), 3);
+}
+
+void AMyProjectCharacter::Server_NotifyCutsceneFinished_Implementation()
+{
+	// 서버에서 CutsceneBox 찾기
+	APlayingCutsceneBox* Box = Cast<APlayingCutsceneBox>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayingCutsceneBox::StaticClass()));
+
+	if (Box)
+	{
+		Box->Server_HandleCutsceneFinished(Cast<AGameController>(this->GetController()));
+	}
 }

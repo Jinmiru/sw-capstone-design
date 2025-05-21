@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "PlayingCutsceneBox.generated.h"
 
+class USoundCue;
+
 UCLASS()
 class MYPROJECT_API APlayingCutsceneBox : public AActor
 {
@@ -33,8 +35,20 @@ private:
 
 	UPROPERTY()
 	class UUserWidget* CutsceneWidgetInstance;
-	
-public:	
+
+	UPROPERTY()
+	class UAudioComponent* audioComponent;
+
+	UPROPERTY(EditAnywhere, Category = "Cutscene")
+	USoundBase* CutsceneSound;
+
+	UFUNCTION()
+	void OnMediaOpened(FString OpenedUrl);
+
+	bool bPlayersTeleported = false;
+
+
+public:
 	// Sets default values for this actor's properties
 	APlayingCutsceneBox();
 
@@ -42,15 +56,26 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+
+
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION()
-	void OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
-		int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UFUNCTION(Server, Reliable)
+	void Server_HandleCutsceneFinished(AGameController* PC);
+
+	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+	void Multicast_PlayCutScene();
+
 
 	UFUNCTION()
 	void OnCutsceneFinished();
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bCutscenePlayed = false;
+
+	UPROPERTY(EditAnywhere, Category = "Cutscene")
+	FVector TargetTeleportLocation;
 
 };

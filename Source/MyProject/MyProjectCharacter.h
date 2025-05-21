@@ -388,6 +388,11 @@ public:
 
 	void ApplyStatIncrease(EPlayerStatType Stat);
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Cutscene")
+	bool bIsMovementLocked = false;
+
+	UFUNCTION(Server, Reliable)
+	void Server_NotifyCutsceneFinished();
 
 protected:
 
