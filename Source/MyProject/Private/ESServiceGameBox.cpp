@@ -95,7 +95,7 @@ void AESServiceGameBox::SpawnTrashActors()
     FVector PlayerLocation = PlayerCharacter->GetActorLocation();
     // UE_LOG(LogTemp, Warning, TEXT("쓰레기 생성3"));
 
-    for (int32 i = 0; i < NumTrashToSpawn + 1; ++i)
+    for (int32 i = 0; i < NumTrashToSpawn + 10; ++i)
     {
         float AngleRad = FMath::DegreesToRadians(FMath::FRandRange(0.f, 360.f));
         float Dist = FMath::FRandRange(200.f, SpawnRadius);
@@ -141,6 +141,13 @@ void AESServiceGameBox::TrashPickedUp()
     if (CollectedTrashCount >= NumTrashToSpawn)
     {
         UE_LOG(LogTemp, Warning, TEXT("쓰레기 다 주웠음"));
+
+        TArray<AActor*> TrashActors;
+        UGameplayStatics::GetAllActorsOfClass(GetWorld(), TrashActorClass, TrashActors);
+        for (AActor* Trash : TrashActors)
+        {
+            Trash->Destroy();
+        }
 
         // 클라이언트에게 UI 종료 요청
         if (AGameController* PlayerController = Cast<AGameController>(UGameplayStatics::GetPlayerController(GetWorld(), 0)))
