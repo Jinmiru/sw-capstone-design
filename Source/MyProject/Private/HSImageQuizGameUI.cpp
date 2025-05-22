@@ -9,6 +9,8 @@
 #include "Components/TextBlock.h"
 #include "Components/EditableTextBox.h"
 #include "Math/UnrealMathUtility.h"
+#include "Myproject/MyProjectCharacter.h"
+
 void UHSImageQuizGameUI::NativeOnInitialized()
 {
     Super::NativeOnInitialized();
@@ -171,6 +173,16 @@ void UHSImageQuizGameUI::EndGame(bool bIsWin)
 {
     if (bIsWin)
     {
+        AMyProjectCharacter* PlayerCharacter = Cast<AMyProjectCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));
+        if (PlayerCharacter)//미션 보상
+        {
+            PlayerCharacter->PlusStat(EPlayerStatType::SensoryStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::SensoryStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::SocialSkillStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::MentalStrengthStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::AgeStatus);
+
+        }
         ResultText->SetText(FText::FromString(TEXT("성공!")));
         ResultText->SetColorAndOpacity(FSlateColor(FLinearColor::Blue));
     }
