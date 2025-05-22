@@ -373,6 +373,8 @@ public:
 	UFUNCTION()
 	void UnfreezeMovement(); //스킬 정지 해제
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Light Control")
+	bool isNight = false;
 
 	//============================	========================== 미니게임종료시 능력치 상승
 
@@ -393,6 +395,14 @@ public:
 
 	UFUNCTION(Server, Reliable)
 	void Server_NotifyCutsceneFinished();
+
+	void ChangeJobSkill1();// 직업 변경
+	void ChangeJobSkill2();// 직업 변경
+	void ChangeJobSkill3();// 직업 변경
+	void ChangeJobSkill4();// 직업 변경
+	void ChangeJobSkill5();// 직업 변경
+	void ChangeJobSkill6();// 중학생
+	void ChangeJobSkill7();// 고등학생
 
 protected:
 
@@ -457,13 +467,7 @@ protected:
 
 	void Inventory(const FInputActionValue& Value);	// 인벤토리
 
-	void ChangeJobSkill1();// 직업 변경
-	void ChangeJobSkill2();// 직업 변경
-	void ChangeJobSkill3();// 직업 변경
-	void ChangeJobSkill4();// 직업 변경
-	void ChangeJobSkill5();// 직업 변경
-	void ChangeJobSkill6();// 중학생
-	void ChangeJobSkill7();// 고등학생
+
 
 	void SkillAttack1();// 
 	void SkillAttack2();// 

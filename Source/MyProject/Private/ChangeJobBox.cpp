@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "ChangeJobBox.h"
@@ -20,6 +20,9 @@ AChangeJobBox::AChangeJobBox()
 	CollisionBox->SetupAttachment(RootComponent);
 	CollisionBox->SetBoxExtent(FVector(80.0f, 80.0f, 80.0f));
 	CollisionBox->SetRelativeLocation(FVector(0.0f, 0.0f, 120.0f));
+	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AChangeJobBox::OnBeginOverlap);
+
+
 }
 
 // Called when the game starts or when spawned
@@ -37,22 +40,44 @@ void AChangeJobBox::Tick(float DeltaTime)
 }
 
 void AChangeJobBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
-    int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult)
+	int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+
+
 	if (!HasAuthority()) return;
-	//UE_LOG(LogTemp, Warning, TEXT("Overlap with Job Center1")); 
 
+	if (!OtherActor || !OtherActor->IsA(AMyProjectCharacter::StaticClass()))
+		return;
 
-	if (AMyProjectCharacter* Character = Cast<AMyProjectCharacter>(OtherActor))
+	AMyProjectCharacter* Character = Cast<AMyProjectCharacter>(OtherActor);
+	if (!Character) return;
+
+	AController* Controller = Character->GetController();
+	AGameController* PlayerController = Cast<AGameController>(Controller);
+
+	if (PlayerController && PlayerController->JobSuccess)
 	{
-		AController* Controller = Character->GetController();
-		AGameController* PlayerController = Cast<AGameController>(Controller);
-
-
-		if (PlayerController && !PlayerController->IsPlayingMiniGame())
+		switch (ActionType)
 		{
-			PlayerController->SetIsPlayingMiniGame(true);
-			PlayerController->Client_ShowGameUI(EGameUIType::ES_ImageQuiz);
+		case EJobBoxActionType::ACTION_One:
+			Character->ChangeJobSkill1();
+			break;
+		case EJobBoxActionType::ACTION_Two:
+			Character->ChangeJobSkill2();
+			break;
+		case EJobBoxActionType::ACTION_Three:
+			Character->ChangeJobSkill3();
+			break;
+		case EJobBoxActionType::ACTION_Four:
+			Character->ChangeJobSkill4();
+			break;
+		case EJobBoxActionType::ACTION_Five:
+			Character->ChangeJobSkill5();
+			break;
+		default:
+			break;
 		}
+		Destroy();
 	}
 }
+

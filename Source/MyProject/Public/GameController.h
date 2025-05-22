@@ -68,6 +68,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "MiniGame")
 	bool IsPlayingMiniGame() const;
 	
+	bool JobSuccess;
 
 	//서버에서 실행되는 함수              클라이언트가 호출 -> 서버에서 검증 -> SetISPlayingMiniGame 실행
 	UFUNCTION(BlueprintCallable, Category = "MiniGame")

@@ -14,6 +14,7 @@
 void AGameController::BeginPlay()
 {
 	Super::BeginPlay();
+	JobSuccess = true;
 }
 
 bool AGameController::IsPlayingMiniGame() const

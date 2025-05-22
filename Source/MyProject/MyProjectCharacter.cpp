@@ -23,6 +23,10 @@
 #include "DieWidget.h"
 #include "PlayingCutsceneBox.h"
 #include "GameController.h"
+#include "Engine/SkyLight.h"//밤낮 조절
+#include "Components/SkyLightComponent.h"
+#include "Engine/DirectionalLight.h"        // ADirectionalLight
+#include "Components/LightComponent.h"      // ULightComponent
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -541,7 +545,7 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 				UE_LOG(LogTemp, Error, TEXT("초등학생입니다."));
 				ChangeProfile(TEXT("/Game/Images/elemental.elemental"), TEXT("elemental school"), TEXT("/Game/Images/NoSkill.NoSkill"));
 				Power = 1.5;
-				if(HUDWidget->GuideText != nullptr)
+				if (HUDWidget->GuideText != nullptr)
 					HUDWidget->GuideText->SetText(FText::FromString(TEXT("초등학교 수업을 진행하세요!")));
 			}
 			else {
@@ -551,7 +555,8 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 		}
 		else if (Age >= 14 && Age < 17) {
 
-			CameraBoom->TargetArmLength = 1300.0f;
+			if (CameraBoom)
+				CameraBoom->TargetArmLength = 1300.0f;
 			AttackRange += 50.0f;
 			if (HUDWidget)
 			{
@@ -566,10 +571,12 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 				UE_LOG(LogTemp, Error, TEXT("중학교 진학 실패"));
 			}
 
+
 		}
 		else if (Age >= 17 && Age < 20) {
 
-			CameraBoom->TargetArmLength = 1500.0f;
+			if (CameraBoom)
+				CameraBoom->TargetArmLength = 1500.0f;
 			AttackRange += 50.0f;
 			if (HUDWidget)
 			{
@@ -584,42 +591,52 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 			}
 
 		}
+		else {
+			if (HUDWidget->GuideText != nullptr)
+				HUDWidget->GuideText->SetText(FText::FromString(TEXT("스펙을 쌓아 취업하세요!")));
+		}
+
 		break;
 	case 1:
-		CameraBoom->TargetArmLength = 1500.0f;
+		if (CameraBoom)
+			CameraBoom->TargetArmLength = 1500.0f;
 		UE_LOG(LogTemp, Warning, TEXT("Police"));
 		ChangeProfile(TEXT("/Game/Images/police.police"), TEXT("police"), TEXT("/Game/Images/siren.siren"));
-		if (HUDWidget->GuideText != nullptr)
-			HUDWidget->GuideText->SetText(FText::FromString(TEXT("스펙을 쌓아 취업하세요!")));
+		if (HUDWidget && HUDWidget->GuideText != nullptr)
+			HUDWidget->GuideText->SetText(FText::FromString(TEXT("최후의 승리자가 되세요!")));
 		break;
 	case 2:
-		CameraBoom->TargetArmLength = 1500.0f;
+		if (CameraBoom)
+			CameraBoom->TargetArmLength = 1500.0f;
 		UE_LOG(LogTemp, Warning, TEXT("cooking"));
 		ChangeProfile(TEXT("/Game/Images/cooking.cooking"), TEXT("cooking"), TEXT("/Game/Images/fire.fire"));
-		if (HUDWidget->GuideText != nullptr)
-			HUDWidget->GuideText->SetText(FText::FromString(TEXT("스펙을 쌓아 취업하세요!")));
+		if (HUDWidget && HUDWidget->GuideText != nullptr)
+			HUDWidget->GuideText->SetText(FText::FromString(TEXT("최후의 승리자가 되세요!")));
 
 		break;
 	case 3:
-		CameraBoom->TargetArmLength = 1500.0f;
+		if (CameraBoom)
+			CameraBoom->TargetArmLength = 1500.0f;
 		UE_LOG(LogTemp, Warning, TEXT("boxer"));
 		ChangeProfile(TEXT("/Game/Images/boxer.boxer"), TEXT("boxer"), TEXT("/Game/Images/punch.punch"));
-		if (HUDWidget->GuideText != nullptr)
-			HUDWidget->GuideText->SetText(FText::FromString(TEXT("스펙을 쌓아 취업하세요!")));
+		if (HUDWidget && HUDWidget->GuideText != nullptr)
+			HUDWidget->GuideText->SetText(FText::FromString(TEXT("최후의 승리자가 되세요!")));
 
 		break;
 	case 4:
-		CameraBoom->TargetArmLength = 1500.0f;
+		if (CameraBoom)
+			CameraBoom->TargetArmLength = 1500.0f;
 		ChangeProfile(TEXT("/Game/Images/doctor.doctor"), TEXT("doctor"), TEXT("/Game/Images/heal.heal"));
-		if (HUDWidget->GuideText != nullptr)
-			HUDWidget->GuideText->SetText(FText::FromString(TEXT("스펙을 쌓아 취업하세요!")));
+		if (HUDWidget && HUDWidget->GuideText != nullptr)
+			HUDWidget->GuideText->SetText(FText::FromString(TEXT("최후의 승리자가 되세요!")));
 
 		break;
 	case 5:
-		CameraBoom->TargetArmLength = 1500.0f;
+		if (CameraBoom)
+			CameraBoom->TargetArmLength = 1500.0f;
 		ChangeProfile(TEXT("/Game/Images/artist.artist"), TEXT("artist"), TEXT("/Game/Images/ink.ink"));
-		if (HUDWidget->GuideText != nullptr)
-			HUDWidget->GuideText->SetText(FText::FromString(TEXT("스펙을 쌓아 취업하세요!")));
+		if (HUDWidget && HUDWidget->GuideText != nullptr)
+			HUDWidget->GuideText->SetText(FText::FromString(TEXT("최후의 승리자가 되세요!")));
 
 		break;
 	}
@@ -688,9 +705,49 @@ int32 AMyProjectCharacter::GetHighestStatName()
 
 void AMyProjectCharacter::Inventory(const FInputActionValue& Value)
 {
-	//PlusStat(EPlayerStatType::LinguisticStatus);
-	OnHitEvent2();
-	UE_LOG(LogTemp, Warning, TEXT("Inventory!"));
+	isNight = true;
+
+	if (!GetWorld()) return;
+
+	// === Directional Lights ===
+	TArray<AActor*> FoundLights;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ADirectionalLight::StaticClass(), FoundLights);
+
+	for (AActor* Actor : FoundLights)
+	{
+		// 🎯 안전성 보장: Cast 전에 타입 체크!
+		if (!IsValid(Actor) || !Actor->IsA(ADirectionalLight::StaticClass()))
+			continue;
+
+		ADirectionalLight* DirLight = Cast<ADirectionalLight>(Actor);
+		if (!DirLight) continue;
+
+		ULightComponent* LightComp = DirLight->GetLightComponent();
+		if (LightComp)
+		{
+			LightComp->SetIntensity(1.0f);
+		}
+	}
+
+	// === Sky Lights ===
+	TArray<AActor*> FoundSkyLights;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ASkyLight::StaticClass(), FoundSkyLights);
+
+	for (AActor* Actor : FoundSkyLights)
+	{
+		if (!IsValid(Actor) || !Actor->IsA(ASkyLight::StaticClass()))
+			continue;
+
+		ASkyLight* SkyLight = Cast<ASkyLight>(Actor);
+		if (!SkyLight) continue;
+
+		USkyLightComponent* SkyLightComp = SkyLight->GetLightComponent();
+		if (SkyLightComp)
+		{
+			SkyLightComp->SetIntensity(0.1f);
+			SkyLightComp->MarkRenderStateDirty();
+		}
+	}
 
 }
 

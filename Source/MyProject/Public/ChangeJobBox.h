@@ -6,6 +6,18 @@
 #include "GameFramework/Actor.h"
 #include "ChangeJobBox.generated.h"
 
+
+UENUM(BlueprintType)
+enum class EJobBoxActionType : uint8
+{
+	ACTION_One   UMETA(DisplayName = "Action One"),
+	ACTION_Two   UMETA(DisplayName = "Action Two"),
+	ACTION_Three UMETA(DisplayName = "Action Three"),
+	ACTION_Four  UMETA(DisplayName = "Action Four"),
+	ACTION_Five  UMETA(DisplayName = "Action Five")
+};
+
+
 UCLASS()
 class MYPROJECT_API AChangeJobBox : public AActor
 {
@@ -30,6 +42,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	// 블루프린트에서 설정 가능하도록 UPROPERTY 선언
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Job Box Settings")
+	EJobBoxActionType ActionType;
+
+	UFUNCTION()
 	void OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
 			int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult);
 };
