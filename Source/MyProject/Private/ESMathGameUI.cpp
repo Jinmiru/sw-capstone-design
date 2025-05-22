@@ -133,8 +133,6 @@ void UESMathGameUI::EndGame(bool bIsWin)
         {
             PlayerCharacter->PlusStat(EPlayerStatType::LogicStatus);
             PlayerCharacter->PlusStat(EPlayerStatType::MentalStrengthStatus);
-            PlayerCharacter->PlusStat(EPlayerStatType::AgeStatus);
-
             
         }
         ResultText->SetText(FText::FromString(TEXT("성공!")));

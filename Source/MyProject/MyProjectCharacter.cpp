@@ -27,6 +27,7 @@
 #include "Components/SkyLightComponent.h"
 #include "Engine/DirectionalLight.h"        // ADirectionalLight
 #include "Components/LightComponent.h"      // ULightComponent
+#include "GameManager.h"
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
@@ -130,6 +131,8 @@ void AMyProjectCharacter::BeginPlay()
 
 			}
 		}
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle_PlusAge, this, &AMyProjectCharacter::UPdateUI, 1.0f, false);
+
 	}
 
 	//  서버든 클라이언트든 공통적으로 실행될 내용
@@ -190,6 +193,8 @@ void AMyProjectCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(Skill4, ETriggerEvent::Completed, this, &AMyProjectCharacter::ReleaseDashCharge);
 
 
+		//EnhancedInputComponent->BindAction(UpadateUIAction, ETriggerEvent::Started, this, &AMyProjectCharacter::UpdateUI);
+
 
 	}
 
@@ -237,6 +242,12 @@ void AMyProjectCharacter::Look(const FInputActionValue& Value)
 
 void AMyProjectCharacter::SwapToNewCharacter(const FString& BlueprintPath)
 {
+	if (HUDWidget)
+	{
+		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
+	}
+
 	if (HasAuthority())
 	{
 		Server_SwapToNewCharacter(BlueprintPath, GetController());
@@ -254,6 +265,8 @@ void AMyProjectCharacter::Server_SwapToNewCharacter_Implementation(const FString
 
 	AMyProjectCharacter* OldCharacter = Cast<AMyProjectCharacter>(PC->GetPawn());
 	if (!OldCharacter) return;
+
+
 
 	FCharacterRuntimeData SavedData = OldCharacter->SaveCurrentState();
 	FVector SpawnLocation = OldCharacter->GetActorLocation();
@@ -536,7 +549,31 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 
 	UE_LOG(LogTemp, Error, TEXT("JobSkill : %d,  Age : %d"), jobskill, Age);
 
+	if (Age == 13) {
+		SwapToNewCharacter(TEXT("/Game/MetaHumans/middle/BP_MiddleThirdPersonCharacter.BP_MiddleThirdPersonCharacter"));
+	} 
+	else if (Age == 16) {
+		SwapToNewCharacter(TEXT("/Game/MetaHumans/goding/BP_GodingThirdPersonCharacter.BP_GodingThirdPersonCharacter"));
 
+	}
+	if (Age == 19) {
+		TArray<AActor*> FoundManagers;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AGameManager::StaticClass(), FoundManagers);
+
+		if (FoundManagers.Num() > 0)
+		{
+			AGameManager* GM = Cast<AGameManager>(FoundManagers[0]);
+			if (GM)
+			{
+				GM->middle();
+			}
+		}
+	}
+	
+	UpdateStatus();
+}
+
+void AMyProjectCharacter::UPdateUI() {
 	switch (jobskill) {
 	case 0:
 		if (Age < 14) {
@@ -553,7 +590,7 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 
 			}
 		}
-		else if (Age >= 14 && Age < 17) {
+		else if (Age  >= 14 && Age<17) {
 
 			if (CameraBoom)
 				CameraBoom->TargetArmLength = 1300.0f;
@@ -573,7 +610,7 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 
 
 		}
-		else if (Age >= 17 && Age < 20) {
+		else if (Age > 17 && Age < 20) {
 
 			if (CameraBoom)
 				CameraBoom->TargetArmLength = 1500.0f;
@@ -642,8 +679,6 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 	}
 	UpdateStatus();
 }
-
-
 void AMyProjectCharacter::UpdateStatus()
 {
 	if (!IsLocallyControlled()) return;
@@ -750,6 +785,8 @@ void AMyProjectCharacter::Inventory(const FInputActionValue& Value)
 	}
 
 }
+
+
 
 void AMyProjectCharacter::IncreaseMoney()
 {
@@ -927,6 +964,7 @@ void AMyProjectCharacter::ChangeJobSkill1()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(1);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/Police/BP_PoliceThirdPersonCharacter.BP_PoliceThirdPersonCharacter"));
@@ -936,6 +974,7 @@ void AMyProjectCharacter::ChangeJobSkill2()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(2);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/Chef/BP_ChefThirdPersonCharacter.BP_ChefThirdPersonCharacter_C"));
@@ -945,6 +984,7 @@ void AMyProjectCharacter::ChangeJobSkill3()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(3);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/Boxer/BP_BoxerThirdPersonCharacter.BP_BoxerThirdPersonCharacter"));
@@ -954,6 +994,7 @@ void AMyProjectCharacter::ChangeJobSkill4()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(4);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/doctor/BP_DoctorThirdPersonCharacter.BP_DoctorThirdPersonCharacter"));
@@ -963,6 +1004,7 @@ void AMyProjectCharacter::ChangeJobSkill5()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(5);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/Painter/BP_PainterThirdPersonCharacter.BP_PainterThirdPersonCharacter"));
@@ -973,6 +1015,7 @@ void AMyProjectCharacter::ChangeJobSkill6()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(0);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/middle/BP_MiddleThirdPersonCharacter.BP_MiddleThirdPersonCharacter"));
@@ -983,6 +1026,7 @@ void AMyProjectCharacter::ChangeJobSkill7()
 	if (HUDWidget)
 	{
 		HUDWidget->RemoveFromParent();
+		HUDWidget = nullptr;
 	}
 	ServerChangeJobSkill(0);
 	SwapToNewCharacter(TEXT("/Game/MetaHumans/goding/BP_GodingThirdPersonCharacter.BP_GodingThirdPersonCharacter"));
@@ -2088,6 +2132,7 @@ void AMyProjectCharacter::ServerPlusStat_Implementation(EPlayerStatType Stat)
 
 void AMyProjectCharacter::ApplyStatIncrease(EPlayerStatType Stat)
 {
+	Age++;
 	switch (Stat)
 	{
 	case EPlayerStatType::PhysicalStatus:
@@ -2108,8 +2153,6 @@ void AMyProjectCharacter::ApplyStatIncrease(EPlayerStatType Stat)
 	case EPlayerStatType::MentalStrengthStatus:
 		MentalStrength++;
 		break;
-	case EPlayerStatType::AgeStatus:
-		Age++;
 	default:
 		break;
 	}

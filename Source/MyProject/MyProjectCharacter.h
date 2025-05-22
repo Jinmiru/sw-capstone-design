@@ -53,8 +53,7 @@ enum class EPlayerStatType : uint8
 	LogicStatus,	//수학
 	LinguisticStatus,//국어
 	SocialSkillStatus,//사회
-	MentalStrengthStatus,//정신ㄹ겨
-	AgeStatus
+	MentalStrengthStatus//정신ㄹ겨
 };
 
 UCLASS(config = Game)
@@ -147,7 +146,8 @@ class AMyProjectCharacter : public ACharacter
 	TSubclassOf<APawn> BP_PoliceClass;
 
 
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* UpadateUIAction;
 
 
 public:
@@ -222,7 +222,10 @@ public:
 
 	UPROPERTY(ReplicatedUsing = OnRep_NiagaraSystem, EditDefaultsOnly)
 	UNiagaraSystem* NiagaraSystem; // 대쉬이펙트 저장소
+	void UPdateUI();
 
+	//=========레벨업
+	FTimerHandle TimerHandle_PlusAge;
 
 	//-------------------스텟 멀티 설정 함수-------------------
 
@@ -354,6 +357,7 @@ public:
 	{
 		return FMath::Clamp((float)HP_Player / 100.0f, 0.f, 1.f);
 	}
+
 
 
 	UFUNCTION()

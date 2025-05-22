@@ -4,7 +4,8 @@
 #include "GameManager.h"
 #include "Components/AudioComponent.h"
 #include "StatusWidget.h"
-// Sets default values
+#include "RedZoneManager.h"
+#include "Kismet/GameplayStatics.h" // Sets default values
 AGameManager::AGameManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -69,6 +70,19 @@ void AGameManager::end() //자기장 시작
 		AudioComponent->SetSound(SoundToPlay3);
 		AudioComponent->Play();
 		StatusWidget->changeUI();
+
+		// RedZoneManager 찾기
+		TArray<AActor*> FoundManagers;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), ARedZoneManager::StaticClass(), FoundManagers);
+
+		if (FoundManagers.Num() > 0)
+		{
+			ARedZoneManager* redmanager = Cast<ARedZoneManager>(FoundManagers[0]);
+			if (redmanager)
+			{
+				redmanager->StartRedZone();
+			}
+		}
 	}
 }
 

@@ -154,8 +154,6 @@ void UESImageQuizGameUI::EndGame(bool bIsWin)
         {
             PlayerCharacter->PlusStat(EPlayerStatType::SensoryStatus);
             PlayerCharacter->PlusStat(EPlayerStatType::SocialSkillStatus);
-            PlayerCharacter->PlusStat(EPlayerStatType::AgeStatus);
-
         }
         ResultText->SetText(FText::FromString(TEXT("성공!")));
         ResultText->SetColorAndOpacity(FSlateColor(FLinearColor::Blue));
