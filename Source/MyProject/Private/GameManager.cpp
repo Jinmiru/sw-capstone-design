@@ -154,4 +154,5 @@ void AGameManager::win() //승리
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("⛔ VictoryWidgetClass가 설정되지 않았습니다."));
+	}*/
 }
