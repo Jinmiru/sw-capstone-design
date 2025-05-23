@@ -46,6 +46,9 @@ enum class EGameUIType : uint8
 	//중간미션
 	English,
 	Library,
+
+	//승리
+	Win,
 };
 
 USTRUCT(BlueprintType)
