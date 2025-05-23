@@ -2138,7 +2138,6 @@ void AMyProjectCharacter::ServerPlusStat_Implementation(EPlayerStatType Stat)
 
 void AMyProjectCharacter::ApplyStatIncrease(EPlayerStatType Stat)
 {
-	Age++;
 	switch (Stat)
 	{
 	case EPlayerStatType::PhysicalStatus:
@@ -2158,6 +2157,9 @@ void AMyProjectCharacter::ApplyStatIncrease(EPlayerStatType Stat)
 		break;
 	case EPlayerStatType::MentalStrengthStatus:
 		MentalStrength++;
+		break;
+	case EPlayerStatType::AgeStatus:
+		Age++;
 		break;
 	default:
 		break;

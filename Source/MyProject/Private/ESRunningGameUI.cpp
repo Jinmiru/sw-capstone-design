@@ -9,6 +9,7 @@
 #include "Components/Image.h"
 #include "Kismet/GameplayStatics.h"
 #include "TimerManager.h"
+#include "MyProject/MyProjectCharacter.h"
 
 void UESRunningGameUI::NativeConstruct()
 {
@@ -92,6 +93,14 @@ void UESRunningGameUI::HandleSuccess()
 
     if (ResultText)
     {
+        AMyProjectCharacter* PlayerCharacter = Cast<AMyProjectCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));
+        if (PlayerCharacter)//미션 보상
+        {
+            PlayerCharacter->PlusStat(EPlayerStatType::SensoryStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::LinguisticStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::AgeStatus);
+        }
+
         ResultText->SetText(FText::FromString(TEXT("성공!")));
         ResultText->SetColorAndOpacity(FSlateColor(FLinearColor::Blue));
         ResultText->SetVisibility(ESlateVisibility::Visible);
