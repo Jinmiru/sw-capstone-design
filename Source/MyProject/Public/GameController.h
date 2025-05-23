@@ -42,7 +42,6 @@ enum class EGameUIType : uint8
 
 	//취직
 	SUCCES,
-	
 };
 
 USTRUCT(BlueprintType)

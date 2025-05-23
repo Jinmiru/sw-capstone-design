@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "StatusWidget.h"
+#include "Blueprint/UserWidget.h"
 #include "GameManager.generated.h"
 
 UCLASS()
@@ -38,17 +39,25 @@ public:
 	UPROPERTY()
 	UStatusWidget* StatusWidget;
 
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UUserWidget> VictoryWidgetClass;
+
+	UPROPERTY()
+	UUserWidget* VictoryWidgetInstance;
+
 	UFUNCTION()
 	void lobby();
 
 	UFUNCTION()
 	void Start();
 
-
-
 	UFUNCTION()
 	void middle();
 
 	UFUNCTION()
 	void end();
+
+	UFUNCTION()
+	void win();
+
 };

@@ -6,15 +6,23 @@
 #include "StatusWidget.h"
 #include "RedZoneManager.h"
 #include "Kismet/GameplayStatics.h" // Sets default values
+#include "Blueprint/UserWidget.h"
+#include "GameFramework/PlayerController.h"
+
 AGameManager::AGameManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	// ÄÄÆ÷³ÍÆ® »ı¼º
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
 	AudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AudioComponent"));
 	AudioComponent->SetupAttachment(RootComponent);
-	AudioComponent->bAutoActivate = false; // ÀÚµ¿ Àç»ı ¹æÁö
+	AudioComponent->bAutoActivate = false; // ï¿½Úµï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+#if WITH_EDITORONLY_DATA
+	bIsSpatiallyLoaded = false; // ì›”ë“œ íŒŒí‹°ì…˜ì—ì„œ ê³µê°„ ì¶”ì  í•˜ì§€ ì•ŠìŒ
+#endif
+
 }
 
 // Called when the game starts or when spawned
@@ -36,14 +44,14 @@ void AGameManager::Tick(float DeltaTime)
 }
 
 
-void AGameManager::lobby() //·Îºñ ½ÃÀÛ
+void AGameManager::lobby() //ï¿½Îºï¿½ ï¿½ï¿½ï¿½ï¿½
 {
-	//½Ã³×¸¶Æ½ ¿µ»ó Àç»ı
+	//ï¿½Ã³×¸ï¿½Æ½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 
 
 }
 
-void AGameManager::Start() //ÃÊµîÇĞ»ı ½ÃÀÛ
+void AGameManager::Start() //ï¿½Êµï¿½ï¿½Ğ»ï¿½ ï¿½ï¿½ï¿½ï¿½
 {
 	if (SoundToPlay1)
 	{
@@ -53,7 +61,7 @@ void AGameManager::Start() //ÃÊµîÇĞ»ı ½ÃÀÛ
 	}
 }
 
-void AGameManager::middle() //¼ºÀÎ ½ÃÀÛ
+void AGameManager::middle() //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 {
 	if (SoundToPlay2)
 	{
@@ -63,7 +71,7 @@ void AGameManager::middle() //¼ºÀÎ ½ÃÀÛ
 	}
 }
 
-void AGameManager::end() //ÀÚ±âÀå ½ÃÀÛ
+void AGameManager::end() //ï¿½Ú±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 {
 	if (SoundToPlay3)
 	{
@@ -71,7 +79,7 @@ void AGameManager::end() //ÀÚ±âÀå ½ÃÀÛ
 		AudioComponent->Play();
 		StatusWidget->changeUI();
 
-		// RedZoneManager Ã£±â
+		// RedZoneManager Ã£ï¿½ï¿½
 		TArray<AActor*> FoundManagers;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), ARedZoneManager::StaticClass(), FoundManagers);
 
@@ -86,3 +94,63 @@ void AGameManager::end() //ÀÚ±âÀå ½ÃÀÛ
 	}
 }
 
+void AGameManager::win() //ìŠ¹ë¦¬
+{
+	/*if (VictoryWidgetClass)
+	{
+		APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0);
+		if (PC)
+		{
+			VictoryWidgetInstance = CreateWidget<UUserWidget>(PC, VictoryWidgetClass);
+			if (VictoryWidgetInstance)
+			{
+				VictoryWidgetInstance->AddToViewport();
+
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(VictoryWidgetInstance->TakeWidget());
+				InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+				PC->SetInputMode(InputMode);
+				PC->bShowMouseCursor = true;
+			}
+		}
+	}*/
+
+	UE_LOG(LogTemp, Warning, TEXT("ğŸ† GameManager::win() í•¨ìˆ˜ í˜¸ì¶œë¨."));
+
+	if (VictoryWidgetClass)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ğŸ† VictoryWidgetClass ìœ íš¨í•¨."));
+
+		APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0);
+		if (PC)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("ğŸ† PlayerController ì°¾ìŒ. ìœ„ì ¯ ìƒì„± ì‹œë„."));
+
+			VictoryWidgetInstance = CreateWidget<UUserWidget>(PC, VictoryWidgetClass);
+			if (VictoryWidgetInstance)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("ğŸ† Victory ìœ„ì ¯ ìƒì„± ì„±ê³µ. í™”ë©´ì— ì¶”ê°€í•©ë‹ˆë‹¤."));
+
+				VictoryWidgetInstance->AddToViewport();
+
+				FInputModeUIOnly InputMode;
+				InputMode.SetWidgetToFocus(VictoryWidgetInstance->TakeWidget());
+				InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+				PC->SetInputMode(InputMode);
+				PC->bShowMouseCursor = true;
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("â›” Victory ìœ„ì ¯ ìƒì„± ì‹¤íŒ¨."));
+			}
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("â›” PlayerController ì°¾ê¸° ì‹¤íŒ¨."));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("â›” VictoryWidgetClassê°€ ì„¤ì •ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤."));
+	}
+}
