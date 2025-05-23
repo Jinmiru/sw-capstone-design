@@ -131,7 +131,7 @@ void AMyProjectCharacter::BeginPlay()
 
 			}
 		}
-		GetWorld()->GetTimerManager().SetTimer(TimerHandle_PlusAge, this, &AMyProjectCharacter::UPdateUI, 1.0f, false);
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle_PlusAge, this, &AMyProjectCharacter::UPdateUI, 1.5f, false);
 
 	}
 
@@ -260,6 +260,8 @@ void AMyProjectCharacter::SwapToNewCharacter(const FString& BlueprintPath)
 
 void AMyProjectCharacter::Server_SwapToNewCharacter_Implementation(const FString& BlueprintPath, AController* OwningController)
 {
+
+
 	APlayerController* PC = Cast<APlayerController>(GetController());
 	if (!PC) return;
 
@@ -550,13 +552,17 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 	UE_LOG(LogTemp, Error, TEXT("JobSkill : %d,  Age : %d"), jobskill, Age);
 
 	if (Age == 13) {
+		Age=14;
 		SwapToNewCharacter(TEXT("/Game/MetaHumans/middle/BP_MiddleThirdPersonCharacter.BP_MiddleThirdPersonCharacter"));
 	} 
 	else if (Age == 16) {
+		Age=17;
 		SwapToNewCharacter(TEXT("/Game/MetaHumans/goding/BP_GodingThirdPersonCharacter.BP_GodingThirdPersonCharacter"));
 
 	}
-	if (Age == 19) {
+	if (Age == 20) {
+		Age=21;
+
 		TArray<AActor*> FoundManagers;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AGameManager::StaticClass(), FoundManagers);
 
@@ -574,6 +580,19 @@ void AMyProjectCharacter::Multicast_Player_Setting_Implementation()
 }
 
 void AMyProjectCharacter::UPdateUI() {
+	if (jobskill != 0) {
+		TArray<AActor*> FoundManagers;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AGameManager::StaticClass(), FoundManagers);
+
+		if (FoundManagers.Num() > 0)
+		{
+			AGameManager* GM = Cast<AGameManager>(FoundManagers[0]);
+			if (GM)
+			{
+				GM->end();
+			}
+		}
+	}
 	switch (jobskill) {
 	case 0:
 		if (Age < 14) {
@@ -584,10 +603,6 @@ void AMyProjectCharacter::UPdateUI() {
 				Power = 1.5;
 				if (HUDWidget->GuideText != nullptr)
 					HUDWidget->GuideText->SetText(FText::FromString(TEXT("초등학교 수업을 진행하세요!")));
-			}
-			else {
-				UE_LOG(LogTemp, Error, TEXT("초등학교 진학 실패"));
-
 			}
 		}
 		else if (Age  >= 14 && Age<17) {
@@ -604,13 +619,8 @@ void AMyProjectCharacter::UPdateUI() {
 					HUDWidget->GuideText->SetText(FText::FromString(TEXT("중학교 수업을 진행하세요!")));
 
 			}
-			else {
-				UE_LOG(LogTemp, Error, TEXT("중학교 진학 실패"));
-			}
-
-
 		}
-		else if (Age > 17 && Age < 20) {
+		else if (Age >= 17 && Age < 21) {
 
 			if (CameraBoom)
 				CameraBoom->TargetArmLength = 1500.0f;
@@ -623,10 +633,6 @@ void AMyProjectCharacter::UPdateUI() {
 				if (HUDWidget->GuideText != nullptr)
 					HUDWidget->GuideText->SetText(FText::FromString(TEXT("고등학교 수업을 진행하세요!")));
 			}
-			else {
-				UE_LOG(LogTemp, Error, TEXT("고등학교 진학 실패 "));
-			}
-
 		}
 		else {
 			if (HUDWidget->GuideText != nullptr)
