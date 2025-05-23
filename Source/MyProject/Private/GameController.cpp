@@ -7,6 +7,7 @@
 #include "DoctorUI.h"
 #include "CookUI.h"
 #include "JobCenterUI.h"
+#include "LibraryUI.h"
 #include "GameFramework/SpectatorPawn.h"
 #include "Kismet/KismetSystemLibrary.h"
 
@@ -189,6 +190,23 @@ void AGameController::Client_UpdateCookUI_Implementation(const TArray<FName>& Re
 void AGameController::Client_EndCookGame_Implementation(bool bWin)
 {
 	if (UCookUI* UI = Cast<UCookUI>(GetGameUIInstance(EGameUIType::JC_Cook)))
+	{
+		UI->EndGame(bWin);
+	}
+}
+
+void AGameController::Client_UpdateLibraryUI_Implementation(int32 Current, int32 Max)
+{
+	if (ULibraryUI* UI = Cast<ULibraryUI>(GetGameUIInstance(EGameUIType::Library)))
+	{
+
+		UI->UpdateQuestionText(Current, Max);
+	}
+}
+
+void AGameController::Client_EndLibraryGame_Implementation(bool bWin)
+{
+	if (ULibraryUI* UI = Cast<ULibraryUI>(GetGameUIInstance(EGameUIType::Library)))
 	{
 		UI->EndGame(bWin);
 	}

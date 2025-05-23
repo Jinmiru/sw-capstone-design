@@ -20,7 +20,6 @@ AEnglishSchoolBox::AEnglishSchoolBox()
 	CollisionBox->SetupAttachment(RootComponent);
 	CollisionBox->SetBoxExtent(FVector(80.0f, 80.0f, 80.0f));
 	CollisionBox->SetRelativeLocation(FVector(0.0f, 0.0f, 120.0f));
-	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AEnglishSchoolBox::OnBeginOverlap);
 
 }
 
@@ -38,8 +37,3 @@ void AEnglishSchoolBox::Tick(float DeltaTime)
 
 }
 
-void AEnglishSchoolBox::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
-	int32 OtherBoxIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-	// 코드 내용 작성 필요
-}

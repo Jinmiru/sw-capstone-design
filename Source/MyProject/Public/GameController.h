@@ -42,6 +42,10 @@ enum class EGameUIType : uint8
 
 	//취직
 	SUCCES,
+
+	//중간미션
+	English,
+	Library,
 };
 
 USTRUCT(BlueprintType)
@@ -73,7 +77,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "MiniGame")
 	void SetIsPlayingMiniGame(bool bPlaying);
 
-	UFUNCTION(Server, Reliable, WithValidation)  //서버가 클라이언트에게 UI를 표시하도록 요청할	때 사용
+	UFUNCTION(BlueprintCallable, Server, Reliable, WithValidation)  //서버가 클라이언트에게 UI를 표시하도록 요청할	때 사용
 	void Server_SetIsPlayingMiniGame(bool bPlaying);
 
 	UFUNCTION(Client, Reliable)		//서버가 클라이언트에게 UI를 표시하도록 요청할 때 사용
@@ -116,6 +120,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_EndCookGame(bool bWin);
+
+	UFUNCTION(BlueprintCallable, Client, Reliable)
+	void Client_UpdateLibraryUI(int32 Current, int32 Max);
+
+	UFUNCTION(Client, Reliable)
+	void Client_EndLibraryGame(bool bWin);
 
 	UFUNCTION(Server, Reliable)
 	void Server_RequestSpectator();
