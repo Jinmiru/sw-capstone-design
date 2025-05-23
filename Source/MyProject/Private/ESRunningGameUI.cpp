@@ -125,11 +125,11 @@ void UESRunningGameUI::EndMiniGame(bool bIsSuccess)
 {
     if (AGameController* PC = Cast<AGameController>(UGameplayStatics::GetPlayerController(this, 0)))
     {
-        // 아래 코드 수정 필요할 수 있음(현재 문제: 마우스 입력이 상시하는 상태가 되어 클릭 없이도 마우스 회전에 따라 시야도 회전함)
-        PC->SetIsPlayingMiniGame(false);
+        //PC->SetIsPlayingMiniGame(false);
+        PC->Server_SetIsPlayingMiniGame(false);
         PC->HideGameUI(EGameUIType::ES_Running);
         PC->SetInputMode(FInputModeGameOnly());
-        PC->bShowMouseCursor = false;
+        //PC->bShowMouseCursor = false;
     }
 
     RemoveFromParent();
