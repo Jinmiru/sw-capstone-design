@@ -9,6 +9,7 @@
 #include "Components/TextBlock.h"
 #include "Components/EditableTextBox.h"
 #include "Math/UnrealMathUtility.h"
+
 void UHSImageQuizGameUI::NativeOnInitialized()
 {
     Super::NativeOnInitialized();
@@ -105,8 +106,8 @@ void UHSImageQuizGameUI::SetRandomQuestion()
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/Weeping_Woman.Weeping_Woman'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/Daedongyeojido.Daedongyeojido'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/Sundial.Sundial'"),
-        TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/Sundial.Sundial'"),
-        TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/Sundial.Sundial'"),
+        TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/TurtleShip.TurtleShip'"),
+        TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/StatueOfLiberty.StatueOfLiberty'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/SydneyOperaHouse.SydneyOperaHouse'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/EiffelTower.EiffelTower'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/HighSchool/BigBen.BigBen'"),
@@ -114,16 +115,16 @@ void UHSImageQuizGameUI::SetRandomQuestion()
     };
 
     Questions = {
-        TEXT("좌측 그림을 그린 인물의 이름은?"),
-        TEXT("좌측 그림을 그린 인물의 이름은?"),
-        TEXT("좌측 지도를 제작한 인물의 이름은?"),
-        TEXT("좌측 발명품을 만든 인물의 이름은?"),
-        TEXT("좌측 군함으로 유명한 인물의 이름은?"),
-        TEXT("좌측 건축물이 위치한 국가는?"),
-        TEXT("좌측 건축물이 위치한 국가는?"),
-        TEXT("좌측 건축물이 위치한 국가는?"),
-        TEXT("좌측 건축물이 위치한 국가는?"),
-        TEXT("좌측 건축물이 위치한 국가는?")
+        TEXT("다음 그림을 그린 인물의 이름은?"),
+        TEXT("다음 그림을 그린 인물의 이름은?"),
+        TEXT("다음 지도를 제작한 인물의 이름은?"),
+        TEXT("다음 발명품을 만든 인물의 이름은?"),
+        TEXT("다음 군함으로 유명한 장군의 이름은?"),
+        TEXT("다음 건축물이 위치한 국가는?"),
+        TEXT("다음 건축물이 위치한 국가는?"),
+        TEXT("다음 건축물이 위치한 국가는?"),
+        TEXT("다음 건축물이 위치한 국가는?"),
+        TEXT("다음 건축물이 위치한 국가는?")
     };
 
     Answers = {

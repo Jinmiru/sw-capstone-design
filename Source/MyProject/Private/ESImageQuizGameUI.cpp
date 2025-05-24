@@ -95,7 +95,7 @@ void UESImageQuizGameUI::SetRandomQuestion()
     // 이미지 파일 경로 및 정답 설정
     ImagePaths = {
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/ElementarySchool/Apple.Apple'"),
-        TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/ElementarySchool/Apple.Apple'"),
+        TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/ElementarySchool/Banana.Banana'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/ElementarySchool/Chair.Chair'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/ElementarySchool/Clock.Clock'"),
         TEXT("/Script/Engine.Texture2D'/Game/Images/ImageQuizGame/ElementarySchool/Flower.Flower'"),
