@@ -756,7 +756,7 @@ void AMyProjectCharacter::Inventory(const FInputActionValue& Value)
 
 	for (AActor* Actor : FoundLights)
 	{
-		// 🎯 안전성 보장: Cast 전에 타입 체크!
+		// 안전성 보장: Cast 전에 타입 체크!
 		if (!IsValid(Actor) || !Actor->IsA(ADirectionalLight::StaticClass()))
 			continue;
 
@@ -2084,7 +2084,6 @@ void AMyProjectCharacter::OnRep_HPChanged() {}
 void AMyProjectCharacter::ServerPlusAge_Implementation()
 {
 	Age++;
-	Linguistic++;
 
 
 	UE_LOG(LogTemp, Warning, TEXT("AGE : %d"), Age);
@@ -2163,6 +2162,30 @@ void AMyProjectCharacter::ApplyStatIncrease(EPlayerStatType Stat)
 		break;
 	default:
 		break;
+	}
+	if (Age == 13) {
+		Age = 14;
+		SwapToNewCharacter(TEXT("/Game/MetaHumans/middle/BP_MiddleThirdPersonCharacter.BP_MiddleThirdPersonCharacter"));
+	}
+	else if (Age == 16) {
+		Age = 17;
+		SwapToNewCharacter(TEXT("/Game/MetaHumans/goding/BP_GodingThirdPersonCharacter.BP_GodingThirdPersonCharacter"));
+
+	}
+	if (Age == 20) {
+		Age = 21;
+
+		TArray<AActor*> FoundManagers;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AGameManager::StaticClass(), FoundManagers);
+
+		if (FoundManagers.Num() > 0)
+		{
+			AGameManager* GM = Cast<AGameManager>(FoundManagers[0]);
+			if (GM)
+			{
+				GM->middle();
+			}
+		}
 	}
 }
 
