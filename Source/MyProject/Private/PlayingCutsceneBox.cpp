@@ -10,6 +10,7 @@
 #include "MyProject/MyProjectCharacter.h"
 #include "GameController.h"
 #include "Components/AudioComponent.h"
+#include "GameManager.h"
 #include <Kismet/GameplayStatics.h>
 
 // Sets default values
@@ -98,6 +99,12 @@ void APlayingCutsceneBox::Multicast_PlayCutScene_Implementation()
 		// 종료 이벤트 바인딩 (한 번만)
 		if (!MediaPlayer->OnEndReached.IsAlreadyBound(this, &APlayingCutsceneBox::OnCutsceneFinished))
 		{
+			AGameManager* GameManager = Cast<AGameManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AGameManager::StaticClass()));
+			if (GameManager)
+			{
+				GameManager->SetBGM(true);
+			}
+
 			MediaPlayer->OnEndReached.AddDynamic(this, &APlayingCutsceneBox::OnCutsceneFinished);
 		}
 	}
@@ -126,6 +133,12 @@ void APlayingCutsceneBox::OnCutsceneFinished()
 	if (MediaPlayer)
 	{
 		MediaPlayer->Close();
+	}
+
+	AGameManager* GameManager = Cast<AGameManager>(UGameplayStatics::GetActorOfClass(GetWorld(), AGameManager::StaticClass()));
+	if (GameManager)
+	{
+		GameManager->SetBGM(false);
 	}
 
 	AMyProjectCharacter* Character = Cast<AMyProjectCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));

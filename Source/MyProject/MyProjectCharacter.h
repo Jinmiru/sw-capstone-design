@@ -53,7 +53,7 @@ enum class EPlayerStatType : uint8
 	LogicStatus,	//수학
 	LinguisticStatus,//국어
 	SocialSkillStatus,//사회
-	MentalStrengthStatus,//정신ㄹ겨
+	MentalStrengthStatus,//정신력
 	AgeStatus
 };
 
@@ -388,7 +388,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void PlusStat(EPlayerStatType Stat);
 
-	UFUNCTION(Server, Reliable)
+	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void ServerPlusStat(EPlayerStatType Stat);
 
 	UFUNCTION(NetMulticast, Reliable)

@@ -94,6 +94,11 @@ void AGameManager::end() //�ڱ��� ����
 	}
 }
 
+void AGameManager::SetBGM(bool play)
+{
+	AudioComponent->SetPaused(play);
+}
+
 void AGameManager::win() //승리
 {
 	/*if (VictoryWidgetClass)

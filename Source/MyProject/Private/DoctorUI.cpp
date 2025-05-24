@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "DoctorUI.h"
@@ -22,10 +22,10 @@ void UDoctorUI::OnCloseClicked()
 {
     if (QuestionText)
     {
-        QuestionText->SetText(FText::FromString(TEXT("¹Ì¼ÇÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.")));
+        QuestionText->SetText(FText::FromString(TEXT("ë¯¸ì…˜ì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤.")));
     }
 
-    // 2ÃÊ µÚ ÀÚµ¿À¸·Î UI ²¨Áü
+    // 2ì´ˆ ë’¤ ìžë™ìœ¼ë¡œ UI êº¼ì§
     FTimerHandle CancelTimerHandle;
     GetWorld()->GetTimerManager().SetTimer(CancelTimerHandle, FTimerDelegate::CreateLambda([this]()
         {
@@ -38,7 +38,7 @@ void UDoctorUI::UpdateQuestionText(int32 CollectedPatientCount)
 {
     if (QuestionText)
     {
-        QuestionText->SetText(FText::FromString(FString::Printf(TEXT("Care Patient : %d Left"), CollectedPatientCount)));
+        QuestionText->SetText(FText::FromString(FString::Printf(TEXT("í™˜ìžë¥¼ ì¹˜ë£Œí•˜ì„¸ìš” ë‚¨ì€í™˜ìž: %d ëª…"), CollectedPatientCount)));
     }
 }
 
@@ -46,11 +46,11 @@ void UDoctorUI::EndGame(bool bIsWin)
 {
     if (bIsWin)
     {
-        QuestionText->SetText(FText::FromString(TEXT("¼º°ø!!!")));
+        QuestionText->SetText(FText::FromString(TEXT("ì„±ê³µ!!!")));
     }
     else
     {
-        QuestionText->SetText(FText::FromString(TEXT("½ÇÆÐ...")));
+        QuestionText->SetText(FText::FromString(TEXT("ì‹¤íŒ¨...")));
     }
 
     FTimerHandle EndTimerHandle;

@@ -60,4 +60,7 @@ public:
 	UFUNCTION()
 	void win();
 
+	UFUNCTION()
+	void SetBGM(bool play);
+
 };

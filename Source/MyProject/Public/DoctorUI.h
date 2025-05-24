@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -18,18 +18,18 @@ protected:
     virtual void NativeOnInitialized() override;
 
     UFUNCTION()
-    void OnCloseClicked();      // ´İ±â ¹öÆ° ´©¸¦ ½Ã ¼öÇà
+    void OnCloseClicked();      // ë‹«ê¸° ë²„íŠ¼ ëˆ„ë¥¼ ì‹œ ìˆ˜í–‰
 
 public:
     UPROPERTY(meta = (BindWidget))
-    class UButton* CloseButton;                 // ´İ±â ¹öÆ°
+    class UButton* CloseButton;                 // ë‹«ê¸° ë²„íŠ¼
 
     UPROPERTY(meta = (BindWidget))
-    class UTextBlock* QuestionText;             // ¹®Á¦ ³»¿ë ÅØ½ºÆ®
+    class UTextBlock* QuestionText;             // ë¬¸ì œ ë‚´ìš© í…ìŠ¤íŠ¸
 
-    void UpdateQuestionText(int32 CollectedTrashCount);     // ¹®Á¦ ³»¿ë »ı¼º ¹× °»½Å
+    void UpdateQuestionText(int32 CollectedTrashCount);     // ë¬¸ì œ ë‚´ìš© ìƒì„± ë° ê°±ì‹ 
 
-    void EndGame(bool bIsWin);      // bool°ª(¼º°ø ¶Ç´Â ½ÇÆĞ)¿¡ µû¸¥ °ÔÀÓ °á°ú Ã³¸®
+    void EndGame(bool bIsWin);      // boolê°’(ì„±ê³µ ë˜ëŠ” ì‹¤íŒ¨)ì— ë”°ë¥¸ ê²Œì„ ê²°ê³¼ ì²˜ë¦¬
 
 
 
