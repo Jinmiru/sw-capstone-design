@@ -55,6 +55,17 @@ void ULibraryUI::EndGame(bool bIsWin)
 {
     if (bIsWin)
     {
+        AMyProjectCharacter* PlayerCharacter = Cast<AMyProjectCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));
+        if (PlayerCharacter)//미션 보상
+        {
+            PlayerCharacter->PlusStat(EPlayerStatType::SensoryStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::LinguisticStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::LinguisticStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::PhysicalStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::PhysicalStatus);
+            PlayerCharacter->PlusStat(EPlayerStatType::AgeStatus);
+
+        }
         QuestionText->SetText(FText::FromString(TEXT("성공!!!")));
     }
     else
