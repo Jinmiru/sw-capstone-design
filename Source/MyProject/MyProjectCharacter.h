@@ -20,28 +20,28 @@ struct FCharacterRuntimeData
 	GENERATED_BODY()
 
 	UPROPERTY()
-	int32 Save_HP;
+	int32 Save_HP=0;
 
 	UPROPERTY()
-	int32 Save_JobSkill;
+	int32 Save_JobSkill=0;
 
 	UPROPERTY()
-	int32 Save_Age;
+	int32 Save_Age=0;
 
 	UPROPERTY()
-	int32 Save_Physical;   //신체능력
+	int32 Save_Physical=0;   //신체능력
 	UPROPERTY()
-	int32 Save_Sensory;    // 감각능력
+	int32 Save_Sensory=0;    // 감각능력
 	UPROPERTY()
-	int32 Save_Logic;             // 논리력
+	int32 Save_Logic=0;             // 논리력
 	UPROPERTY()
-	int32 Save_Linguistic;        // 언어력
+	int32 Save_Linguistic=0;        // 언어력
 	UPROPERTY()
-	int32 Save_SocialSkill;       // 사회성
+	int32 Save_SocialSkill=0;       // 사회성
 	UPROPERTY()
-	int32 Save_MentalStrength;    // 정신력
+	int32 Save_MentalStrength=0;    // 정신력
 	UPROPERTY()
-	int32 Save_money;             // 돈
+	int32 Save_money=0;             // 돈
 
 };
 

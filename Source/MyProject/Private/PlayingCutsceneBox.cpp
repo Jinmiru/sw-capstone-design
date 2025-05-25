@@ -24,8 +24,8 @@ APlayingCutsceneBox::APlayingCutsceneBox()
 
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision Box"));
 	CollisionBox->SetupAttachment(RootComponent);
-	CollisionBox->SetBoxExtent(FVector(80.0f, 80.0f, 80.0f));
-	CollisionBox->SetRelativeLocation(FVector(0.0f, 0.0f, 120.0f));
+	CollisionBox->SetBoxExtent(FVector(100.0f, 100.0f, 100.0f));
+	CollisionBox->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
 
 	audioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("CutsceneAudio"));
 	audioComponent->bAutoActivate = false;
