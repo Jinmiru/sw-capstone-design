@@ -6,6 +6,8 @@
 #include "Blueprint/WidgetLayoutLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameController.h"
+#include "MyProject/MyProjectCharacter.h"
+
 
 void UPainterUI::NativeOnInitialized()
 {
@@ -181,6 +183,12 @@ void UPainterUI::FinishMission()
 	{
 		PC->SetIsPlayingMiniGame(false);
 		PC->HideGameUI(EGameUIType::JC_Artist);
+
+		AController* Controller = GetOwningPlayer();
+		if (!Controller)
+			return;
+		AGameController* PlayerController = Cast<AGameController>(Controller);
+		PlayerController->Server_SetJobSuccess(true);
 	}
 }
 

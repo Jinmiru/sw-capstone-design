@@ -47,6 +47,12 @@ void UDoctorUI::EndGame(bool bIsWin)
     if (bIsWin)
     {
         QuestionText->SetText(FText::FromString(TEXT("성공!!!")));
+
+        AController* Controller = GetOwningPlayer();
+        if (!Controller)
+            return;
+        AGameController* PlayerController = Cast<AGameController>(Controller);
+        PlayerController->Server_SetJobSuccess(true);
     }
     else
     {

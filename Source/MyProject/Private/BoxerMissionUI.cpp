@@ -35,6 +35,12 @@ void UBoxerMissionUI::EndGame()
     if (QuestionText)
     {
         QuestionText->SetText(FText::FromString(TEXT("경기 우승!! \n 복싱장으로 가면 복서로 취직됩니다!!!")));
+
+        AController* Controller = GetOwningPlayer();
+        if (!Controller)
+            return;
+        AGameController* PlayerController = Cast<AGameController>(Controller);
+        PlayerController->Server_SetJobSuccess(true);
     }
     else
     {

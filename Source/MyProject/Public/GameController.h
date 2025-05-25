@@ -74,7 +74,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "MiniGame")
 	bool IsPlayingMiniGame() const;
 	
-	bool JobSuccess;
+	UPROPERTY(Replicated)
+	bool JobSuccess = false;
 
 	//서버에서 실행되는 함수              클라이언트가 호출 -> 서버에서 검증 -> SetISPlayingMiniGame 실행
 	UFUNCTION(BlueprintCallable, Category = "MiniGame")
@@ -96,6 +97,9 @@ public:
 	//클라이언트용 UI 업데이트 함수
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_UpdateServiceUI(int32 Current, int32 Max);
+
+	UFUNCTION(Server, Reliable)
+	void Server_SetJobSuccess(bool success);
 
 
 	UFUNCTION(BlueprintCallable)

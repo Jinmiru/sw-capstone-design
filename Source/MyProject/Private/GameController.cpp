@@ -15,7 +15,6 @@
 void AGameController::BeginPlay()
 {
 	Super::BeginPlay();
-	JobSuccess = true;
 }
 
 bool AGameController::IsPlayingMiniGame() const
@@ -37,6 +36,12 @@ bool AGameController::Server_SetIsPlayingMiniGame_Validate(bool bPlaying)
 {
 	return true;
 }
+
+void AGameController::Server_SetJobSuccess_Implementation(bool success)
+{
+	JobSuccess = success;
+}
+
 void AGameController::ShowGameUI(EGameUIType UIType)
 {
 	if (!IsLocalController())

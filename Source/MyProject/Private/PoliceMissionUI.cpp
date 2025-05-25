@@ -34,6 +34,14 @@ void UPoliceMissionUI::EndGame()
     if (QuestionText)
     {
         QuestionText->SetText(FText::FromString(TEXT("도둑 잡기 성공! \n 경찰서로 가면 경찰로 취직할 수 있습니다!")));
+
+
+        AController* Controller = GetOwningPlayer();
+        if (!Controller)
+            return;
+        AGameController* PlayerController = Cast<AGameController>(Controller);
+        PlayerController->Server_SetJobSuccess(true);
+
     }
     else
     {

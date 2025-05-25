@@ -72,6 +72,12 @@ void UCookUI::EndGame(bool bIsWin)
     if (bIsWin)
     {
         QuestionText->SetText(FText::FromString(TEXT("¼º°ø!!!")));
+
+        AController* Controller = GetOwningPlayer();
+        if (!Controller)
+            return;
+        AGameController* PlayerController = Cast<AGameController>(Controller);
+        PlayerController->Server_SetJobSuccess(true);
     }
     else
     {
