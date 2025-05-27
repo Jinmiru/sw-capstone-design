@@ -1,33 +1,169 @@
-# sw-capstone-design
-대학 소프트웨어캡스톤디자인 프로젝트를 담은 리포지토리입니다.
+# 🎓 인생게임 (직업게임) - CodeCraft
 
-## 1. 팀원<table border="1">
-  <thead>
-    <tr>
-      <th>팀원</th>
-      <th>전공</th>
-      <th>학번</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://github.com/pch2001">
-        <img src="https://github.com/user-attachments/assets/1f71f813-32fc-45e1-9b6e-3d6ca949577b" width="100px;" alt=""/><br/><sub>박창후</sub></a><br/>
-      <td>콘텐츠IT전공</td>
-      <td>20205177</td>
-    </tr>
-    <tr>
-      <td align="center"><a href="https://github.com/scsar">
-        <img src="https://github.com/user-attachments/assets/a375767d-467d-4647-a729-7ba0f6c9f9eb" width="100px;" alt=""/><br/><sub>장현일</sub></a><br/>
-      <td>콘텐츠IT전공</td>
-      <td>20205246</td>
-    </tr>
-    <tr>
-      <td align="center"><a href="https://github.com/Jinmiru">
-        <img src="https://github.com/user-attachments/assets/c5292883-2903-41d2-a1f1-ace700ab6159" width="100px;" alt=""/><br/><sub>정진영</sub></a><br/>
-      </td>
-      <td>콘텐츠IT전공</td>
-      <td>20205252</td>
-    </tr>
-  </tbody>
-</table>
+> 언리얼 엔진 5 기반 직업 체험 성장형 배틀로얄 게임  
+> 교육, 전략, 생존을 융합한 신개념 게임 프로젝트 (한림대학교 SW캡스톤디자인)
+
+<br><br>
+
+
+## 📑 목차
+
+1. [팀 CodeCraft](#-1-팀-codecraft)
+2. [프로젝트 개요](#-2-프로젝트-개요)
+3. [기술 스택](#-3-기술-스택)
+4. [주요 기능](#-4-주요-기능)
+   - [시네마틱 로비](#-41-시네마틱-로비)
+   - [기초 교육 시스템](#-42-기초-교육-시스템)
+   - [스펙 쌓기 시스템](#-43-스펙-쌓기-시스템)
+   - [취업 시스템](#-44-취업-시스템)
+   - [최종 전투](#-45-최종-전투-battle-royale)
+5. [게임 구현 상세](#-5-게임-구현-상세)
+   - [Dedicated Server 구조](#-51-dedicated-server-구조)
+   - [캐릭터 커스터마이징](#-52-캐릭터-커스터마이징)
+   - [애니메이션 처리](#-53-애니메이션-처리)
+   - [UI 시스템](#-54-ui-시스템-umg-기반)
+   - [Niagara VFX 시스템](#-55-niagara-vfx-시스템)
+   - [HUD 및 이미지](#-58-hud-및-이미지)
+6. [시각 자료](#-6-시각-자료)
+   - [로비 화면](#61-로비-화면)
+   - [학교 수업](#62-학교-수업)
+   - [스펙업 미션](#63-스펙업-미션)
+   - [취업 미션](#64-취업-미션)
+   - [레드존](#65-레드존)
+   - [전투](#66-전투)
+
+
+
+<br><br>
+
+
+
+## 🧑‍🤝‍🧑 1. 팀 CodeCraft
+
+|이름|학과|학번|이메일|
+|---|---|---|---|
+| 박창후 | 콘텐츠IT전공 | 20205177 | glee623@naver.com |
+| 장현일 | 콘텐츠IT전공 | 20205246 | gusdud0627@naver.com |
+| 정진영 | 콘텐츠IT전공 | 20205252 | ceng1217@naver.com  |
+
+<br><br>
+
+
+
+## 📌 2. 프로젝트 개요
+
+**인생게임**은 초·중·고 교육, 스펙 쌓기, 취업 그리고 전투까지  
+**실제 직업 체험을 게임으로 풀어낸 성장형 배틀로얄**입니다.
+
+- 다양한 수업을 통해 능력치를 키우고
+- 자율적으로 맵을 탐험하며 스펙을 쌓고
+- 자신이 선택한 직업에 도전하여
+- 마지막엔 최후의 1인을 가리는 **전략 서바이벌**
+
+🎮 교육 + 경쟁 + 생존이라는 색다른 조합으로  
+진로 탐색과 직업 인식을 자연스럽게 유도합니다.
+
+<br><br>
+
+
+
+## 🛠️ 3. 기술 스택
+
+| 구분 | 사용 기술 |
+|---|---|
+| 게임 엔진 | Unreal Engine 5 |
+| 캐릭터 시스템 | MetaHuman + Blender |
+| 애니메이션 | Mixamo + UE 리타깃팅 |
+| 멀티플레이 | Dedicated Server |
+| UI 시스템 | UMG (Unreal Motion Graphics) |
+| 시네마틱 | UE5 Sequencer |
+| VFX | Niagara |
+| 디자인 | ChatGPT 이미지 생성 기능 활용 |
+
+<br><br>
+
+
+
+## 🧩 4. 주요 기능
+
+### 🎬 4.1. 시네마틱 로비
+- 게임 시작 시 **맵 안내 및 게임 설명 영상 재생**
+- 카메라 연출, 키프레임 기반 컷 편집 적용
+
+### 📚 4.2. 기초 교육 시스템
+- 초/중/고 3단계 수업을 선택해 능력치(지능, 체력 등) 향상
+
+### 🧾 4.3. 스펙 쌓기 시스템
+- 봉사, 자격증, 동아리 등 자유 탐험 기반 활동
+- 플레이어의 선택에 따른 **전략적 성장 경로**
+
+### 📚 4.4. 취업 시스템
+- 선택한 직업별 맞춤 미션 수행
+- 예: 요리사(재료 선택), 복서(근접 전투), 의사(퀴즈)
+
+### ⚔️ 4.5. 최종 전투 (Battle Royale)
+- 첫 취업자가 등장하면 자기장 시작
+- 직업 기반 스킬 & 무기로 전투, **최후의 1인 승리**
+
+<br><br>
+
+
+
+## 🎮 5. 게임 구현 상세
+본 프로젝트는 언리얼 엔진 5 기반의 고성능 게임 시스템을 구축하고자, 다음과 같은 아키텍처 및 기술 요소를 사용하였습니다.
+
+<br>
+
+### 🌐 5.1 Dedicated Server 구조
+- Unreal Engine의 Dedicated Server 기능을 활용해 서버-클라이언트 구조 구현
+- 서버가 모든 플레이어 상태를 관리하고, 클라이언트는 OpenLevel()로 접속
+- Event BeginPlay 시점에 자동 접속
+- 확장성을 고려해 최대 접속 인원 무제한 구조 설계
+
+### 👤 5.2 캐릭터 커스터마이징
+- MetaHuman을 활용한 현실적인 캐릭터 모델 생성
+- 각 직업에 맞는 의상 구성
+- Blender로 MetaHuman 체형에 맞춰 의상 리깅 및 충돌 해결
+
+### 🏃 5.3 애니메이션 처리
+- Mixamo에서 다양한 동작(걷기, 전투 등) 애니메이션 수집
+- UE5 리타깃팅으로 MetaHuman에 적용
+- 블렌딩 및 커브 조정으로 손 꺾임 등 문제 해결
+
+### 📺 5.4 UI 시스템 (UMG 기반)
+- UMG + UserWidget으로 직관적인 UI 구현
+- 교육/스펙/취업/전투 상황에 따라 화면 자동 구성
+- 직업 선택 시 HUD가 자동 갱신되도록 동적 바인딩 설계
+
+### 💥 5.5 Niagara VFX 시스템
+- 자기장, 스킬, 전투 효과 등 고급 VFX 구성
+- 직업별 시각효과 커스터마이징 적용
+- 플레이어가 자기장에 접근하면 UI 경고 연동
+
+### 🧠 5.8 HUD 및 이미지
+- ChatGPT 이미지 생성을 통해 아이콘 제작
+- HUD는 선택한 직업에 따라 자동으로 구성 변경됨
+
+<br><br>
+
+
+
+## 📷 6. 시각 자료
+
+### 6.1. 로비 화면
+![로비 화면](https://github.com/user-attachments/assets/6d7e5146-93e0-493a-bcd8-f746f9db8930)
+
+### 6.2. 학교 수업
+![학교 수업](https://github.com/user-attachments/assets/cacbb1ff-0e6a-471e-b060-445f16947c93)
+
+### 6.3. 스펙업 미션
+![스펙업 미션](https://github.com/user-attachments/assets/1e3231d5-2a38-4766-9230-569af81ab2dd)
+
+### 6.4. 취업 미션
+![취업 미션](https://github.com/user-attachments/assets/99132bb0-8319-4ae2-a371-169920c5c10e)
+
+### 6.5. 레드존
+![레드존](https://github.com/user-attachments/assets/341563f5-86d6-476f-a647-424be3b5f641)
+
+### 6.6. 전투
+![전투](https://github.com/user-attachments/assets/7fd79ca1-80e1-4cdc-b347-fd18d87a0bbd)
